@@ -1,0 +1,197 @@
+.container-home {
+    background-image: url('../assets/images/fondoIndex-2.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: white;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
+    padding-top: 230px;
+}
+
+.container-datos {
+    display: flex;
+    flex-direction: column;
+    padding-inline-end: 10px;
+    align-items: end;
+    justify-content: end;
+    padding-bottom: 350px;
+}
+
+.nombre {
+    margin: 0;
+    font-size: 74px;
+    font-family: 'new amsterdam';
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
+        /* Sombra sutil y definida */
+        4px 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.profesion {
+    margin: 0;
+    margin-top: -30px;
+    font-size: 40px;
+    font-family: 'dancing script';
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
+        /* Sombra sutil y definida */
+        4px 4px 6px rgba(0, 0, 0, 0.4);
+
+}
+
+.developer {
+    color: #68e8f9;
+    /* Cambia esto al color que prefieras */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
+        /* Sombra sutil y definida */
+        4px 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+
+.container-links {
+    font-family: "Kirang Haerang";
+    
+    font-style: italic;
+    font-size: 50px;    
+    padding-inline-start: 15px;
+    padding-bottom: 350px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.container-links a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    /* Elimina el subrayado del link */
+}
+
+.container-links h1 {
+    display: inline-block;
+    font-size: 120px;
+    margin: 0;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7),
+        /* Sombra sutil y definida */
+        2px 2px 3px rgba(0, 0, 0, 0.4);
+
+}
+
+.about:hover,
+.services:hover,
+.contacto:hover,
+.info:hover {
+    color: #68e8f9;
+
+    font-style: normal;
+    transform: scale(1.02);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
+                 0 0 20px rgba(255, 255, 255, 0.9);
+
+    transition: transform 0.2s ease, text-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.about {
+    margin-bottom: -55px;
+}
+
+.services {
+    margin-bottom: -55px;
+}
+
+.contacto {
+    margin-bottom: -10px;
+
+}
+
+.info {
+    margin-top: -45px;
+}
+
+
+/* Media Queries para pantallas medianas y pequeñas */
+
+/* Para pantallas medianas (tabletas en modo retrato) */
+@media (max-width: 991px) and (min-width: 768px) {
+    .container-home {
+        padding-top: 150px; /* Ajusta el espacio superior si es necesario */
+        grid-template-columns: 1fr; /* Cambia la disposición a una columna */
+        text-align: center; /* Centra el texto horizontalmente */
+        justify-content: center; /* Centra el contenido horizontalmente */
+        padding-bottom: 150px; /* Ajusta el espacio inferior si es necesario */
+    }
+
+    .container-datos {
+        padding-inline-end: 0; /* Elimina el padding lateral */
+        padding-bottom: 20px; /* Ajusta el espacio inferior si es necesario */
+        align-items: center; /* Centra el contenido verticalmente */
+        justify-content: center; /* Centra el contenido verticalmente */
+    }
+
+    .nombre {
+        font-size: 50px; /* Reduce el tamaño de la fuente en pantallas medianas */
+    }
+
+    .profesion {
+        font-size: 30px; /* Reduce el tamaño de la fuente en pantallas medianas */
+    }
+
+    .container-links {
+        font-size: 70px; /* Ajusta el tamaño de la fuente en pantallas medianas */
+        padding-inline-start: 0; /* Elimina el padding lateral */
+        padding-bottom: 20px; /* Ajusta el espacio inferior si es necesario */
+        flex-direction: column;
+        gap: 30px; /* Cambia la disposición a fila */
+        justify-content: center; /* Centra los enlaces horizontalmente */
+    }
+
+    .container-links h1 {
+        font-size: 120px; /* Reduce el tamaño de la fuente en pantallas medianas */
+        margin: -10px 10px; /* Ajusta el margen entre los enlaces */
+    }
+}
+
+/* Para pantallas pequeñas (teléfonos) */
+@media (max-width: 767px) {
+    .container-home {
+        padding-top: 100px; /* Ajusta el espacio superior si es necesario */
+        grid-template-columns: 1fr; /* Cambia la disposición a una columna */
+        text-align: center; /* Centra el texto horizontalmente */
+        justify-content: center; /* Centra el contenido horizontalmente */
+        padding-bottom: 50px; /* Ajusta el espacio inferior si es necesario */
+    }
+
+    .container-datos {
+        padding-inline-end: 0; /* Elimina el padding lateral */
+        padding-bottom: 10px; /* Ajusta el espacio inferior si es necesario */
+        align-items: center; /* Centra el contenido verticalmente */
+        justify-content: center; /* Centra el contenido verticalmente */
+    }
+
+    .nombre {
+        font-size: 50px;
+        padding-bottom: 15px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+    }
+
+    .profesion {
+        font-size: 32px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+    }
+
+    .container-links {
+        font-size: 70px; /* Ajusta el tamaño de la fuente en pantallas medianas */
+        padding-inline-start: 0; /* Elimina el padding lateral */
+        padding-bottom: 20px; /* Ajusta el espacio inferior si es necesario */
+        flex-direction: column;
+        gap: 30px; /* Cambia la disposición a fila */
+        justify-content: center; /* Centra los enlaces horizontalmente */
+        
+    }
+
+    .container-links h1 {
+        font-size: 120px; /* Reduce el tamaño de la fuente en pantallas medianas */
+        margin: -10px 10px;  /* Ajusta el margen entre los enlaces */
+    }
+}

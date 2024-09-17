@@ -1,0 +1,228 @@
+.carousel-item img {
+    height: 500px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.link {
+    margin-top: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #003366;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.link:hover {
+    color: #001933;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.container-fluid {
+    background-image: url('../assets/images/INdexMasTres.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+}
+
+.projects-image img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.projects-image {
+    display: flex;
+    flex-direction: column;
+}
+
+.primerTextoTitulo {
+    font-family: 'New Amsterdam';
+    font-size: 100px;
+    text-align: center; /* Alinea el texto al centro */
+    font-weight: bold;
+    padding-top: 30px;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+.primerTextoTitulo:hover {
+    text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.9);
+}
+
+.segundoTexto {
+    font-family: 'New Amsterdam';
+    font-size: 100px;
+    text-align: center; /* Alinea el texto al centro */
+    font-weight: bold;
+    padding-top: 30px;
+    margin-top: 50px;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+.segundoTexto:hover {
+    text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.9);
+}
+
+.despedida {
+    font-family: 'New Amsterdam';
+    font-size: 100px;
+    text-align: center; /* Alinea el texto al centro */
+    font-weight: bold;
+    padding-top: 30px;
+    margin-top: 50px;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+.despedida:hover {
+    text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.9);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.container h2 {
+    text-align: center;
+    padding: 30px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 20px;
+    width: 20px;
+    height: 30px;
+}
+
+.carousel-control-prev-icon {
+    margin-left: -90px;
+}
+
+.carousel-control-next-icon {
+    margin-right: -90px;
+}
+
+.carousel-caption h5 {
+    font-size: 50px;
+    font-family: 'New Amsterdam';
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
+        4px 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.carousel-caption p {
+    font-size: 20px;
+    font-family: 'Montserrat';
+    background-color: rgba(255, 255, 255);
+    border-radius: 10px;
+    width: auto;
+    padding: 2px 10px;
+    color: black;
+    text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.5);
+}
+
+.carousel {
+    background-color: rgba(255, 255, 255, 0.302);
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px black;
+    padding: 100px;
+}
+
+.carousel-caption a {
+    font-family: 'Montserrat';
+    background-color: transparent;
+    border: 2px solid #17a2b8;
+    color: #17a2b8;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.carousel-caption a:hover {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.githubImage {
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.githubImage img {
+    margin-top: 50px;
+    border-radius: 8px;
+    width: 70%;
+    background-color: gray;
+}
+
+/* Media queries para ajustar estilos en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px; /* Ajusta la altura según sea necesario para pantallas más pequeñas */
+    }
+    .githubImage img {
+        margin-top: 50px;
+        border-radius: 8px;
+        width: 100%;
+        background-color: gray;
+    }
+    
+    .primerTextoTitulo,
+    .segundoTexto,
+    .despedida {
+        font-size: 50px; /* Reduce el tamaño de los títulos */
+    }
+
+    .container {
+        padding: 0; /* Elimina el padding en pantallas pequeñas */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 15px; /* Ajusta el tamaño del ícono */
+        height: 20px; /* Ajusta el tamaño del ícono */
+        padding: 10px; /* Ajusta el padding */
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-item img {
+        height: 200px; /* Ajusta aún más la altura para pantallas muy pequeñas */
+    }
+
+    .primerTextoTitulo,
+    .segundoTexto,
+    .despedida {
+        font-size: 30px; /* Reduce aún más el tamaño de los títulos */
+    }
+
+    .projects-image img {
+        width: 100%; /* Ajusta el tamaño de la imagen del proyecto */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 10px; /* Ajusta el tamaño del ícono */
+        height: 15px; /* Ajusta el tamaño del ícono */
+        padding: 5px; /* Ajusta el padding */
+    }
+}

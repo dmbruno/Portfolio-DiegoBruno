@@ -1,0 +1,195 @@
+/* Header base */
+.header {
+  display: flex;
+  padding: 20px;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  z-index: 10;
+  justify-content: center;
+  transition: padding 0.5s ease, width 0.5s ease, left 0.5s ease, transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+/* Header cuando se hace scroll */
+.header.scrolled-header {
+  padding: 10px 20px; /* Reduce el padding al hacer scroll */
+  left: 33%; /* Ajusta la posición */
+  width: 35%; /* Ajusta el ancho */
+}
+
+/* Clase para ocultar el header cuando se desplaza hacia abajo */
+.header.hidden {
+  transform: translateY(-100%); /* Desplaza el header hacia arriba fuera de la pantalla */
+  opacity: 0; /* Desaparece gradualmente */
+  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out; /* Transición suave para ocultar */
+}
+
+/* Mostrar header con la misma transición */
+.header:not(.hidden) {
+  transform: translateY(0); /* Reaparece en su lugar original */
+  opacity: 1;
+}
+
+/* Contenedor de links */
+.nav-container {
+  width: 100%;
+  margin-bottom: 10px;
+  transition: width 0.5s ease; /* Transición uniforme en ambos estados */
+}
+
+
+
+/* Contenedor de links en el header */
+.header-links-container {
+  
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 10px;
+  border-radius: 50px;
+  justify-content: center;
+  border: 1px solid white;
+  transition: border 0.3s ease-in-out, padding 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.header-links-container.scrolled {
+  border: 1px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo de los links */
+.link-header {
+  color: white;
+  font-family: 'new amsterdam';
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin: 0 15px;
+  transition: color 0.5s ease, font-size 0.5s ease-in-out;
+}
+
+.link-header.scrolled {
+  font-size: 20px;
+}
+
+.link-header:hover {
+  cursor: pointer;
+  color: white;
+  text-decoration: underline;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  transition: color 0.2s ease-in-out;
+}
+
+
+/* Media Query para pantallas pequeñas (hasta 1024px) */
+@media (max-width: 1124px) {
+  .link-header {
+    font-size: 1.3rem; /* Ajuste ligero del tamaño */
+  }
+  .header-links-container.scrolled {
+    border: 1px solid white;
+    padding-right:20px;
+    padding-left:20px;
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .nav-container {
+    width: 300%;
+    margin-bottom: 10px;
+    transition: width 0.5s ease; /* Transición uniforme en ambos estados */
+  }
+}
+
+
+
+
+
+/* Media Query para pantallas medianas (hasta 768px) */
+@media (max-width: 768px) {
+  .link-header {
+    font-size: 1.1rem; /* Ajuste moderado del tamaño */
+  }
+  .header-links-container.scrolled {
+    border: 1px solid white;
+    padding-right:20px;
+    padding-left:20px;
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .nav-container {
+    width: 300%;
+    margin-bottom: 10px;
+    transition: width 0.5s ease; /* Transición uniforme en ambos estados */
+  }
+}
+
+
+
+
+
+
+/* Media Query para pantallas pequeñas (hasta 600px) */
+@media (max-width: 600px) {
+  .link-header {
+    font-size: 1rem; /* Ajuste mayor del tamaño */
+  }
+  .header-links-container.scrolled {
+    border: 1px solid white;
+    padding-right:20px;
+    padding-left:20px;
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .nav-container {
+    width: 300%;
+    margin-bottom: 10px;
+    transition: width 0.5s ease; /* Transición uniforme en ambos estados */
+  }
+}
+
+
+
+
+
+/* Media Query para pantallas muy pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+  .link-header {
+    font-size: 0.9rem; /* Tamaño más pequeño */
+  }
+  .header-links-container.scrolled {
+    border: none;
+    padding-right:20px;
+    padding-left:20px;
+    
+    box-shadow: none;
+  }
+  .nav-container {
+    width: 200%;
+    margin-bottom: 10px;
+    transition: width 0.5s ease; /* Transición uniforme en ambos estados */
+  }
+}
+
+
+
+
+/* Media Query para pantallas muy pequeñas (hasta 320px) */
+@media (max-width: 420px) {
+  .link-header {
+    font-size: 0.8rem; /* Tamaño más pequeño aún para pantallas muy pequeñas */
+  }
+  .header-links-container.scrolled {
+    border: none;
+    padding-right:20px;
+    padding-left:20px;
+    
+    box-shadow: none;
+  }
+  .nav-container {
+    width: 200%;
+    margin-bottom: 10px;
+    transition: width 0.5s ease; /* Transición uniforme en ambos estados */
+  }
+}

@@ -1,0 +1,441 @@
+/* Estilos globales */
+.certificaciones-section {
+    background-image: url('../assets/images/IndexMasDos.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.desarrolloWeb {
+    background-image: url('../assets/images/certificados/certificado-desarrolloWeb.png');
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-size: contain;
+    /* Hace que la imagen se ajuste al contenedor sin recortarse */
+    width: 100%;
+    /* Ajusta el ancho del contenedor */
+    height: 100%;
+    /* Mantiene la relación de aspecto */
+    max-height: 400px;
+    /* Establece una altura máxima */
+
+}
+
+.carrera {
+    background-image: url('../assets/images/certificados/certificado-carreraDesarrolloDeApp.png');
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-size: contain;
+    /* Hace que la imagen se ajuste al contenedor sin recortarse */
+    width: 100%;
+    /* Ajusta el ancho del contenedor */
+    height: 100%;
+    /* Mantiene la relación de aspecto */
+    max-height: 400px;
+    /* Establece una altura máxima */
+}
+
+.javaScript {
+    background-image: url('../assets/images/certificados/certificado-javascript.png');
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-size: contain;
+    /* Hace que la imagen se ajuste al contenedor sin recortarse */
+    width: 100%;
+    /* Ajusta el ancho del contenedor */
+    height: 100%;
+    /* Mantiene la relación de aspecto */
+    max-height: 400px;
+    /* Establece una altura máxima */
+}
+
+.reactJs {
+    background-image: url('../assets/images/certificados/certificado-ReactJs.png');
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-size: contain;
+    /* Hace que la imagen se ajuste al contenedor sin recortarse */
+    width: 100%;
+    /* Ajusta el ancho del contenedor */
+    height: 100%;
+    /* Mantiene la relación de aspecto */
+    max-height: 400px;
+    /* Establece una altura máxima */
+}
+
+
+.reactNative {
+    background-image: url('../assets/images/certificados/certificado-ReactNative.png');
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-size: contain;
+    /* Hace que la imagen se ajuste al contenedor sin recortarse */
+    width: 100%;
+    /* Ajusta el ancho del contenedor */
+    height: 100%;
+    /* Mantiene la relación de aspecto */
+    max-height: 400px;
+    /* Establece una altura máxima */
+}
+
+.python {
+    background-image: url('../assets/images/certificados/Python-Full-Stack.png');
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-size: contain;
+    /* Hace que la imagen se ajuste al contenedor sin recortarse */
+    width: 100%;
+    /* Ajusta el ancho del contenedor */
+    height: 100%;
+    /* Mantiene la relación de aspecto */
+    max-height: 400px;
+    /* Establece una altura máxima */
+}
+
+
+
+.certificaciones-container {
+    padding: 2.5rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.certificaciones-title {
+    font-family: 'new amsterdam';
+    font-size: 6rem;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    /* text-gray-800 */
+    text-transform: capitalize;
+    text-shadow: 2px 2px 10px black;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.certificaciones-title:hover {
+
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.499);
+    transition: all 0.3s ease-in-out;
+    /* dark:text-white */
+}
+
+.certificaciones-description {
+    margin-top: 1rem;
+    text-align: start;
+    font-size: 2rem;
+    color: #cccccc;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0px 0px 5px rgba(255, 255, 255, 0.1);
+    /* Sombras sutiles */
+
+    font-family: 'Montserrat';
+    font-style: italic;
+    /* text-gray-500 */
+}
+
+
+
+.certificaciones-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px;
+}
+
+
+
+.certificaciones-card {
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    height: 20rem;
+    width: 100%;
+    /* h-96 */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
+        /* Sombra sutil y definida */
+        4px 4px 6px rgba(0, 0, 0, 0.4);
+
+}
+
+.certificaciones-card:hover .certificaciones-overlay {
+    opacity: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
+        /* Sombra sutil y definida */
+        4px 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.certificaciones-overlay {
+    position: absolute;
+    height: 20rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(31, 41, 55, 0.6);
+    /* bg-gray-800/60 */
+    backdrop-filter: blur(10px);
+    /* backdrop-blur-sm */
+    transition: opacity 0.7s ease;
+    opacity: 0;
+}
+
+
+.certificaciones-title-card {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+    text-transform: capitalize;
+}
+
+.certificaciones-subtitle {
+    margin-top: 0.5rem;
+    font-size: 1.125rem;
+    letter-spacing: 0.1rem;
+    color: #60a5fa;
+    /* text-blue-400 */
+    text-transform: uppercase;
+}
+
+.certificaciones-subtitle {
+    margin-top: 0.5rem;
+    font-size: 1.125rem;
+    letter-spacing: 0.1rem;
+    color: #60a5fa;
+    /* Color de texto */
+    text-transform: uppercase;
+    text-decoration: none;
+    /* Opcional: elimina el subrayado predeterminado de los enlaces */
+}
+
+.certificaciones-subtitle:hover {
+    text-decoration: underline;
+    /* Opcional: añade un subrayado al pasar el ratón sobre el enlace */
+}
+
+.tech-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.tech-section h3 {
+    font-family: 'New Amsterdam';
+    font-size: 100px;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+.tech-section h3:hover {
+    text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+.tech-icons {
+    padding-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 9rem;
+
+
+}
+
+
+
+.tech-icon {
+    font-size: 60px;
+    width: 50px;
+    /* Ajusta el tamaño según sea necesario */
+    height: 50px;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6);
+
+
+}
+
+/* Media Queries para pantallas medianas (tablets y pantallas de 768px a 1024px) */
+@media (max-width: 1024px) {
+
+   
+    .certificaciones-title {
+        font-size: 4rem; /* Reduce el tamaño del título */
+    }
+
+    .certificaciones-description {
+        font-size: 1.5rem; /* Ajusta el tamaño de la descripción */
+    }
+
+    .certificaciones-card {
+        
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.0),
+            /* Sombra sutil y definida */
+            4px 4px 6px rgba(0, 0, 0, 0.0);
+    
+    }
+
+    .certificaciones-card:hover .certificaciones-overlay {
+        opacity: 0;
+        text-shadow: none;
+        
+    }
+
+    
+
+    .desarrolloWeb{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        
+       
+    }
+    .python{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+    }    
+    .reactNative{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .reactJs{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain; 
+    }
+
+    .javaScript{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain; 
+    }
+
+    .carrera{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain; 
+    }
+
+    .certificaciones-grid {
+        grid-template-columns: 1fr; /* Cambia a una columna */
+    }
+
+   
+   
+    .tech-section h3 {
+        font-size: 60px; /* Reduce el tamaño del título de la sección tecnológica */
+    }
+
+    .tech-icons {
+        gap: 6rem; /* Reduce el espacio entre íconos */
+    }
+
+    .tech-icon {
+        font-size: 40px; /* Reduce el tamaño de los íconos */
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Media Queries para pantallas pequeñas (móviles hasta 768px) */
+@media (max-width: 768px) {
+    .certificaciones-title {
+        font-size: 3rem; /* Ajuste más drástico del título */
+    }
+
+    .certificaciones-description {
+        font-size: 1.25rem; /* Reduce el tamaño del texto descriptivo */
+    }
+
+    .certificaciones-grid {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+        gap: 1rem; /* Menos espacio entre tarjetas */
+    }
+
+    .certificaciones-card {
+        height: 12rem; /* Reduce aún más la altura de las tarjetas */
+    }
+
+    .tech-section h3 {
+        font-size: 50px; /* Reduce el título de la sección tecnológica */
+    }
+
+    .tech-icons {
+        gap: 4rem; /* Menor espacio entre los íconos */
+    }
+
+    .tech-icon {
+        font-size: 35px; /* Tamaño reducido para íconos en móviles */
+        width: 35px;
+        height: 35px;
+    }
+    .certificaciones-card:hover .certificaciones-overlay {
+        opacity: 0;
+        text-shadow: none;
+        
+    }
+}
+
+/* Media Queries para pantallas extra pequeñas (móviles hasta 480px) */
+@media (max-width: 480px) {
+    .certificaciones-title {
+        font-size: 2.5rem; /* Reduce el título para pantallas muy pequeñas */
+    }
+
+    .certificaciones-description {
+        font-size: 1rem; /* Texto aún más pequeño */
+    }
+
+    .certificaciones-grid {
+        gap: 0.5rem; /* Menor espacio entre tarjetas */
+    }
+
+    .certificaciones-card {
+        height: 10rem; /* Reduce la altura de las tarjetas */
+    }
+
+    .tech-section h3 {
+        font-size: 40px; /* Más pequeño para la sección tecnológica */
+    }
+
+    .tech-icons {
+        gap: 3rem; /* Menos espacio entre íconos */
+    }
+
+    .tech-icon {
+        font-size: 30px; /* Tamaño pequeño para los íconos */
+        width: 30px;
+        height: 30px;
+    }
+    .certificaciones-card:hover .certificaciones-overlay {
+        opacity: 0;
+        text-shadow: none;
+        cursor: none;
+        
+    }
+}
+

@@ -1,0 +1,34 @@
+.download-cv-btn {
+    font-family: 'new Amsterdam';
+    font-size: 20px;
+    background-color: transparent; /* Fondo transparente */
+    color: white; /* Texto blanco */
+    padding: 10px 20px;
+    border: 2px solid white; /* Bordes blancos */
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para elevar un poco */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    
+}
+
+.download-cv-btn i{
+    margin-left: 10px;
+    color: white; /* Texto blanco */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.download-cv-btn:hover {
+    background-color: #68e8f9a3;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Más sombra al hacer hover */
+}
+
+.download-container {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    
+    margin-left: 40px;
+}
+
+  

@@ -1,0 +1,94 @@
+
+footer {
+  background: linear-gradient(45deg, rgba(24, 43, 54, 0.518) 0%, rgba(30,50,60,1) 100%);
+  padding: 25px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.footer-left{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 60px;
+}
+/* Contenedor del footer */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  
+}
+
+/* Estilos para el texto con íconos */
+.footer-left p {
+  margin: 5px 0; /* Ajusta el espaciado entre líneas */
+  color: white;
+  font-family: 'new amsterdam';
+  font-size: 16px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-shadow: 5px 5px 8px rgb(0, 0, 0); /* Añade una sombra leve a los íconos */
+  
+}
+
+.footer-left p:hover{
+  color: #00bfff92;
+  transform: scale(1.1);
+  text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+}
+
+.footer-left i {
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+  font-size: 18px; /* Tamaño del icono */
+}
+
+/* Estilos para los enlaces de redes sociales */
+.footer-right a {
+  color: white;
+  font-size: 26px;
+  margin: 0 15px;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 5px 5px 8px rgb(0, 0, 0); /* Añade una sombra leve a los íconos */
+}
+
+.footer-right a:hover {
+  color: #00bfffb7;
+  transform: scale(1.1);
+  text-shadow: 0 0 10px rgba(0, 191, 255, 0.7); /* Sombra brillante en el hover */
+  
+}
+
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer-right a {
+    margin: 10px;
+  }
+  .footer-right a {
+    color: white;
+    font-size: 26px;
+    margin: 0 20px;
+    transition: all 0.3s ease-in-out;
+    text-shadow: 5px 5px 8px rgb(0, 0, 0); /* Añade una sombra leve a los íconos */
+  }
+}
+
+  
+  
+ 
