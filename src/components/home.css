@@ -195,3 +195,10 @@
         margin: -10px 10px;  /* Ajusta el margen entre los enlaces */
     }
 }
+
+@media (max-width: 420px){
+    .container-links h1 {
+        font-size: 80px; /* Reduce el tamaño de la fuente en pantallas medianas */
+        margin: -10px 10px;  /* Ajusta el margen entre los enlaces */
+    }
+}

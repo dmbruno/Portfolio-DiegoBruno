@@ -389,3 +389,19 @@
         margin-top: 5px; /* Ajustar márgenes del contenedor de botones */
     }
 }
+
+@media (max-width: 420px){
+    .contact-info-container {
+      display: none;
+        
+    }
+    .contact-form-container{
+        padding: 10px 10px;
+        
+        flex: none; /* Quitar flex para que cada card tenga su tamaño propio */
+        width: 150%; /* Ajustar el ancho de cada card, dejando espacio a los lados */
+        align-self: center; /* Agregar margen para dejar espacio alrededor de las cards */
+        padding: 20px; /* Agregar padding para reducir el tamaño visible de las cards */
+        
+    }
+}
