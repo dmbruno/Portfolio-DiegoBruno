@@ -48,7 +48,7 @@ footer {
 }
 
 .footer-left i {
-  margin-right: 10px; /* Espacio entre el icono y el texto */
+  margin-right: 5px; /* Espacio entre el icono y el texto */
   font-size: 18px; /* Tamaño del icono */
 }
 
@@ -89,6 +89,19 @@ footer {
   }
 }
 
+@media (max-width: 768px){
+  .footer-left p {
+     /* Ajusta el espaciado entre líneas */
+    color: white;
+    font-family: 'new amsterdam';
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 5px 5px 8px rgb(0, 0, 0); /* Añade una sombra leve a los íconos */
+    
+  }
+}
   
   
  
