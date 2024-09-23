@@ -179,5 +179,22 @@
 
     .content-area p {
         font-size: 18px;
+    } 
+}
+
+@media (max-width: 400px) {
+    .sidebar-item {
+        font-size: 12px;
+    }
+    .content-area h2{
+        font-size: 16px;
+    }
+    .content-area p{
+        font-size: 12px;
+    }
+
+
+    .container-principal h3 {
+        font-size: 30px;
     }
 }
