@@ -32,7 +32,7 @@ const Carousel = () => {
                     <div className="carousel-inner">
                         <div className="carousel-item active">
                             <img src={fondoUbm} className="d-block w-100" alt="Foto para ubm" />
-                            <div className="carousel-caption ubm d-none d-md-block">
+                            <div className="carousel-caption ubm ">
                                 <h5>UBM - Viajes y Turismo</h5>
                                 <p>App Web para la carga de datos de pasajeros.</p>
                                 <a
@@ -62,7 +62,7 @@ const Carousel = () => {
                         </div>
                         <div className="carousel-item">
                             <img src={menuInteractivo} className="d-block w-100" alt="..." />
-                            <div className="carousel-caption menuInteractivo d-none d-md-block">
+                            <div className="carousel-caption menuInteractivo">
                                 <h5>Menu Interactivo</h5>
                                 <p>Menu Interactivo / carrito de compras para Bar.</p>
                                 <a
@@ -77,7 +77,7 @@ const Carousel = () => {
                         </div>
                         <div className="carousel-item">
                             <img src={fonfoGrizzly} className="d-block w-100" alt="..." />
-                            <div className="carousel-caption grizzly d-none d-md-block">
+                            <div className="carousel-caption grizzly">
                                 <h5>App Movil para la gestión de pedidos</h5>
                                 <p>Menu interactivo para eliminar la espera en los Bares y Cafe.</p>
                                 <a
