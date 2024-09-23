@@ -47,7 +47,7 @@ const Carousel = () => {
                         </div>
                         <div className="carousel-item">
                             <img src={fondoAqua} className="d-block w-100" alt="..." />
-                            <div className="carousel-caption aqua d-none d-md-block">
+                            <div className="carousel-caption aqua">
                                 <h5>Aqua s.a.s</h5>
                                 <p>App Web para el calculo de presupuestos rapido y facil.</p>
                                 <a
