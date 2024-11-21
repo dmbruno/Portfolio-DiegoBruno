@@ -97,7 +97,7 @@ const Carousel = () => {
                             </div>
                         </div>
 
-                        <div className="carousel-item active">
+                        <div className="carousel-item">
                             <img src={chatbotUBM} className="d-block w-100" alt="Foto para ubm" />
                             <div className="carousel-caption ubm">
                                 <h5>ChatBot - UBM</h5>
@@ -113,7 +113,7 @@ const Carousel = () => {
                             </div>
                         </div>
 
-                        <div className="carousel-item active">
+                        <div className="carousel-item">
                             <img src={chatbootSaludPulmonar} className="d-block w-100" alt="Foto para ubm" />
                             <div className="carousel-caption ubm">
                                 <h5>ChatBot - Salud Pulmonar Salta</h5>
@@ -129,7 +129,7 @@ const Carousel = () => {
                             </div>
                         </div>
 
-                        <div className="carousel-item active">
+                        <div className="carousel-item">
                             <img src={chatbotInformativo} className="d-block w-100" alt="Foto para ubm" />
                             <div className="carousel-caption ubm">
                                 <h5>ChatBot - Informativo</h5>
