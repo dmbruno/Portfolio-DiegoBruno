@@ -7,6 +7,9 @@ import fondoAqua from '../assets/images/fondoAqua.jpg'
 import menuInteractivo from '../assets/images/fondoMenuInteractivo.jpg'
 import fonfoGrizzly from '../assets/images/fondoGrizzly.jpg'
 import github from '../assets/images/contribucionesGithub.png'
+import chatbotUBM from '../assets/images/chatBotUBM.png'
+import chatbootSaludPulmonar from '../assets/images/chatbotSaludPulmonar.png'
+import chatbotInformativo from '../assets/images/chatbotInformativo.png'
 
 
 
@@ -28,6 +31,9 @@ const Carousel = () => {
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
                     </div>
                     <div className="carousel-inner">
                         <div className="carousel-item active">
@@ -90,6 +96,55 @@ const Carousel = () => {
                                 </a>
                             </div>
                         </div>
+
+                        <div className="carousel-item active">
+                            <img src={chatbotUBM} className="d-block w-100" alt="Foto para ubm" />
+                            <div className="carousel-caption ubm">
+                                <h5>ChatBot - UBM</h5>
+                                <p>ChatBot para la gestion de cotizaciones y mas ...</p>
+                                <a
+                                    href="https://github.com/dmbruno/UBM-BOT-WhatsApp"
+                                    className="btn btn-outline-info btn-sm mt-2"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Mira el repo en Github
+                                </a>
+                            </div>
+                        </div>
+
+                        <div className="carousel-item active">
+                            <img src={chatbootSaludPulmonar} className="d-block w-100" alt="Foto para ubm" />
+                            <div className="carousel-caption ubm">
+                                <h5>ChatBot - Salud Pulmonar Salta</h5>
+                                <p>ChatBot para la gestion de turnos y mas ...</p>
+                                <a
+                                    href="https://github.com/dmbruno/Bot-SaludPS"
+                                    className="btn btn-outline-info btn-sm mt-2"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Mira el repo en Github
+                                </a>
+                            </div>
+                        </div>
+
+                        <div className="carousel-item active">
+                            <img src={chatbotInformativo} className="d-block w-100" alt="Foto para ubm" />
+                            <div className="carousel-caption ubm">
+                                <h5>ChatBot - Informativo</h5>
+                                <p>ChatBot para que los usuarios se informen sobre usos y ventajas</p>
+                                <a
+                                    href="https://github.com/dmbruno/ChatbotInformativo-DB"
+                                    className="btn btn-outline-info btn-sm mt-2"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Mira el repo en Github
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
                     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
