@@ -25,6 +25,7 @@ function About() {
                 <div className="about-image">
                     <img src={fotoColor} alt="about" />
                 </div>
+                
 
 
             </div>
