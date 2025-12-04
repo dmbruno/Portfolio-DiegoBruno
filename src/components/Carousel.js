@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from 'react-i18next';
 import "./carousel.css";
 import fondoWebGauchosGuemes from "../assets/images/fondoWebGauchosGuemes.jpg";
-import chatbotUBM from "../assets/images/chatbotUBM.png";
+
 import fondoChatBotUBM from "../assets/images/fondoChatBotUBM.png";
 import fondoChatBotInformativo from "../assets/images/fondoChatBotInformativo.jpg";
 import fondoKipuBank from "../assets/images/fondoKipuBank.png";
