@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--spacing-5xl) 0;
+  
   background-color: var(--color-bg-primary);
   overflow-x: hidden;
   width: 100%;
@@ -355,6 +355,11 @@
 
 /* Responsive - Mobile (≤768px) - cuando aparece hamburguesa */
 @media (max-width: 768px) {
+  /* Ajustar padding del contenedor para alinearlo con otros componentes */
+  .works-container {
+    padding: 0 var(--spacing-lg);
+  }
+
   /* Reorganizar con Flexbox para mostrar TODO en orden */
   .featured-project {
     margin-bottom: var(--spacing-5xl);
