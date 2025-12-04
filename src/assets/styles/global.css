@@ -310,20 +310,4 @@ button {
 
 /* === RESPONSIVE === */
 
-@media (max-width: 768px) {
-  h1 {
-    font-size: var(--font-size-4xl);
-  }
-  
-  h2 {
-    font-size: var(--font-size-3xl);
-  }
-  
-  h3 {
-    font-size: var(--font-size-2xl);
-  }
-  
-  .section {
-    padding: var(--spacing-3xl) 0;
-  }
-}
+

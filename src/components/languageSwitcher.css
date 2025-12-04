@@ -33,9 +33,4 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .language-switcher {
-    padding: 6px 12px;
-    font-size: var(--font-size-xs);
-  }
-}
+
