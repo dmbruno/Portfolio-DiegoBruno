@@ -14,6 +14,8 @@
   padding: 0 var(--spacing-2xl);
   max-width: 1600px;
   margin: 0 auto;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .home-content {
@@ -229,12 +231,19 @@
 
 /* === RESPONSIVE DESIGN === */
 
-/* Tablets y pantallas medianas (991px y menos) */
-@media (max-width: 991px) {
+/* Desktop Large (1440px+) */
+@media (min-width: 1440px) {
+  .container-home {
+    padding: 0 var(--spacing-5xl);
+  }
+}
+
+/* Tablets y pantallas medianas (1024px y menos) */
+@media (max-width: 1024px) {
   .container-home {
     grid-template-columns: 1fr;
-    gap: var(--spacing-5xl);
-    padding: var(--spacing-5xl) var(--spacing-xl);
+    gap: var(--spacing-4xl);
+    padding: var(--spacing-5xl) var(--spacing-2xl);
   }
 
   .home-content {
@@ -243,19 +252,21 @@
 
   .container-links {
     justify-self: start;
+    width: 100%;
   }
 
   .container-links h1 {
-    font-size: clamp(1.8rem, 5vw, 3.5rem);
+    font-size: clamp(2rem, 6vw, 4rem);
   }
 }
 
-/* Smartphones y pantallas pequeñas (768px y menos) */
+/* Tablets pequeñas (768px y menos) */
 @media (max-width: 768px) {
   .container-home {
     padding: var(--spacing-4xl) var(--spacing-lg);
-    min-height: calc(100vh - 80px);
-    gap: var(--spacing-4xl);
+    padding-top: calc(var(--spacing-5xl) + 60px); /* Espacio para el header */
+    min-height: 100vh;
+    gap: var(--spacing-3xl);
   }
 
   .home-greeting {
@@ -264,61 +275,114 @@
   }
 
   .home-name {
-    font-size: clamp(2rem, 8vw, 3.5rem);
-    margin-bottom: var(--spacing-lg);
+    font-size: clamp(2rem, 10vw, 3rem);
+    margin-bottom: var(--spacing-xl);
   }
 
   .home-description {
     font-size: var(--font-size-base);
-    margin-bottom: var(--spacing-3xl);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-2xl);
+    max-width: 100%;
   }
 
   .home-cta {
     padding: var(--spacing-md) var(--spacing-2xl);
     font-size: var(--font-size-xs);
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .container-links {
+    gap: var(--spacing-sm);
   }
 
   .container-links h1 {
-    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
   }
 
   .container-links h1::before {
-    font-size: var(--font-size-base);
-    margin-right: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+    margin-right: var(--spacing-xs);
   }
 
   .container-links a:hover h1 {
-    transform: translateX(var(--spacing-sm));
+    transform: translateX(var(--spacing-xs));
+  }
+
+  .container-links a::after {
+    height: 2px;
   }
 }
 
-/* Pantallas muy pequeñas (480px y menos) */
+/* Mobile (480px y menos) */
 @media (max-width: 480px) {
   .container-home {
     padding: var(--spacing-3xl) var(--spacing-md);
-    gap: var(--spacing-3xl);
+    padding-top: calc(var(--spacing-4xl) + 60px);
+    gap: var(--spacing-2xl);
+  }
+
+  .home-greeting {
+    font-size: var(--font-size-xs);
+    margin-bottom: var(--spacing-sm);
   }
 
   .home-name {
-    font-size: clamp(1.8rem, 8vw, 2.5rem);
+    font-size: clamp(1.75rem, 10vw, 2.5rem);
+    margin-bottom: var(--spacing-lg);
   }
 
   .home-description {
     font-size: var(--font-size-sm);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .home-cta {
+    padding: var(--spacing-sm) var(--spacing-xl);
+    font-size: 0.75rem;
+    width: 100%;
+    max-width: 250px;
   }
 
   .container-links h1 {
-    font-size: clamp(1.3rem, 5vw, 2rem);
+    font-size: clamp(1.5rem, 8vw, 2rem);
+    line-height: 1.2;
+  }
+
+  .container-links h1::before {
+    font-size: 0.75rem;
   }
 }
 
-/* Pantallas extra pequeñas (360px y menos) */
+/* Extra pequeñas (360px y menos) */
 @media (max-width: 360px) {
   .container-home {
     padding: var(--spacing-2xl) var(--spacing-sm);
+    padding-top: calc(var(--spacing-3xl) + 60px);
+    gap: var(--spacing-xl);
   }
 
-  .container-links gap {
-    gap: var(--spacing-xs);
+  .home-name {
+    font-size: clamp(1.5rem, 10vw, 2rem);
+  }
+
+  .home-description {
+    font-size: 0.85rem;
+  }
+
+  .container-links {
+    gap: 4px;
+  }
+
+  .container-links h1 {
+    font-size: clamp(1.2rem, 8vw, 1.6rem);
+  }
+
+  .home-cta {
+    font-size: 0.7rem;
+    padding: 10px var(--spacing-md);
   }
 }

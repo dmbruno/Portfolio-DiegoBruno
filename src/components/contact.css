@@ -3,12 +3,14 @@
    =================================== */
 
 .contact-section {
-  
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--spacing-3xl) var(--spacing-2xl);
+  padding: var(--spacing-5xl) var(--spacing-2xl);
   background-color: var(--color-bg-primary);
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .contact-container {
@@ -16,6 +18,7 @@
   width: 100%;
   margin: 0 auto;
   text-align: center;
+  padding: 0 var(--spacing-md);
 }
 
 /* === OVERLINE === */
@@ -93,10 +96,17 @@
 
 /* === RESPONSIVE === */
 
-/* Tablets */
-@media (max-width: 991px) {
+/* Desktop Large */
+@media (min-width: 1440px) {
   .contact-section {
-    padding: var(--spacing-4xl) var(--spacing-xl);
+    padding: var(--spacing-5xl) var(--spacing-4xl);
+  }
+}
+
+/* Tablets (1024px y menos) */
+@media (max-width: 1024px) {
+  .contact-section {
+    padding: var(--spacing-4xl) var(--spacing-2xl);
   }
 
   .contact-description {
@@ -104,46 +114,92 @@
   }
 }
 
-/* Mobile */
+/* Tablets pequeñas y Mobile (768px y menos) */
 @media (max-width: 768px) {
   .contact-section {
     padding: var(--spacing-3xl) var(--spacing-lg);
+    min-height: 80vh;
+  }
+
+  .contact-container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .contact-overline {
+    font-size: var(--font-size-xs);
+    margin-bottom: var(--spacing-md);
   }
 
   .contact-title {
-    font-size: var(--font-size-4xl);
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin-bottom: var(--spacing-lg);
   }
 
   .contact-description {
-    margin-bottom: var(--spacing-3xl);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-2xl);
   }
 
   .contact-button {
     padding: var(--spacing-md) var(--spacing-2xl);
     font-size: var(--font-size-sm);
+    margin-top: var(--spacing-lg);
   }
 }
 
-/* Small Mobile */
+/* Mobile (480px y menos) */
 @media (max-width: 480px) {
   .contact-section {
     padding: var(--spacing-2xl) var(--spacing-md);
+    min-height: 70vh;
+  }
+
+  .contact-container {
+    padding: 0;
   }
 
   .contact-overline {
-    font-size: var(--font-size-xs);
+    font-size: 0.75rem;
+    margin-bottom: var(--spacing-sm);
   }
 
   .contact-title {
-    font-size: var(--font-size-3xl);
+    font-size: clamp(1.75rem, 6vw, 2.25rem);
+    margin-bottom: var(--spacing-md);
   }
 
   .contact-description {
     font-size: var(--font-size-sm);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-xl);
   }
 
   .contact-button {
+    padding: var(--spacing-sm) var(--spacing-xl);
+    font-size: 0.85rem;
     width: 100%;
-    max-width: 280px;
+    max-width: 260px;
+    margin-top: var(--spacing-md);
+  }
+}
+
+/* Extra pequeñas (360px y menos) */
+@media (max-width: 360px) {
+  .contact-section {
+    padding: var(--spacing-xl) var(--spacing-sm);
+  }
+
+  .contact-title {
+    font-size: 1.75rem;
+  }
+
+  .contact-description {
+    font-size: 0.85rem;
+  }
+
+  .contact-button {
+    font-size: 0.8rem;
+    padding: 10px var(--spacing-lg);
   }
 }
