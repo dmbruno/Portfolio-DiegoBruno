@@ -70,11 +70,13 @@ function Header() {
             <li><Link to="certificaciones" className={`link-header ${scrolled ? 'scrolled' : ''}`} smooth={true} duration={500} onClick={closeMenu}>{t('nav.training')}</Link></li>
             <li><Link to="carousel" className={`link-header ${scrolled ? 'scrolled' : ''}`} smooth={true} duration={500} onClick={closeMenu}>{t('nav.projects')}</Link></li>
             <li><Link to="contact" className={`link-header ${scrolled ? 'scrolled' : ''}`} smooth={true} duration={500} onClick={closeMenu}>{t('nav.contact')}</Link></li>
+            {/* Botón de CV temporalmente oculto - actualizar CV antes de mostrar
             <li>
-              <a href="/CV-DiegoBruno.pdf" download className={`cv-download-link ${scrolled ? 'scrolled' : ''}`} onClick={closeMenu}>
+              <a href="/CV-DIegoBruno.pdf" download className={`cv-download-link ${scrolled ? 'scrolled' : ''}`} onClick={closeMenu}>
                 {t('nav.downloadCV')}
               </a>
             </li>
+            */}
             <li>
               <LanguageSwitcher />
             </li>
