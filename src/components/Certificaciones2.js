@@ -4,62 +4,74 @@ import './certificaciones2.css';
 
 import cloudFoundryLogo from '../assets/images/cloudfoundry.svg';
 
-
-
 const Certificaciones2 = () => {
     const { t } = useTranslation();
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(false);
     const sliderRef = useRef(null);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
     const certificates = [
-        {
-            className: 'desarrolloWeb',
-            
-        },
-        {
-            className: 'javaScript',
-            
-        },
-        {
-            className: 'reactJs',
-            
-        },
-        {
-            className: 'reactNative',
-            
-        },
-        {
-            className: 'carrera',
-            
-        },
-        {
-            className: 'python',
-            
-        }
+        { className: 'desarrolloWeb' },
+        { className: 'javaScript' },
+        { className: 'reactJs' },
+        { className: 'reactNative' },
+        { className: 'carrera' },
+        { className: 'python' }
     ];
 
-    // Duplicamos los certificados para crear el efecto infinito
-    const extendedCertificates = [...certificates, ...certificates, ...certificates];
+    // Para desktop - duplicamos los certificados
+    const extendedCertificates = isMobile 
+        ? certificates 
+        : [...certificates, ...certificates, ...certificates];
 
     useEffect(() => {
-        // Comenzar desde el medio del array extendido
-        setCurrentIndex(certificates.length);
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+        
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    // Función para obtener el ancho de la card según el viewport
+    // Detectar scroll en mobile para actualizar indicadores
+    useEffect(() => {
+        if (!isMobile || !sliderRef.current) return;
+
+        const handleScroll = () => {
+            const slider = sliderRef.current;
+            const scrollLeft = slider.scrollLeft;
+            const cardWidth = slider.querySelector('.certificaciones-card')?.offsetWidth || 0;
+            const gap = 24;
+            const index = Math.round(scrollLeft / (cardWidth + gap));
+            setCurrentIndex(index);
+        };
+
+        const slider = sliderRef.current;
+        slider?.addEventListener('scroll', handleScroll);
+        return () => slider?.removeEventListener('scroll', handleScroll);
+    }, [isMobile]);
+
+    // Solo para desktop
+    useEffect(() => {
+        if (isMobile) {
+            setCurrentIndex(0);
+            return;
+        }
+        setCurrentIndex(certificates.length);
+    }, [isMobile]);
+
     const getCardWidth = () => {
         const width = window.innerWidth;
         if (width <= 360) return 200;
         if (width <= 480) return 240;
-        if (width <= 768) return 360; // 40% de reducción de 600px
-        return 600; // Tamaño desktop por defecto
+        if (width <= 768) return 360;
+        return 600;
     };
 
     const [cardWidth, setCardWidth] = useState(getCardWidth());
-    const gap = 24; // var(--spacing-xl) aproximadamente 24px
+    const gap = 24;
 
-    // Actualizar cardWidth al redimensionar
     useEffect(() => {
         const handleResize = () => {
             setCardWidth(getCardWidth());
@@ -70,21 +82,22 @@ const Certificaciones2 = () => {
     }, []);
 
     const nextSlide = () => {
-        if (isTransitioning) return;
+        if (isTransitioning || isMobile) return;
         setIsTransitioning(true);
         setCurrentIndex(prev => prev + 1);
     };
 
     const prevSlide = () => {
-        if (isTransitioning) return;
+        if (isTransitioning || isMobile) return;
         setIsTransitioning(true);
         setCurrentIndex(prev => prev - 1);
     };
 
     const handleTransitionEnd = () => {
+        if (isMobile) return;
+        
         setIsTransitioning(false);
         
-        // Si llegamos al final del array, volvemos al inicio sin animación
         if (currentIndex >= certificates.length * 2) {
             setCurrentIndex(certificates.length);
             if (sliderRef.current) {
@@ -97,7 +110,6 @@ const Certificaciones2 = () => {
             }
         }
         
-        // Si llegamos al inicio del array, volvemos al final sin animación
         if (currentIndex <= 0) {
             setCurrentIndex(certificates.length);
             if (sliderRef.current) {
@@ -121,14 +133,14 @@ const Certificaciones2 = () => {
                     {t('certifications.description')}
                 </p>
 
-                <div className="certificaciones-slider-wrapper">
+                <div className="certificaciones-slider-wrapper" ref={isMobile ? sliderRef : null}>
                     <div 
-                        ref={sliderRef}
+                        ref={!isMobile ? sliderRef : null}
                         className="certificaciones-grid" 
-                        style={{ 
+                        style={!isMobile ? { 
                             transform: `translateX(-${translateX}px)`,
                             transition: isTransitioning ? 'transform 0.5s ease-in-out' : 'none'
-                        }}
+                        } : {}}
                         onTransitionEnd={handleTransitionEnd}
                     >
                         {extendedCertificates.map((cert, index) => (
@@ -141,7 +153,7 @@ const Certificaciones2 = () => {
                     </div>
                 </div>
 
-                {/* Controles del slider */}
+                {/* Controles del slider - solo desktop */}
                 <div className="slider-controls">
                     <button className="slider-arrow" onClick={prevSlide}>
                         ←
@@ -156,10 +168,23 @@ const Certificaciones2 = () => {
                     {certificates.map((_, index) => (
                         <div
                             key={index}
-                            className={`slider-dot ${(currentIndex % certificates.length) === index ? 'active' : ''}`}
+                            className={`slider-dot ${
+                                isMobile 
+                                    ? currentIndex === index ? 'active' : ''
+                                    : (currentIndex % certificates.length) === index ? 'active' : ''
+                            }`}
                             onClick={() => {
-                                setIsTransitioning(true);
-                                setCurrentIndex(certificates.length + index);
+                                if (isMobile) {
+                                    const slider = sliderRef.current;
+                                    const cardWidth = slider?.querySelector('.certificaciones-card')?.offsetWidth || 0;
+                                    slider?.scrollTo({
+                                        left: index * (cardWidth + gap),
+                                        behavior: 'smooth'
+                                    });
+                                } else {
+                                    setIsTransitioning(true);
+                                    setCurrentIndex(certificates.length + index);
+                                }
                             }}
                         />
                     ))}

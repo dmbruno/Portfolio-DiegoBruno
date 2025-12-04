@@ -390,15 +390,39 @@
   }
 
   .certificaciones-slider-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+    width: 100%;
+    padding: 0;
     min-height: auto;
-    padding: var(--spacing-md) 0;
+  }
+
+  /* Ocultar scrollbar en webkit */
+  .certificaciones-slider-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .certificaciones-grid {
+    display: flex !important;
+    flex-direction: row;
+    gap: var(--spacing-xl);
+    padding: 0 var(--spacing-lg);
+    transform: none !important;
+    transition: none !important;
   }
 
   /* 600px - 40% = 360px */
   .certificaciones-card {
-    min-width: 360px;
-    width: 360px;
+    flex: 0 0 85vw; /* Cada tarjeta ocupa 85% del viewport */
+    max-width: 360px;
+    min-width: 280px;
     height: 247px;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
   }
 
   .slider-arrow {
@@ -407,8 +431,15 @@
     font-size: var(--font-size-lg);
   }
 
+  /* Ocultar controles en mobile */
   .slider-controls {
-    margin-top: var(--spacing-lg);
+    display: none !important;
+  }
+
+  /* Mantener indicadores visibles */
+  .slider-indicators {
+    display: flex;
+    margin-top: var(--spacing-xl);
   }
 
   .tech-section {
