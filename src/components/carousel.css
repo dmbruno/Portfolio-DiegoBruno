@@ -52,6 +52,12 @@
   opacity: 0.3;
 }
 
+/* === MOBILE FLIP CARD === */
+/* Oculto por defecto en desktop */
+.project-card-mobile {
+  display: none;
+}
+
 /* === FEATURED PROJECT LAYOUT === */
 .featured-project {
   display: grid;
@@ -343,6 +349,339 @@
 .project-counter .separator {
   margin: 0 var(--spacing-xs);
   color: var(--color-text-dim);
+}
+
+/* === MOBILE FLIP CARD STYLES === */
+
+/* Responsive - Mobile (≤768px) - cuando aparece hamburguesa */
+@media (max-width: 768px) {
+  /* Reorganizar con Flexbox para mostrar TODO en orden */
+  .featured-project {
+    margin-bottom: var(--spacing-5xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+  }
+
+  /* ORDEN MOBILE:
+     1. Featured Label
+     2. Título
+     3. Imagen/Descripción (flip card)
+     4. Tecnologías (DEBAJO de la imagen)
+     5. Links (DEBAJO de la imagen)
+  */
+
+  /* Ocultar imagen desktop */
+  .project-image {
+    display: none !important;
+  }
+
+  /* Mostrar .project-content pero sin descripción */
+  .project-content {
+    display: flex !important;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    width: 100%;
+    grid-column: unset;
+    text-align: left;
+    padding: 0;
+    position: static;
+    z-index: unset;
+  }
+
+  /* 1. Featured Label */
+  .project-label {
+    order: 1;
+    text-align: left;
+    margin: 0;
+  }
+
+  .project-featured {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    color: var(--color-primary);
+    opacity: 1;
+  }
+
+  /* 2. Título */
+  .project-title {
+    order: 2;
+    text-align: left;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    color: var(--color-text-bright);
+    margin: 0;
+    width: 100%;
+  }
+
+  /* Ocultar descripción desktop (se muestra en flip) */
+  .project-description,
+  .project-description-right,
+  .project-description-left {
+    display: none !important;
+  }
+
+  /* 3. Flip Card - centrado */
+  .project-card-mobile {
+    order: 3;
+    display: block;
+    perspective: 1500px;
+    width: 95%;
+    margin: 0 auto;
+    min-height: 400px;
+    cursor: pointer;
+    position: relative;
+    align-self: center;
+  }
+
+  .project-card-mobile > .card-front,
+  .project-card-mobile > .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    backface-visibility: hidden;
+    transition: transform 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Frente - Imagen (sin opacidad) */
+  .card-front {
+    transform: rotateY(0deg);
+    z-index: 2;
+  }
+
+  .project-card-mobile.flipped .card-front {
+    transform: rotateY(180deg);
+  }
+
+  .card-front .image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+  }
+
+  /* Quitar overlay para que la imagen se vea más clara en mobile */
+  .card-front .image-wrapper::before {
+    display: none;
+  }
+
+  .card-front img {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    opacity: 1;
+    filter: none;
+    mix-blend-mode: normal;
+  }
+
+  .tap-indicator {
+    position: absolute;
+    bottom: var(--spacing-xl);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--color-primary);
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    z-index: 2;
+    background-color: rgba(10, 25, 47, 0.9);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    animation: pulse 2s infinite;
+    opacity: 1;
+  }
+
+  /* Ocultar el botón tapToFlip cuando la card está volteada */
+  .project-card-mobile.flipped .tap-indicator {
+    display: none;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: translateX(-50%) scale(1); }
+    50% { opacity: 0.95; transform: translateX(-50%) scale(1.05); }
+  }
+
+  /* Reverso - Descripción */
+  .card-back {
+    transform: rotateY(-180deg);
+    background: linear-gradient(
+      135deg,
+      rgba(23, 42, 69, 0.98) 0%,
+      rgba(10, 25, 47, 0.98) 100%
+    );
+    backdrop-filter: blur(10px);
+    padding: var(--spacing-3xl) var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .project-card-mobile.flipped .card-back {
+    transform: rotateY(0deg);
+  }
+
+  .card-back-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    width: 100%;
+  }
+
+  .project-description-mobile {
+    font-size: clamp(0.95rem, 3vw, 1.1rem);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin: 0;
+    text-align: left;
+    opacity: 1;
+  }
+
+  .project-description-mobile strong {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .tap-to-return {
+    margin-top: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    color: var(--color-primary);
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    background-color: rgba(100, 255, 218, 0.15);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: 8px;
+    opacity: 1;
+  }
+
+  /* 4. Tecnologías (sin título) */
+  .project-tech-list {
+    order: 4;
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .project-tech-list li {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+    background-color: rgba(100, 255, 218, 0.1);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 4px;
+    opacity: 1;
+  }
+
+  /* 5. Links */
+  .project-links {
+    order: 5;
+    display: flex !important;
+    gap: var(--spacing-lg);
+    justify-content: flex-start;
+    margin: 0;
+    width: 100%;
+  }
+
+  .project-link {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-xl);
+    transition: all var(--transition-base);
+    opacity: 1;
+  }
+
+  .project-link:hover {
+    color: var(--color-primary);
+    transform: translateY(-3px);
+  }
+
+  /* Ajustar título para coincidir con otros componentes */
+  .works-title {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+  }
+
+  .works-title::after {
+    width: 80px;
+  }
+
+  /* Ajustes para pantallas más pequeñas */
+  @media (max-width: 480px) {
+    .project-card-mobile {
+      width: 98%;
+      min-height: 350px;
+    }
+
+    .project-card-mobile > .card-front,
+    .project-card-mobile > .card-back {
+      min-height: 350px;
+    }
+
+    .card-front .image-wrapper,
+    .card-front img {
+      min-height: 350px;
+    }
+
+    .project-title {
+      font-size: clamp(1.25rem, 4.5vw, 1.75rem);
+    }
+
+    .project-description-mobile {
+      font-size: clamp(0.9rem, 3vw, 1rem);
+      line-height: 1.6;
+    }
+
+    .card-back {
+      padding: var(--spacing-2xl) var(--spacing-lg);
+    }
+  }
+
+  @media (max-width: 360px) {
+    .project-card-mobile {
+      width: 100%;
+      min-height: 320px;
+    }
+
+    .project-card-mobile > .card-front,
+    .project-card-mobile > .card-back {
+      min-height: 320px;
+    }
+
+    .card-front .image-wrapper,
+    .card-front img {
+      min-height: 320px;
+    }
+
+    .project-title {
+      font-size: clamp(1.1rem, 4vw, 1.5rem);
+    }
+
+    .project-description-mobile {
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    .card-back {
+      padding: var(--spacing-xl) var(--spacing-md);
+    }
+  }
 }
 
 /* === RESPONSIVE === */

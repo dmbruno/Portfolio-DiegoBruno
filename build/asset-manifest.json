@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3f61a5b8.css",
-    "main.js": "/static/js/main.43c445a8.js",
+    "main.css": "/static/css/main.cb1cfaa0.css",
+    "main.js": "/static/js/main.65229a66.js",
     "static/js/453.66266d61.chunk.js": "/static/js/453.66266d61.chunk.js",
     "static/media/fondoChatBotInformativo.jpg": "/static/media/fondoChatBotInformativo.329a453d2955a222c1d4.jpg",
     "static/media/fondoWebGauchosGuemes.jpg": "/static/media/fondoWebGauchosGuemes.4b1fda9212feeea751b3.jpg",
@@ -16,12 +16,12 @@
     "static/media/fotoColor.jpeg": "/static/media/fotoColor.74b445591971438bbef5.jpeg",
     "static/media/cloudfoundry.svg": "/static/media/cloudfoundry.b2e54b27ed1b15bae675c42698c2fd76.svg",
     "index.html": "/index.html",
-    "main.3f61a5b8.css.map": "/static/css/main.3f61a5b8.css.map",
-    "main.43c445a8.js.map": "/static/js/main.43c445a8.js.map",
+    "main.cb1cfaa0.css.map": "/static/css/main.cb1cfaa0.css.map",
+    "main.65229a66.js.map": "/static/js/main.65229a66.js.map",
     "453.66266d61.chunk.js.map": "/static/js/453.66266d61.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3f61a5b8.css",
-    "static/js/main.43c445a8.js"
+    "static/css/main.cb1cfaa0.css",
+    "static/js/main.65229a66.js"
   ]
 }

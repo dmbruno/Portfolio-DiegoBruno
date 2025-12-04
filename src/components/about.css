@@ -141,3 +141,113 @@
 /* Desktop Large */
 
 /* Tablets (1024px y menos) */
+@media (max-width: 1024px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-3xl);
+  }
+
+  .about-image {
+    order: -1; /* Imagen arriba */
+  }
+
+  .about-image img {
+    max-width: 320px;
+  }
+
+  .about-text h2::after {
+    width: 150px;
+  }
+}
+
+/* Mobile (768px y menos) - cuando aparece el menú hamburguesa */
+@media (max-width: 768px) {
+  .about-section {
+    padding: var(--spacing-4xl) var(--spacing-lg);
+    gap: var(--spacing-3xl);
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  /* Texto primero, imagen después */
+  .about-text {
+    order: 1;
+  }
+
+  .about-image {
+    order: 2;
+  }
+
+  .about-image img {
+    max-width: 196px; /* 280px - 30% = 196px */
+  }
+
+  .about-image::before {
+    max-width: 196px;
+    top: 12px;
+    left: 12px;
+  }
+
+  .about-text h2 {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+  }
+
+  .about-text h2::after {
+    width: 80px;
+  }
+
+  .about-text p {
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+  }
+
+  .about-parteDos {
+    gap: var(--spacing-2xl);
+    margin-top: var(--spacing-2xl);
+  }
+}
+
+/* Small Mobile (480px y menos) */
+@media (max-width: 480px) {
+  .about-section {
+    padding: var(--spacing-3xl) var(--spacing-md);
+  }
+
+  .about-content {
+    gap: var(--spacing-xl);
+  }
+
+  .about-image img {
+    max-width: 154px; /* 220px - 30% = 154px */
+  }
+
+  .about-image::before {
+    max-width: 154px;
+    top: 8px;
+    left: 8px;
+  }
+
+  .about-text h2::after {
+    display: none; /* Ocultar línea decorativa en mobile pequeño */
+  }
+
+  .about-text p {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* Extra Small (360px y menos) */
+@media (max-width: 360px) {
+  .about-image img {
+    max-width: 126px; /* 180px - 30% = 126px */
+  }
+
+  .about-image::before {
+    max-width: 126px;
+    top: 6px;
+    left: 6px;
+  }
+}

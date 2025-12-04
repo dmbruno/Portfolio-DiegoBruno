@@ -239,6 +239,21 @@
   overflow: hidden;
   position: relative;
   padding: var(--spacing-2xl) 0;
+}
+
+.tech-carousel {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.tech-carousel-track {
+  display: flex;
+  gap: var(--spacing-3xl);
+  animation: scroll-tech 30s linear infinite;
+  width: max-content;
   mask-image: linear-gradient(
     to right,
     transparent,
@@ -255,16 +270,9 @@
   );
 }
 
-.tech-carousel {
-  width: 100%;
-  position: relative;
-}
-
-.tech-carousel-track {
-  display: flex;
-  gap: var(--spacing-3xl);
-  animation: scroll-tech 30s linear infinite;
-  width: max-content;
+/* Segunda fila con animación inversa */
+.tech-carousel-track:nth-child(2) {
+  animation: scroll-tech-reverse 30s linear infinite;
 }
 
 .tech-carousel-track:hover {
@@ -277,6 +285,15 @@
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-tech-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
@@ -324,3 +341,189 @@
 /* === RESPONSIVE === */
 
 /* Desktop Large */
+@media (min-width: 1440px) {
+  .certificaciones-section {
+    padding: var(--spacing-5xl) var(--spacing-4xl);
+  }
+}
+
+/* Tablets (1024px y menos) */
+@media (max-width: 1024px) {
+  .certificaciones-section {
+    padding: var(--spacing-4xl) var(--spacing-2xl);
+  }
+
+  .certificaciones-title::after {
+    width: 150px;
+  }
+
+  .tech-section h3::after {
+    width: 150px;
+  }
+
+  .certificaciones-card {
+    min-width: 500px;
+    width: 500px;
+    height: 343px;
+  }
+}
+
+/* Mobile (768px y menos) - cuando aparece el menú hamburguesa */
+/* AQUÍ se reduce un 40% del tamaño original */
+@media (max-width: 768px) {
+  .certificaciones-section {
+    padding: var(--spacing-4xl) var(--spacing-lg);
+    gap: var(--spacing-3xl);
+  }
+
+  .certificaciones-title {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+  }
+
+  .certificaciones-title::after {
+    width: 80px;
+  }
+
+  .certificaciones-description {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .certificaciones-slider-wrapper {
+    min-height: auto;
+    padding: var(--spacing-md) 0;
+  }
+
+  /* 600px - 40% = 360px */
+  .certificaciones-card {
+    min-width: 360px;
+    width: 360px;
+    height: 247px;
+  }
+
+  .slider-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: var(--font-size-lg);
+  }
+
+  .slider-controls {
+    margin-top: var(--spacing-lg);
+  }
+
+  .tech-section {
+    padding-left: 0;
+    margin-top: var(--spacing-2xl);
+  }
+
+  .tech-section h3 {
+    font-size: var(--font-size-lg);
+  }
+
+  .tech-section h3::before {
+    font-size: var(--font-size-sm);
+  }
+
+  .tech-section h3::after {
+    width: 80px;
+  }
+
+  .tech-icon {
+    font-size: 2.5rem;
+  }
+
+  .tech-icon-img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+/* Small Mobile (480px y menos) */
+@media (max-width: 480px) {
+  .certificaciones-section {
+    padding: var(--spacing-3xl) var(--spacing-md);
+  }
+
+  .certificaciones-title::before {
+    font-size: var(--font-size-base);
+  }
+
+  .certificaciones-title::after {
+    display: none;
+  }
+
+  /* Reducción adicional para pantallas pequeñas */
+  .certificaciones-card {
+    min-width: 300px;
+    width: 300px;
+    height: 206px;
+  }
+
+  .slider-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: var(--font-size-base);
+  }
+
+  .slider-dot {
+    width: 8px;
+  }
+
+  .slider-dot.active {
+    width: 24px;
+  }
+
+  .tech-section h3::after {
+    display: none;
+  }
+
+  .tech-icon {
+    font-size: 2rem;
+  }
+
+  .tech-icon-img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .tech-carousel {
+    gap: var(--spacing-md);
+  }
+
+  .tech-carousel-track {
+    gap: var(--spacing-2xl);
+  }
+}
+
+/* Extra Small (360px y menos) */
+@media (max-width: 360px) {
+  .certificaciones-section {
+    padding: var(--spacing-2xl) var(--spacing-sm);
+    gap: var(--spacing-2xl);
+  }
+
+  .certificaciones-title {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .certificaciones-card {
+    min-width: 200px;
+    width: 200px;
+    height: 137px;
+  }
+
+  .slider-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: var(--font-size-sm);
+  }
+
+  .tech-icon {
+    font-size: 1.8rem;
+  }
+
+  .tech-icon-img {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}

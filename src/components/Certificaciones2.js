@@ -4,13 +4,6 @@ import './certificaciones2.css';
 
 import cloudFoundryLogo from '../assets/images/cloudfoundry.svg';
 
-// Importar certificados
-import certDesarrolloWeb from '../assets/images/certificados/certificado-desarrolloWeb.png';
-import certJavaScript from '../assets/images/certificados/certificado-javascript.png';
-import certReactJs from '../assets/images/certificados/certificado-ReactJs.png';
-import certReactNative from '../assets/images/certificados/certificado-ReactNative.png';
-import certCarrera from '../assets/images/certificados/certificado-carreraDesarrolloDeApp.png';
-import certPython from '../assets/images/certificados/Python-Full-Stack.png';
 
 
 const Certificaciones2 = () => {
@@ -22,27 +15,27 @@ const Certificaciones2 = () => {
     const certificates = [
         {
             className: 'desarrolloWeb',
-            image: certDesarrolloWeb,
+            
         },
         {
             className: 'javaScript',
-            image: certJavaScript,
+            
         },
         {
             className: 'reactJs',
-            image: certReactJs,
+            
         },
         {
             className: 'reactNative',
-            image: certReactNative,
+            
         },
         {
             className: 'carrera',
-            image: certCarrera,
+            
         },
         {
             className: 'python',
-            image: certPython,
+            
         }
     ];
 
@@ -54,8 +47,27 @@ const Certificaciones2 = () => {
         setCurrentIndex(certificates.length);
     }, []);
 
-    const cardWidth = 600; // ancho de cada card + gap
+    // Función para obtener el ancho de la card según el viewport
+    const getCardWidth = () => {
+        const width = window.innerWidth;
+        if (width <= 360) return 200;
+        if (width <= 480) return 240;
+        if (width <= 768) return 360; // 40% de reducción de 600px
+        return 600; // Tamaño desktop por defecto
+    };
+
+    const [cardWidth, setCardWidth] = useState(getCardWidth());
     const gap = 24; // var(--spacing-xl) aproximadamente 24px
+
+    // Actualizar cardWidth al redimensionar
+    useEffect(() => {
+        const handleResize = () => {
+            setCardWidth(getCardWidth());
+        };
+        
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const nextSlide = () => {
         if (isTransitioning) return;
@@ -119,14 +131,8 @@ const Certificaciones2 = () => {
                         }}
                         onTransitionEnd={handleTransitionEnd}
                     >
-                    {extendedCertificates.map((cert, index) => (
-                            <div 
-                                key={index} 
-                                className={`certificaciones-card ${cert.className}`}
-                                style={{
-                                    backgroundImage: `url(${cert.image})`
-                                }}
-                            >
+                        {extendedCertificates.map((cert, index) => (
+                            <div key={index} className={`certificaciones-card ${cert.className}`}>
                                 <div className="certificaciones-overlay">
                                     <h2 className="certificaciones-title-card">{cert.title}</h2>
                                 </div>
@@ -163,6 +169,7 @@ const Certificaciones2 = () => {
                 <h3>{t('certifications.technologies')}</h3>
                 <div className="tech-carousel-wrapper">
                     <div className="tech-carousel">
+                        {/* Primera fila - dirección normal */}
                         <div className="tech-carousel-track">
                             <i className="fab fa-python tech-icon"></i>
                             <i className="fab fa-react tech-icon"></i>
@@ -172,15 +179,6 @@ const Certificaciones2 = () => {
                             <i className="fab fa-sass tech-icon"></i>
                             <i className="fab fa-node-js tech-icon"></i>
                             <i className="fab fa-git tech-icon"></i>
-                            <i className="fab fa-github tech-icon"></i>
-                            <i className="fab fa-bootstrap tech-icon"></i>
-                            <i className="fab fa-docker tech-icon"></i>
-                            <i className="fas fa-database tech-icon"></i>
-                            <i className="fab fa-npm tech-icon"></i>
-                            <i className="fab fa-figma tech-icon"></i>
-                            <i className="fab fa-ethereum tech-icon"></i>
-                            
-                            <img src={cloudFoundryLogo} alt="Cloud Foundry" className="tech-icon tech-icon-img tech-icon-cloudfoundry" />
                             
                             {/* Duplicado para efecto infinito */}
                             <i className="fab fa-python tech-icon"></i>
@@ -191,6 +189,10 @@ const Certificaciones2 = () => {
                             <i className="fab fa-sass tech-icon"></i>
                             <i className="fab fa-node-js tech-icon"></i>
                             <i className="fab fa-git tech-icon"></i>
+                        </div>
+                        
+                        {/* Segunda fila - dirección inversa */}
+                        <div className="tech-carousel-track">
                             <i className="fab fa-github tech-icon"></i>
                             <i className="fab fa-bootstrap tech-icon"></i>
                             <i className="fab fa-docker tech-icon"></i>
@@ -198,9 +200,17 @@ const Certificaciones2 = () => {
                             <i className="fab fa-npm tech-icon"></i>
                             <i className="fab fa-figma tech-icon"></i>
                             <i className="fab fa-ethereum tech-icon"></i>
-                           
                             <img src={cloudFoundryLogo} alt="Cloud Foundry" className="tech-icon tech-icon-img tech-icon-cloudfoundry" />
                             
+                            {/* Duplicado para efecto infinito */}
+                            <i className="fab fa-github tech-icon"></i>
+                            <i className="fab fa-bootstrap tech-icon"></i>
+                            <i className="fab fa-docker tech-icon"></i>
+                            <i className="fas fa-database tech-icon"></i>
+                            <i className="fab fa-npm tech-icon"></i>
+                            <i className="fab fa-figma tech-icon"></i>
+                            <i className="fab fa-ethereum tech-icon"></i>
+                            <img src={cloudFoundryLogo} alt="Cloud Foundry" className="tech-icon tech-icon-img tech-icon-cloudfoundry" />
                         </div>
                     </div>
                 </div>

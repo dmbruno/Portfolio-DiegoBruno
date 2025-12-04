@@ -267,6 +267,16 @@
     padding-top: calc(var(--spacing-5xl) + 60px); /* Espacio para el header */
     min-height: 100vh;
     gap: var(--spacing-3xl);
+    grid-template-columns: 1fr; /* Una sola columna */
+  }
+
+  /* OCULTAR LOS LINKS DE NAVEGACIÓN EN MOBILE */
+  .container-links {
+    display: none;
+  }
+
+  .home-content {
+    max-width: 100%;
   }
 
   .home-greeting {
@@ -292,27 +302,6 @@
     width: 100%;
     max-width: 300px;
     text-align: center;
-  }
-
-  .container-links {
-    gap: var(--spacing-sm);
-  }
-
-  .container-links h1 {
-    font-size: clamp(1.8rem, 8vw, 2.5rem);
-  }
-
-  .container-links h1::before {
-    font-size: var(--font-size-sm);
-    margin-right: var(--spacing-xs);
-  }
-
-  .container-links a:hover h1 {
-    transform: translateX(var(--spacing-xs));
-  }
-
-  .container-links a::after {
-    height: 2px;
   }
 }
 

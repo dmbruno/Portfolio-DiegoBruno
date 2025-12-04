@@ -2,14 +2,21 @@ import React, { useState } from "react";
 import { useTranslation } from 'react-i18next';
 import "./carousel.css";
 import fondoWebGauchosGuemes from "../assets/images/fondoWebGauchosGuemes.jpg";
-
 import fondoChatBotUBM from "../assets/images/fondoChatBotUBM.png";
 import fondoChatBotInformativo from "../assets/images/fondoChatBotInformativo.jpg";
 import fondoKipuBank from "../assets/images/fondoKipuBank.png";
 
 const Carousel = () => {
   const { t } = useTranslation();
-  
+  const [flippedCards, setFlippedCards] = useState({});
+
+  const toggleFlip = (projectId) => {
+    setFlippedCards(prev => ({
+      ...prev,
+      [projectId]: !prev[projectId]
+    }));
+  };
+
   const projects = [
     {
       id: 1,
@@ -72,6 +79,36 @@ const Carousel = () => {
 
         {projects.map((project, index) => (
           <div key={project.id} className="featured-project">
+            {/* Card con flip para mobile - SOLO imagen y descripción */}
+            <div 
+              className={`project-card-mobile ${flippedCards[project.id] ? 'flipped' : ''}`}
+              onClick={() => toggleFlip(project.id)}
+            >
+              {/* Frente - SOLO Imagen */}
+              <div className="card-front">
+                <div className="image-wrapper">
+                  <img src={project.image} alt={t(project.titleKey)} />
+                </div>
+                <div className="tap-indicator">
+                  <i className="fas fa-hand-pointer"></i>
+                  <span>{t('projects.tapToFlip') || 'Toca para ver descripción'}</span>
+                </div>
+              </div>
+
+              {/* Reverso - SOLO Descripción */}
+              <div className="card-back">
+                <div className="card-back-content">
+                  <p className="project-description-mobile" dangerouslySetInnerHTML={{ __html: t(project.descriptionKey) }}></p>
+                  
+                  <div className="tap-to-return">
+                    <i className="fas fa-redo"></i>
+                    <span>{t('projects.tapToReturn') || 'Toca para volver'}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Layout desktop original + info mobile */}
             <div className="project-content">
               <div className="project-label">
                 <span className="project-featured">{t('projects.featured')}</span>

@@ -68,7 +68,7 @@ const resources = {
       "certifications.technologies": "Tecnologías",
       
       // Projects
-      "projects.title": "Proyectos en los que trabajé",
+      "projects.title": "Proyectos ...",
       "projects.featured": "Proyecto Destacado",
       "projects.viewMore": "Explora más!",
       "projects.demo": "Demo",
@@ -97,7 +97,7 @@ const resources = {
       "contact.cta": "Hablemos!",
       
       // Footer
-      "footer.builtBy": "Construido por Diego Bruno © 2023",
+      "footer.builtBy": "Construido por Diego Bruno © 2024",
     }
   },
   en: {
@@ -164,7 +164,7 @@ const resources = {
       "certifications.technologies": "Technologies",
       
       // Projects
-      "projects.title": "Projects I've Worked On",
+      "projects.title": "Projects ...",
       "projects.featured": "Featured Project",
       "projects.viewMore": "Explore more!",
       "projects.demo": "Demo",
@@ -193,7 +193,7 @@ const resources = {
       "contact.cta": "Let's Talk!",
       
       // Footer
-      "footer.builtBy": "Built by Diego Bruno © 2023",
+      "footer.builtBy": "Built by Diego Bruno © 2024",
     }
   }
 };
