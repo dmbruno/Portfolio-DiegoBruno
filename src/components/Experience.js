@@ -1,31 +1,40 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import './experience.css';
 
 const Experience = () => {
+    const { t } = useTranslation();
     // Estado para manejar la experiencia seleccionada
-    const [selectedExperience, setSelectedExperience] = useState('experience1');
+    const [selectedExperience, setSelectedExperience] = useState('saltalabs');
 
     // Información de las experiencias laborales
     const experiences = {
+        saltalabs: {
+            title: t('experience.saltalabs.title'),
+            company: t('experience.saltalabs.company'),
+            period: t('experience.saltalabs.period'),
+            description: t('experience.saltalabs.description'),
+            link: 'https://saltalabs.com/es/'
+        },
         experience1: {
-            title: 'Programador en Bellify.io',
-            description: 'Fui contratado para desarrollar un producto utilizando FlutterFlow, una tecnología con la que no tenía experiencia previa. A través de investigación autodidacta y aprendizaje rápido, logré dominar la herramienta y cumplir con éxito los requisitos del proyecto. Mi capacidad para adaptarme a nuevas tecnologías y superar obstáculos técnicos fue clave para el desarrollo exitoso.'
+            title: t('experience.bellify.title'),
+            description: t('experience.bellify.description')
         },
         experience2: {
-            title: 'Comerciante Independiente',
-            description: 'Propietario y gerente de un lubricentro durante más de 6 años, especializado en mantenimiento ligero de vehículos. Gestioné cuentas con proveedores y clientes, incluyendo corporativos, además de listas de precios, control de stock, y liquidación de sueldos e impuestos. Desarrollé habilidades clave en administración, logística y atención al cliente.'
+            title: t('experience.comerciante.title'),
+            description: t('experience.comerciante.description')
         },
         experience3: {
-            title: 'Propietario de Bar',
-            description: 'Propietario y gerente de un bar durante más de 3 años, liderando un equipo de 4 personas. Gestioné de manera integral el negocio, incluyendo la administración de cuentas con proveedores y clientes, control de stock, compras, liquidación de sueldos e impuestos. Desarrollé sólidas habilidades organizativas y de gestión, destacándome por la capacidad de tomar decisiones bajo presión y asegurar el funcionamiento eficiente del negocio.'
+            title: t('experience.bar.title'),
+            description: t('experience.bar.description')
         },
         experience4: {
-            title: 'Telecom Personal S.A',
-            description: 'Como supervisor de la oficina comercial, gestioné eficientemente los tiempos de espera y la atención al cliente en diversas colas de servicio. Atendí casos especiales, asegurando una experiencia fluida para usuarios finales y corporativos. Lideré un equipo de 30 personas, trabajando en conjunto para alcanzar métricas clave de calidad y gestión, impulsando la satisfacción y fidelización en un entorno dinámico.'
+            title: t('experience.telecom.title'),
+            description: t('experience.telecom.description')
         },
         experience5: {
-            title: 'Centro De Contactos Salta S.A',
-            description: 'Lideré equipos de hasta 30 personas en la atención telefónica para clientes como Movistar y Telefónica. Guié al equipo para cumplir con métricas clave, incluyendo calidad de atención, tiempos de resolución y eficiencia operativa, siguiendo las directrices del cliente. Mi enfoque en la supervisión directa contribuyó a mantener altos estándares de servicio y un rendimiento sobresaliente.'
+            title: t('experience.contactos.title'),
+            description: t('experience.contactos.description')
         },
     };
 
@@ -36,7 +45,7 @@ const Experience = () => {
 
     return (
         <div className='container-principal'>
-            <h3>Experiencias previas...</h3>
+            <h3>{t('experience.title')}</h3>
             <div className="experience-container">
                 <div className="sidebar">
                     {Object.keys(experiences).map((experienceKey) => (
@@ -51,7 +60,25 @@ const Experience = () => {
                 </div>
 
                 <div className="content-area">
-                    <h2>{experiences[selectedExperience].title}</h2>
+                    <h2>
+                        {experiences[selectedExperience].title}
+                        {experiences[selectedExperience].company && (
+                            <>
+                                {' '}
+                                <a 
+                                    href={experiences[selectedExperience].link} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="company-link"
+                                >
+                                    {experiences[selectedExperience].company}
+                                </a>
+                            </>
+                        )}
+                    </h2>
+                    {experiences[selectedExperience].period && (
+                        <p className="experience-period">{experiences[selectedExperience].period}</p>
+                    )}
                     <p>{experiences[selectedExperience].description}</p>
                 </div>
             </div>

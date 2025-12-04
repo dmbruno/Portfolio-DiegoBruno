@@ -1,18 +1,137 @@
-/* Archivo: variables.css */
+/* ===================================
+   VARIABLES CSS GLOBALES
+   =================================== */
 
 :root {
-    
-    --white: #FFFFFF;
-    --black: #000000;
+  /* === COLORES - Estilo Brittany Chiang (Minimalista) === */
   
-    /* Escala de grises */
-    --gray-light: #F0F0F0;
-    --gray-medium: #B0B0B0;
-    --gray-dark: #505050;
-    --anthracite: #2C2C2C;
-    --silver: #D0D0D0;
-    --charcoal: #333333;
-    --gray-soft: #E0E0E0;
-    --gray-fog: #A8A8A8;
-  }
+  /* Colores primarios - Verde azulado suave */
+  --color-primary: #64ffda;
+  --color-primary-dark: #52d4b0;
+  --color-primary-light: #8cffe8;
   
+  /* Colores de fondo - Azul marino oscuro */
+  --color-bg-primary: #0a192f;
+  --color-bg-secondary: #112240;
+  --color-bg-card: rgba(17, 34, 64, 0.8);
+  --color-bg-hover: rgba(100, 255, 218, 0.1);
+  
+  /* Colores de texto - Paleta sobria */
+  --color-text-primary: #ccd6f6;
+  --color-text-secondary: #8892b0;
+  --color-text-muted: #495670;
+  --color-text-dark: #0a192f;
+  --color-text-bright: #e6f1ff;
+  
+  /* Colores de acento */
+  --color-accent: #64ffda;
+  --color-success: #64ffda;
+  --color-warning: #FFC107;
+  --color-info: #64ffda;
+  
+  /* === TIPOGRAFÍA === */
+  
+  /* Familias de fuentes - Tipografía moderna y legible */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Lucida Console', Monaco, monospace;
+  --font-code: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  
+  /* Tamaños de fuente - Sistema escalable */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+  --font-size-6xl: 4rem;      /* 64px */
+  --font-size-7xl: 5rem;      /* 80px */
+  --font-size-8xl: 6rem;      /* 96px */
+  
+  /* Peso de fuentes */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* Altura de línea */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+  
+  /* === ESPACIADO === */
+  
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  --spacing-3xl: 4rem;     /* 64px */
+  --spacing-4xl: 6rem;     /* 96px */
+  --spacing-5xl: 8rem;     /* 128px */
+  
+  /* === BORDES === */
+  
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-2xl: 24px;
+  --border-radius-full: 9999px;
+  
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-thick: 4px;
+  
+  /* === SOMBRAS === */
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-glow: 0 0 20px rgba(0, 217, 255, 0.5);
+  
+  /* === TRANSICIONES === */
+  
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+  
+  /* === Z-INDEX === */
+  
+  --z-index-dropdown: 1000;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-modal-backdrop: 1040;
+  --z-index-modal: 1050;
+  --z-index-popover: 1060;
+  --z-index-tooltip: 1070;
+  
+  /* === ANCHOS MÁXIMOS === */
+  
+  --max-width-xs: 320px;
+  --max-width-sm: 640px;
+  --max-width-md: 768px;
+  --max-width-lg: 1024px;
+  --max-width-xl: 1280px;
+  --max-width-2xl: 1536px;
+  --max-width-full: 100%;
+  
+  /* === BREAKPOINTS (para referencia en media queries) === */
+  /* Usar directamente en @media queries, no como variables CSS */
+  /* 
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  */
+}

@@ -1,416 +1,149 @@
-.contact-section {
-    background-image: url(../assets/images/indexFinal.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-   
+/* ===================================
+   CONTACT - GET IN TOUCH
+   =================================== */
 
+.contact-section {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-3xl) var(--spacing-2xl);
+  background-color: var(--color-bg-primary);
 }
 
 .contact-container {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    gap: 100px;
-    
-    margin-bottom: 200px;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.contact-form-container {
-    border: 1px solid white;
-    flex: 1;
-    padding: 50px 70px;
-    background-color: rgba(255, 255, 255, 0.53);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8); /* Sombra más intensa */
+/* === OVERLINE === */
+.contact-overline {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+  font-weight: var(--font-weight-normal);
 }
 
-
-.contact-form-container h2 {
-    font-size: 60px;
-    font-family: 'New Amsterdam';
-    color: white;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
-        /* Sombra sutil y definida */
-        4px 4px 6px rgba(0, 0, 0, 0.4);
-}
-
-
-.contact-info-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: 1px solid white;
-    flex: 1;
-    background-color: rgba(255, 255, 255, 0.53);
-    border-radius: 8px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8); 
-    padding: 50px 70px;
-}
-
-.contact-info {
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    margin-top: 110px;
-    color: white;
-    
-    
-    
-}
-
+/* === TITLE === */
 .contact-title {
-    font-size: 60px;
-    font-family: 'New Amsterdam';
-    color: white;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
-        /* Sombra sutil y definida */
-        4px 4px 6px rgba(0, 0, 0, 0.4);
+  font-size: clamp(2.5rem, 5vw, var(--font-size-5xl));
+  color: var(--color-text-bright);
+  margin-bottom: var(--spacing-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.1;
 }
 
-.data-container{
-    display: flex;
-    flex-direction: column;
-    
-    align-items: start;
-    background-color: rgba(6, 5, 5, 0.399);
-    border-radius: 8px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8); 
-    padding: 50px 70px;
-    margin-top: 50px;
+/* === DESCRIPTION === */
+.contact-description {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-lg);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-4xl);
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
-
-.data-container p {
-    font-family: 'New Amsterdam';
-    font-size: 28px;
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.789);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
-        /* Sombra sutil y definida */
-        4px 4px 6px rgba(0, 0, 0, 0.4); 
+/* === BUTTON === */
+.contact-button {
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: var(--spacing-lg) var(--spacing-3xl);
+  font-size: var(--font-size-base);
+  font-family: var(--font-mono);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: var(--spacing-2xl);
 }
 
-
-
-
-
-.social-icons-contact{
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-   
+.contact-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(100, 255, 218, 0.1);
+  transition: width 0.3s ease;
+  z-index: -1;
 }
 
-.social-icons-contact p{
-    display: flex;
-    justify-content: center;
-    font-size: 40px;
-    font-family: 'New Amsterdam';
-    color: white;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
-        /* Sombra sutil y definida */
-        4px 4px 6px rgba(0, 0, 0, 0.4);
-   
+.contact-button:hover::before {
+  width: 100%;
 }
 
-.icons-container{
-    display: flex;
-    justify-content: space-between;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
-        /* Sombra sutil y definida */
-        4px 4px 6px rgba(0, 0, 0, 0.4);
+.contact-button:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px -10px rgba(100, 255, 218, 0.3);
 }
 
-
-
-.social-icons-contact .linkedin {
-    color: white;
-    font-size: 3rem;
-
+.contact-button:active {
+  transform: translateY(-1px);
 }
 
-.linkedin:hover {
-    animation: bounce; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 1s; /* don't forget to set a duration! */
-    color: #68e8f9a3;
+/* === RESPONSIVE === */
 
+/* Tablets */
+@media (max-width: 991px) {
+  .contact-section {
+    padding: var(--spacing-4xl) var(--spacing-xl);
+  }
+
+  .contact-description {
+    font-size: var(--font-size-base);
+  }
 }
 
-
-.social-icons-contact .instagram {
-    color: white;
-    font-size: 3rem;
-}
-
-.instagram:hover {
-    animation: bounce; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 1s; /* don't forget to set a duration! */
-    color: #68e8f9a3;
-
-}
-
-
-.social-icons-contact .facebook {
-    color: white;
-    font-size: 3rem;
-}
-
-.facebook:hover {
-    animation: bounce; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 1s; /* don't forget to set a duration! */
-    color: #68e8f9a3;
-
-}
-
-
-
-.social-icons-contact .github {
-    color: white;
-    font-size: 3rem;
-    
-}
-
-
-.github:hover {
-    animation: bounce; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 1s; /* don't forget to set a duration! */
-    color: #68e8f9a3;
-
-}
-
-
-
-.contact-info a:hover {
-    text-decoration: underline;
-}
-
-.form-group {
-    margin-bottom: 20px;
-    text-align: left;
-    font-family: 'Montserrat';
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: white;
-    font-family: 'montserrat';
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
-        /* Sombra sutil y definida */
-        4px 4px 6px rgba(0, 0, 0, 0.4);
-
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.68);
-    background-color: white;
-    box-shadow: inset 4px 4px 3px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.1);
-    /* Sombra externa e interna */
-    transition: box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: #28A745;
-    /* Verde al hacer foco */
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2), 0 0 10px rgba(40, 167, 69, 0.5);
-    /* Resaltar al enfocar */
-}
-
-
-
-.form-group textarea {
-    height: 150px;
-    resize: vertical;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.68);
-}
-
-
-
-.status-message {
-    margin-top: 18px;
-    font-weight: bold;
-    font-family: 'Montserrat';
-    font-size: 15px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
-    /* Sombra sutil y definida */
-    4px 4px 6px rgba(255, 253, 253, 0.5);
-       
-
-}
-
-
-.social-icons-contact {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    color: white;
-    /* Color de los íconos */
-    font-size: 28px;
-    /* Tamaño de los íconos */
-    margin: 0 5px;
-    /* Espaciado entre íconos */
-    transition: color 0.3s ease;
-    /* Transición suave para el color */
-}
-
-.boton {
-    background-color: rgba(255, 255, 255, 0.426);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 50px;
-    border-radius: 8px;
-    margin-top: 5px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
-        /* Sombra sutil y definida */
-        4px 4px 6px rgba(0, 0, 0, 0.4);
-}
-
-.boton:hover {
-    background-color: #68e8f9a3;
-
-    
-}
-
-
-.boton i {
-    
-    
-    margin-left: 8px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
-        4px 4px 6px rgba(0, 0, 0, 0.4);
-    
-}
-
-.boton span {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
-        /* Sombra sutil y definida */
-        4px 4px 6px rgba(0, 0, 0, 0.4);
-    font-family: 'New Amsterdam';
-    margin-left: 8px;
-    font-size: 24px;
-    color: white;
-}
-
-
-
-
-.btn-container {    
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-}
-
-
-@media (max-width: 1260px) {
-    .contact-container {
-        padding: 100px;
-        flex-direction: column; /* Cambiar a columna en pantallas más pequeñas */
-        gap: 20px; /* Espaciado entre las cards */
-        margin-bottom: 60px ;
-    }
-
-    .contact-info-container,
-    .contact-form-container {
-        flex: none; /* Quitar flex para que cada card tenga su tamaño propio */
-        width: calc(100% - 40px); /* Ajustar el ancho de cada card, dejando espacio a los lados */
-        margin: 0 20px; /* Agregar margen para dejar espacio alrededor de las cards */
-        padding: 20px; /* Agregar padding para reducir el tamaño visible de las cards */
-    }
-}
-
-/* Media query para pantallas más pequeñas (por debajo de 768px) */
+/* Mobile */
 @media (max-width: 768px) {
-    .contact-form-container {
-        margin-bottom: 20px ;
-        padding: 15px; /* Ajustar padding para la forma de contacto */
-    }
+  .contact-section {
+    padding: var(--spacing-3xl) var(--spacing-lg);
+  }
 
-    .contact-form-container h2 {
-        font-size: 30px; /* Ajustar tamaño del texto del título en pantallas pequeñas */
-    }
+  .contact-title {
+    font-size: var(--font-size-4xl);
+  }
 
-    .data-container {
-        padding: 15px; /* Ajustar padding para la sección de datos */
-    }
+  .contact-description {
+    margin-bottom: var(--spacing-3xl);
+  }
 
-    .data-container p {
-        font-size: 20px; /* Ajustar tamaño del texto en pantallas pequeñas */
-    }
-
-    .form-group input,
-    .form-group textarea {
-        font-size: 14px; /* Ajustar tamaño del texto de los inputs */
-    }
-
-    .social-icons-contact p {
-        font-size: 24px; /* Ajustar tamaño del texto de los íconos sociales */
-    }
-
-    .social-icons-contact .linkedin,
-    .social-icons-contact .instagram,
-    .social-icons-contact .facebook,
-    .social-icons-contact .github {
-        font-size: 1.5rem; /* Ajustar tamaño de los íconos sociales */
-    }
-
-    .boton {
-        padding: 5px 15px; /* Ajustar tamaño del botón */
-    }
-
-    .btn-container {
-        margin-top: 5px; /* Ajustar márgenes del contenedor de botones */
-    }
+  .contact-button {
+    padding: var(--spacing-md) var(--spacing-2xl);
+    font-size: var(--font-size-sm);
+  }
 }
 
-@media (max-width: 420px){
-    .contact-info-container {
-        padding: 10px 10px;
-        flex: none; /* Quitar flex para que cada card tenga su tamaño propio */
-        width: 150%; /* Ajustar el ancho de cada card, dejando espacio a los lados */
-        align-self: center; /* Agregar margen para dejar espacio alrededor de las cards */
-        padding: 20px;
-        
-    }
-    .contact-form-container{
-        padding: 10px 10px;
-        flex: none; /* Quitar flex para que cada card tenga su tamaño propio */
-        width: 150%; /* Ajustar el ancho de cada card, dejando espacio a los lados */
-        align-self: center; /* Agregar margen para dejar espacio alrededor de las cards */
-        padding: 20px; /* Agregar padding para reducir el tamaño visible de las cards */
-        
-    }
-    .contact-title{
-        font-size: 30px;
-    }
+/* Small Mobile */
+@media (max-width: 480px) {
+  .contact-section {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+
+  .contact-overline {
+    font-size: var(--font-size-xs);
+  }
+
+  .contact-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .contact-description {
+    font-size: var(--font-size-sm);
+  }
+
+  .contact-button {
+    width: 100%;
+    max-width: 280px;
+  }
 }

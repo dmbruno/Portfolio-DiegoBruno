@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import '../src/assets/styles/App.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './i18n'; // Importar configuración de i18n
 
 
 

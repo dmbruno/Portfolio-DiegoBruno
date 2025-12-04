@@ -1,25 +1,36 @@
 import React from 'react';
+import { useTranslation, Trans } from 'react-i18next';
 import './about.css';
 
 import fotoColor from '../assets/images/fotoColor.jpeg';
-import DownloadCV from './DownloadCV';
 import Experience from './Experience';
 
 
 function About() {
+    const { t } = useTranslation();
+    
     return (
         <section id="about" className="about-section">
             <div className="about-content">
                 <div className="about-text">
-                    <h2>Hola,</h2>
+                    <h2>{t('about.title')}</h2>
                     <p>
-                        Soy <strong>Diego M. Bruno</strong>, un programador apasionado por resolver problemas a través del <strong>código</strong>. Tengo experiencia en <strong>HTML</strong>, <strong>CSS</strong>, <strong>Sass</strong>, <strong>JavaScript</strong>, <strong>ReactJS</strong>, <strong>React Native</strong>, y desarrollo <strong>Full Stack</strong> con <strong>Python</strong> y <strong>Flask</strong>. También manejo herramientas como <strong>Git</strong>, <strong>GitHub</strong>, <strong>MySQL</strong> y <strong>Firebase</strong>, <strong>entre otras...</strong>.
+                        <Trans i18nKey="about.paragraph1">
+                            ¡Hola! Mi nombre es Diego y disfruto crear cosas que viven en internet. Mi interés por el desarrollo web comenzó hace años cuando decidí aprender a construir mi primera aplicación — resulta que crear funcionalidades desde cero me enseñó mucho sobre <strong>JavaScript</strong> y <strong>React</strong>!
+                        </Trans>
                     </p>
                     <p>
-                        En mi carrera, he trabajado en proyectos <strong>desafiantes</strong> que me han permitido perfeccionar mis habilidades y ofrecer <strong>soluciones efectivas</strong>. Mi enfoque está en crear <strong>aplicaciones útiles</strong> y mejorar continuamente a través de la <strong>innovación</strong>.
+                        <Trans i18nKey="about.paragraph2">
+                            Avancemos al presente: he tenido el privilegio de trabajar en proyectos variados, desde aplicaciones web tradicionales hasta <strong>aplicaciones descentralizadas</strong>. Actualmente, mi enfoque principal está en construir productos accesibles en el ecosistema <strong>Web3</strong> y <strong>Blockchain</strong>, desarrollando <strong>smart contracts</strong> con <strong>Solidity</strong> y utilizando herramientas como <strong>Remix IDE</strong> y <strong>Foundry</strong>.
+                        </Trans>
                     </p>
                     <p>
-                        Si buscas a alguien comprometido con la <strong>excelencia</strong> y la <strong>resolución de problemas</strong>, estaré encantado de conectar contigo.
+                        <Trans i18nKey="about.paragraph3">
+                            También trabajo constantemente con tecnologías como <strong>React</strong>, <strong>React Native</strong>, <strong>Python</strong>, <strong>Node.js</strong>, <strong>Flask</strong>, y bases de datos <strong>Relacionales</strong> y <strong>NO-Relacionales</strong>.
+                        </Trans>
+                    </p>
+                    <p>
+                        
                     </p>
                 </div>
                 <div className="about-image">
@@ -30,9 +41,6 @@ function About() {
 
             </div>
             <div className='about-parteDos'>
-                <div className='container-download'>
-                    <DownloadCV />
-                </div>
                 <div className='experience'>
                     <Experience />
                 </div>

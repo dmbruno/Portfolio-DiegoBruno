@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.beb12118.css",
+    "main.js": "/static/js/main.0c032b7d.js",
+    "static/js/453.66266d61.chunk.js": "/static/js/453.66266d61.chunk.js",
+    "static/media/fondoMenuInteractivo.jpg": "/static/media/fondoMenuInteractivo.82340f728434d3a84e26.jpg",
+    "static/media/fondoUbm4.jpg": "/static/media/fondoUbm4.563265731d20f5f59733.jpg",
+    "static/media/fondoGrizzly.jpg": "/static/media/fondoGrizzly.4c0e2e0852b4445199de.jpg",
+    "static/media/certificado-desarrolloWeb.png": "/static/media/certificado-desarrolloWeb.1d1b8993f55b0c97c8d7.png",
+    "static/media/certificado-ReactNative.png": "/static/media/certificado-ReactNative.cd94771c7774a8113c43.png",
+    "static/media/certificado-javascript.png": "/static/media/certificado-javascript.9be8a8e6e138a9dda43d.png",
+    "static/media/certificado-carreraDesarrolloDeApp.png": "/static/media/certificado-carreraDesarrolloDeApp.162922aace218adb4b10.png",
+    "static/media/certificado-ReactJs.png": "/static/media/certificado-ReactJs.69b6a15c0455425695f2.png",
+    "static/media/Python-Full-Stack.png": "/static/media/Python-Full-Stack.2a8e0c3abc990594a62a.png",
+    "static/media/chatBotUBM.png": "/static/media/chatBotUBM.e2fd50476df4eeaf8a5d.png",
+    "static/media/chatbotSaludPulmonar.png": "/static/media/chatbotSaludPulmonar.996cb9cf51c69bbf36f4.png",
+    "static/media/chatbotInformativo.png": "/static/media/chatbotInformativo.b1fc4ce7f43a31fe92a2.png",
+    "static/media/fotoColor.jpeg": "/static/media/fotoColor.74b445591971438bbef5.jpeg",
+    "static/media/fondoAqua.jpg": "/static/media/fondoAqua.e3015fa3c51337156a01.jpg",
+    "static/media/contribucionesGithub.png": "/static/media/contribucionesGithub.a2cc6041e663ce9f25db.png",
+    "index.html": "/index.html",
+    "main.beb12118.css.map": "/static/css/main.beb12118.css.map",
+    "main.0c032b7d.js.map": "/static/js/main.0c032b7d.js.map",
+    "453.66266d61.chunk.js.map": "/static/js/453.66266d61.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.beb12118.css",
+    "static/js/main.0c032b7d.js"
+  ]
+}

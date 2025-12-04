@@ -1,441 +1,467 @@
-/* Estilos globales */
+/* ===================================
+   CERTIFICACIONES - GALERÍA ESTILO MINIMALISTA
+   =================================== */
+
 .certificaciones-section {
-    background-image: url('../assets/images/IndexMasDos.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-5xl) var(--spacing-2xl);
+  gap: var(--spacing-5xl);
 }
 
-.desarrolloWeb {
-    background-image: url('../assets/images/certificados/certificado-desarrolloWeb.png');
-    background-position: center;
-    /* Centra la imagen */
-    background-repeat: no-repeat;
-    /* Evita que la imagen se repita */
-    background-size: contain;
-    /* Hace que la imagen se ajuste al contenedor sin recortarse */
-    width: 100%;
-    /* Ajusta el ancho del contenedor */
-    height: 100%;
-    /* Mantiene la relación de aspecto */
-    max-height: 400px;
-    /* Establece una altura máxima */
-
-}
-
-.carrera {
-    background-image: url('../assets/images/certificados/certificado-carreraDesarrolloDeApp.png');
-    background-position: center;
-    /* Centra la imagen */
-    background-repeat: no-repeat;
-    /* Evita que la imagen se repita */
-    background-size: contain;
-    /* Hace que la imagen se ajuste al contenedor sin recortarse */
-    width: 100%;
-    /* Ajusta el ancho del contenedor */
-    height: 100%;
-    /* Mantiene la relación de aspecto */
-    max-height: 400px;
-    /* Establece una altura máxima */
-}
-
-.javaScript {
-    background-image: url('../assets/images/certificados/certificado-javascript.png');
-    background-position: center;
-    /* Centra la imagen */
-    background-repeat: no-repeat;
-    /* Evita que la imagen se repita */
-    background-size: contain;
-    /* Hace que la imagen se ajuste al contenedor sin recortarse */
-    width: 100%;
-    /* Ajusta el ancho del contenedor */
-    height: 100%;
-    /* Mantiene la relación de aspecto */
-    max-height: 400px;
-    /* Establece una altura máxima */
-}
-
-.reactJs {
-    background-image: url('../assets/images/certificados/certificado-ReactJs.png');
-    background-position: center;
-    /* Centra la imagen */
-    background-repeat: no-repeat;
-    /* Evita que la imagen se repita */
-    background-size: contain;
-    /* Hace que la imagen se ajuste al contenedor sin recortarse */
-    width: 100%;
-    /* Ajusta el ancho del contenedor */
-    height: 100%;
-    /* Mantiene la relación de aspecto */
-    max-height: 400px;
-    /* Establece una altura máxima */
-}
-
-
-.reactNative {
-    background-image: url('../assets/images/certificados/certificado-ReactNative.png');
-    background-position: center;
-    /* Centra la imagen */
-    background-repeat: no-repeat;
-    /* Evita que la imagen se repita */
-    background-size: contain;
-    /* Hace que la imagen se ajuste al contenedor sin recortarse */
-    width: 100%;
-    /* Ajusta el ancho del contenedor */
-    height: 100%;
-    /* Mantiene la relación de aspecto */
-    max-height: 400px;
-    /* Establece una altura máxima */
-}
-
-.python {
-    background-image: url('../assets/images/certificados/Python-Full-Stack.png');
-    background-position: center;
-    /* Centra la imagen */
-    background-repeat: no-repeat;
-    /* Evita que la imagen se repita */
-    background-size: contain;
-    /* Hace que la imagen se ajuste al contenedor sin recortarse */
-    width: 100%;
-    /* Ajusta el ancho del contenedor */
-    height: 100%;
-    /* Mantiene la relación de aspecto */
-    max-height: 400px;
-    /* Establece una altura máxima */
-}
-
-
-
+/* === CONTENEDOR === */
 .certificaciones-container {
-    padding: 2.5rem 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  width: 100%;
 }
 
 .certificaciones-title {
-    font-family: 'new amsterdam';
-    font-size: 6rem;
-    font-weight: 600;
-    text-align: center;
-    color: white;
-    /* text-gray-800 */
-    text-transform: capitalize;
-    text-shadow: 2px 2px 10px black;
-    transition: all 0.3s ease-in-out;
-
+  font-size: clamp(2rem, 5vw, var(--font-size-4xl));
+  color: var(--color-text-bright);
+  margin-bottom: var(--spacing-md);
+  position: relative;
+  display: inline-block;
+  width: fit-content;
 }
 
-.certificaciones-title:hover {
+/* Número de sección estilo Brittany */
+.certificaciones-title::before {
+  content: '03. ';
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  margin-right: var(--spacing-sm);
+  font-weight: var(--font-weight-normal);
+}
 
-    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.499);
-    transition: all 0.3s ease-in-out;
-    /* dark:text-white */
+/* Línea decorativa después del título */
+.certificaciones-title::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: calc(100% + var(--spacing-lg));
+  width: 300px;
+  height: 1px;
+  background-color: var(--color-text-muted);
+  opacity: 0.3;
 }
 
 .certificaciones-description {
-    margin-top: 1rem;
-    text-align: start;
-    font-size: 2rem;
-    color: #cccccc;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0px 0px 5px rgba(255, 255, 255, 0.1);
-    /* Sombras sutiles */
-
-    font-family: 'Montserrat';
-    font-style: italic;
-    /* text-gray-500 */
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-3xl);
+  max-width: 600px;
 }
 
-
+/* === GRID DE GALERÍA (SLIDER CONTINUO) === */
+.certificaciones-slider-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg) 0;
+}
 
 .certificaciones-grid {
-    display: grid;
-    gap: 2rem;
-    margin-top: 2rem;
-    grid-template-columns: 1fr 1fr;
-    padding: 50px;
+  display: flex;
+  gap: var(--spacing-xl);
+  transition: transform 0.5s ease-in-out;
+  width: max-content;
 }
 
-
-
+/* === CARDS (FOTOS) === */
 .certificaciones-card {
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    height: 20rem;
-    width: 100%;
-    /* h-96 */
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
-        /* Sombra sutil y definida */
-        4px 4px 6px rgba(0, 0, 0, 0.4);
-
+  position: relative;
+  min-width: 600px;
+  width: 600px;
+  aspect-ratio: 16 / 11;
+  border-radius: 12px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  flex-shrink: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.certificaciones-card:hover .certificaciones-overlay {
-    opacity: 1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
-        /* Sombra sutil y definida */
-        4px 4px 6px rgba(0, 0, 0, 0.4);
+.certificaciones-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
 }
 
+/* Controles de navegación */
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-2xl);
+}
+
+.slider-arrow {
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--border-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: var(--font-size-xl);
+  transition: all var(--transition-base);
+  user-select: none;
+  position: relative;
+}
+
+.slider-arrow:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(100, 255, 218, 0.2);
+}
+
+.slider-arrow:active {
+  transform: translateY(0);
+}
+
+.slider-arrow.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Indicadores de posición */
+.slider-indicators {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.slider-dot {
+  width: 10px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: rgba(100, 255, 218, 0.2);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.slider-dot:hover {
+  background-color: rgba(100, 255, 218, 0.5);
+}
+
+.slider-dot.active {
+  background-color: var(--color-primary);
+  width: 32px;
+}
+
+/* Overlay - ELIMINADO (sin hover) */
 .certificaciones-overlay {
-    position: absolute;
-    height: 20rem;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: rgba(31, 41, 55, 0.6);
-    /* bg-gray-800/60 */
-    backdrop-filter: blur(10px);
-    /* backdrop-blur-sm */
-    transition: opacity 0.7s ease;
-    opacity: 0;
+  display: none;
 }
 
-
-.certificaciones-title-card {
-    margin-top: 1rem;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: white;
-    text-transform: capitalize;
+/* === BACKGROUNDS PARA CADA CERTIFICADO === */
+.desarrolloWeb {
+  background-image: url('../assets/images/certificados/certificado-desarrolloWeb.png');
 }
 
-.certificaciones-subtitle {
-    margin-top: 0.5rem;
-    font-size: 1.125rem;
-    letter-spacing: 0.1rem;
-    color: #60a5fa;
-    /* text-blue-400 */
-    text-transform: uppercase;
+.carrera {
+  background-image: url('../assets/images/certificados/certificado-carreraDesarrolloDeApp.png');
 }
 
-.certificaciones-subtitle {
-    margin-top: 0.5rem;
-    font-size: 1.125rem;
-    letter-spacing: 0.1rem;
-    color: #60a5fa;
-    /* Color de texto */
-    text-transform: uppercase;
-    text-decoration: none;
-    /* Opcional: elimina el subrayado predeterminado de los enlaces */
+.javaScript {
+  background-image: url('../assets/images/certificados/certificado-javascript.png');
 }
 
-.certificaciones-subtitle:hover {
-    text-decoration: underline;
-    /* Opcional: añade un subrayado al pasar el ratón sobre el enlace */
+.reactJs {
+  background-image: url('../assets/images/certificados/certificado-ReactJs.png');
 }
 
+.reactNative {
+  background-image: url('../assets/images/certificados/certificado-ReactNative.png');
+}
+
+.python {
+  background-image: url('../assets/images/certificados/Python-Full-Stack.png');
+}
+
+/* === SECCIÓN DE TECNOLOGÍAS === */
 .tech-section {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding-top: 100px;
+  margin-top: var(--spacing-3xl);
+  padding-left: var(--spacing-xl);
 }
 
 .tech-section h3 {
-    font-family: 'New Amsterdam';
-    font-size: 100px;
-    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6);
-    transition: all 0.3s ease-in-out;
+  font-size: var(--font-size-xl);
+  color: var(--color-text-bright);
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+  display: inline-block;
+  font-weight: var(--font-weight-medium);
+  width: fit-content;
 }
 
-.tech-section h3:hover {
-    text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.9);
-    transition: all 0.3s ease-in-out;
+/* Numeración de subsección */
+.tech-section h3::before {
+  content: '03.1 ';
+  font-family: var(--font-mono);
+  font-size: var(--font-size-base);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-normal);
+  margin-right: var(--spacing-sm);
 }
 
-
-
-
-.tech-icons {
-    padding-top: 70px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 9rem;
-
-
+/* Línea decorativa después del título */
+.tech-section h3::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: calc(100% + var(--spacing-lg));
+  width: 200px;
+  height: 1px;
+  background-color: var(--color-text-muted);
+  opacity: 0.3;
 }
 
+/* === CARRUSEL DE TECNOLOGÍAS === */
+.tech-carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: var(--spacing-2xl) 0;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
 
+.tech-carousel {
+  width: 100%;
+  position: relative;
+}
+
+.tech-carousel-track {
+  display: flex;
+  gap: var(--spacing-3xl);
+  animation: scroll-tech 30s linear infinite;
+  width: max-content;
+}
+
+.tech-carousel-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-tech {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
 .tech-icon {
-    font-size: 60px;
-    width: 50px;
-    /* Ajusta el tamaño según sea necesario */
-    height: 50px;
-    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6);
-
-
+  font-size: 3.5rem;
+  color: var(--color-text-secondary);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  flex-shrink: 0;
+  opacity: 0.7;
 }
 
-/* Media Queries para pantallas medianas (tablets y pantallas de 768px a 1024px) */
-@media (max-width: 1024px) {
-
-   
-    .certificaciones-title {
-        font-size: 4rem; /* Reduce el tamaño del título */
-    }
-
-    .certificaciones-description {
-        font-size: 1.5rem; /* Ajusta el tamaño de la descripción */
-    }
-
-    .certificaciones-card {
-        
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.0),
-            /* Sombra sutil y definida */
-            4px 4px 6px rgba(0, 0, 0, 0.0);
-    
-    }
-
-    .certificaciones-card:hover .certificaciones-overlay {
-        opacity: 0;
-        text-shadow: none;
-        
-    }
-
-    
-
-    .desarrolloWeb{
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        
-       
-    }
-    .python{
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-
-    }    
-    .reactNative{
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-    .reactJs{
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain; 
-    }
-
-    .javaScript{
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain; 
-    }
-
-    .carrera{
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain; 
-    }
-
-    .certificaciones-grid {
-        grid-template-columns: 1fr; /* Cambia a una columna */
-    }
-
-   
-   
-    .tech-section h3 {
-        font-size: 60px; /* Reduce el tamaño del título de la sección tecnológica */
-    }
-
-    .tech-icons {
-        gap: 6rem; /* Reduce el espacio entre íconos */
-    }
-
-    .tech-icon {
-        font-size: 40px; /* Reduce el tamaño de los íconos */
-        width: 40px;
-        height: 40px;
-    }
+.tech-icon-img {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
-/* Media Queries para pantallas pequeñas (móviles hasta 768px) */
+/* Clase específica para CloudFoundry */
+.tech-icon-cloudfoundry {
+  filter: brightness(0) saturate(100%) invert(51%) sepia(10%) saturate(1044%) hue-rotate(177deg) brightness(92%) contrast(87%);
+  opacity: 0.7;
+}
+
+.tech-icon:hover {
+  color: var(--color-primary);
+  transform: translateY(-8px) scale(1.15);
+  opacity: 1;
+}
+
+.tech-icon-cloudfoundry:hover {
+  filter: brightness(0) saturate(100%) invert(88%) sepia(39%) saturate(3207%) hue-rotate(99deg) brightness(105%) contrast(101%);
+  transform: translateY(-8px) scale(1.15);
+  opacity: 1;
+}
+
+/* Eliminamos los estilos antiguos de tech-icons */
+.tech-icons {
+  display: none;
+}
+
+/* === RESPONSIVE === */
+
+/* Tablets */
+@media (max-width: 991px) {
+  .certificaciones-section {
+    padding: var(--spacing-4xl) var(--spacing-xl);
+    gap: var(--spacing-4xl);
+  }
+
+  .certificaciones-slider-wrapper {
+    max-width: 900px;
+  }
+
+  .certificaciones-card {
+    min-width: 500px;
+    width: 500px;
+  }
+
+  .certificaciones-grid {
+    gap: var(--spacing-lg);
+  }
+
+  .slider-arrow {
+    width: 45px;
+    height: 45px;
+    font-size: var(--font-size-xl);
+  }
+
+  .tech-icon {
+    font-size: 3rem;
+  }
+
+  .tech-carousel-track {
+    gap: var(--spacing-2xl);
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-    .certificaciones-title {
-        font-size: 3rem; /* Ajuste más drástico del título */
-    }
+  .certificaciones-section {
+    padding: var(--spacing-3xl) var(--spacing-lg);
+    gap: var(--spacing-3xl);
+  }
 
-    .certificaciones-description {
-        font-size: 1.25rem; /* Reduce el tamaño del texto descriptivo */
-    }
+  .certificaciones-title {
+    font-size: var(--font-size-3xl);
+  }
 
-    .certificaciones-grid {
-        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
-        gap: 1rem; /* Menos espacio entre tarjetas */
-    }
+  .certificaciones-title::before {
+    font-size: var(--font-size-lg);
+  }
 
-    .certificaciones-card {
-        height: 12rem; /* Reduce aún más la altura de las tarjetas */
-    }
+  .certificaciones-slider-wrapper {
+    max-width: 100%;
+  }
 
-    .tech-section h3 {
-        font-size: 50px; /* Reduce el título de la sección tecnológica */
-    }
+  .certificaciones-card {
+    min-width: 400px;
+    width: 400px;
+  }
 
-    .tech-icons {
-        gap: 4rem; /* Menor espacio entre los íconos */
-    }
+  .certificaciones-grid {
+    gap: var(--spacing-md);
+  }
 
-    .tech-icon {
-        font-size: 35px; /* Tamaño reducido para íconos en móviles */
-        width: 35px;
-        height: 35px;
-    }
-    .certificaciones-card:hover .certificaciones-overlay {
-        opacity: 0;
-        text-shadow: none;
-        
-    }
+  .certificaciones-overlay {
+    padding: var(--spacing-lg);
+  }
+
+  .certificaciones-title-card {
+    font-size: var(--font-size-lg);
+  }
+
+  .slider-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: var(--font-size-lg);
+  }
+
+  .slider-controls {
+    gap: var(--spacing-md);
+  }
+
+  .tech-section {
+    margin-top: var(--spacing-3xl);
+    padding-top: var(--spacing-2xl);
+  }
+
+  .tech-section h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .tech-icon {
+    font-size: 2.5rem;
+  }
+
+  .tech-carousel-track {
+    gap: var(--spacing-xl);
+    animation: scroll-tech 25s linear infinite;
+  }
 }
 
-/* Media Queries para pantallas extra pequeñas (móviles hasta 480px) */
+/* Small Mobile */
 @media (max-width: 480px) {
-    .certificaciones-title {
-        font-size: 2.5rem; /* Reduce el título para pantallas muy pequeñas */
-    }
+  .certificaciones-section {
+    padding: var(--spacing-2xl) var(--spacing-md);
+    gap: var(--spacing-2xl);
+  }
 
-    .certificaciones-description {
-        font-size: 1rem; /* Texto aún más pequeño */
-    }
+  .certificaciones-card {
+    min-width: 320px;
+    width: 320px;
+  }
 
-    .certificaciones-grid {
-        gap: 0.5rem; /* Menor espacio entre tarjetas */
-    }
+  .certificaciones-grid {
+    gap: var(--spacing-md);
+  }
 
-    .certificaciones-card {
-        height: 10rem; /* Reduce la altura de las tarjetas */
-    }
+  .certificaciones-overlay {
+    padding: var(--spacing-md);
+  }
 
-    .tech-section h3 {
-        font-size: 40px; /* Más pequeño para la sección tecnológica */
-    }
+  .certificaciones-title-card {
+    font-size: var(--font-size-base);
+  }
 
-    .tech-icons {
-        gap: 3rem; /* Menos espacio entre íconos */
-    }
+  .certificaciones-subtitle {
+    font-size: var(--font-size-xs);
+  }
 
-    .tech-icon {
-        font-size: 30px; /* Tamaño pequeño para los íconos */
-        width: 30px;
-        height: 30px;
-    }
-    .certificaciones-card:hover .certificaciones-overlay {
-        opacity: 0;
-        text-shadow: none;
-        cursor: none;
-        
-    }
+  .slider-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: var(--font-size-base);
+  }
+
+  .tech-icon {
+    font-size: 2rem;
+  }
+
+  .tech-carousel-track {
+    gap: var(--spacing-lg);
+    animation: scroll-tech 20s linear infinite;
+  }
 }
-

@@ -1,26 +1,26 @@
 .download-cv-btn {
     font-family: 'new Amsterdam';
-    font-size: 20px;
+    font-size: var(--font-size-xl);
     background-color: transparent; /* Fondo transparente */
-    color: white; /* Texto blanco */
-    padding: 10px 20px;
-    border: 2px solid white; /* Bordes blancos */
-    border-radius: 5px;
+    color: var(--color-text-primary); /* Texto blanco */
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border: var(--border-width-medium) solid var(--color-text-primary); /* Bordes blancos */
+    border-radius: var(--border-radius-sm);
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para elevar un poco */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    box-shadow: var(--shadow-sm); /* Sombra para elevar un poco */
+    transition: background-color var(--transition-base), box-shadow var(--transition-base); /* Transición suave */
     
 }
 
 .download-cv-btn i{
-    margin-left: 10px;
-    color: white; /* Texto blanco */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    margin-left: var(--spacing-sm);
+    color: var(--color-text-primary); /* Texto blanco */
+    transition: background-color var(--transition-base), box-shadow var(--transition-base); /* Transición suave */
 }
 
 .download-cv-btn:hover {
     background-color: #68e8f9a3;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Más sombra al hacer hover */
+    box-shadow: var(--shadow-md); /* Más sombra al hacer hover */
 }
 
 .download-container {
@@ -28,7 +28,7 @@
     display: flex;
     justify-content: start;
     
-    margin-left: 40px;
+    margin-left: var(--spacing-2xl);
 }
 
   

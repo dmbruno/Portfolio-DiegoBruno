@@ -20,6 +20,7 @@ function MainContent() {
       <Certificaciones2/>
       <Carousel/>
       <Contact/>
+      
     </main>
   );
 }

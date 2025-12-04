@@ -1,187 +1,165 @@
-import React from 'react';
-import './carousel.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import fondoUbm from '../assets/images/fondoUbm4.jpg'
-import fondoAqua from '../assets/images/fondoAqua.jpg'
-import menuInteractivo from '../assets/images/fondoMenuInteractivo.jpg'
-import fonfoGrizzly from '../assets/images/fondoGrizzly.jpg'
-import github from '../assets/images/contribucionesGithub.png'
-import chatbotUBM from '../assets/images/chatBotUBM.png'
-import chatbootSaludPulmonar from '../assets/images/chatbotSaludPulmonar.png'
-import chatbotInformativo from '../assets/images/chatbotInformativo.png'
-
-
-
-
+import React, { useState } from "react";
+import { useTranslation } from 'react-i18next';
+import "./carousel.css";
+import fondoWebGauchosGuemes from "../assets/images/fondoWebGauchosGuemes.jpg";
+import chatbotUBM from "../assets/images/chatbotUBM.png";
+import fondoChatBotUBM from "../assets/images/fondoChatBotUBM.png";
+import fondoChatBotInformativo from "../assets/images/fondoChatBotInformativo.jpg";
+import fondoKipuBank from "../assets/images/fondoKipuBank.png";
 
 const Carousel = () => {
-    return (
-        <div id='carousel' className='container-fluid'>
-            <div className='container'>
-                <div>
-                    <p className="primerTextoTitulo">
-                        WORKS.
-                    </p>
+  const { t } = useTranslation();
+  
+  const projects = [
+    {
+      id: 1,
+      titleKey: "projects.gauchos.title",
+      descriptionKey: "projects.gauchos.description",
+      image: fondoWebGauchosGuemes,
+      technologies: [
+        "React",
+        "Styled Components",
+        "WhatsApp API",
+        "MySQL",
+        "Astro",
+      ],
+      github: "https://github.com/SaltaLabs/landingPage-GauchosGuemes",
+      demo: "https://gauchosdeguemes.com.ar/",
+      whatsapp: null,
+    },
+    {
+      id: 2,
+      titleKey: "projects.chatbotUBM.title",
+      descriptionKey: "projects.chatbotUBM.description",
+      image: fondoChatBotUBM,
+      technologies: [
+        "TypeScript",
+        "BuilderBot",
+        "Node.js",
+        "WhatsApp API",
+        "MySQL",
+      ],
+      github: "https://github.com/dmbruno/UBM-BOT-WhatsApp",
+      demo: null,
+      whatsapp: "https://wa.me/5493874127725?text=Hola!",
+    },
+    {
+      id: 3,
+      titleKey: "projects.chatbotInfo.title",
+      descriptionKey: "projects.chatbotInfo.description",
+      image: fondoChatBotInformativo,
+      technologies: ["TypeScript", "Node.js", "Meta API", "MySQL"],
+      github: "https://github.com/dmbruno/ChatbotInformativo-DB",
+      demo: null,
+      whatsapp: "https://wa.me/5493874046150?text=Hola!",
+    },
+    {
+      id: 4,
+      titleKey: "projects.kipubank.title",
+      descriptionKey: "projects.kipubank.description",
+      image: fondoKipuBank,
+      technologies: ["Remix IDE","Solidity", "Foundry", "Uniswap V2", "OpenZeppelin", "Ethers.js"],
+      github: "https://github.com/dmbruno/KipuBankV3",
+      demo: "https://sepolia.etherscan.io/address/0x952252bEC0fE656006E310BfC4C847181c24E321",
+      whatsapp: null
+    }
+  ];
 
-                </div>
-                <div id="carouselExampleCaptions" className="carousel slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
-                    </div>
-                    <div className="carousel-inner">
-                        <div className="carousel-item active">
-                            <img src={fondoUbm} className="d-block w-100" alt="Foto para ubm" />
-                            <div className="carousel-caption ubm ">
-                                <h5>UBM - Viajes y Turismo</h5>
-                                <p>App Web para la carga de datos de pasajeros.</p>
-                                <a
-                                    href="https://github.com/dmbruno/ubmtool"
-                                    className="btn btn-outline-info btn-sm mt-2"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Mira el repo en Github
-                                </a>
-                            </div>
-                        </div>
-                        <div className="carousel-item">
-                            <img src={fondoAqua} className="d-block w-100" alt="..." />
-                            <div className="carousel-caption aqua">
-                                <h5>Aqua s.a.s</h5>
-                                <p>App Web para el calculo de presupuestos rapido y facil.</p>
-                                <a
-                                    href="https://github.com/dmbruno/AQUA"
-                                    className="btn btn-outline-info btn-sm mt-2"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Mira el repo en Github
-                                </a>
-                            </div>
-                        </div>
-                        <div className="carousel-item">
-                            <img src={menuInteractivo} className="d-block w-100" alt="..." />
-                            <div className="carousel-caption menuInteractivo">
-                                <h5>Menu Interactivo</h5>
-                                <p>Menu Interactivo / carrito de compras para Bar.</p>
-                                <a
-                                    href="https://github.com/dmbruno/ReactJs-Comision49910-DiegoBruno"
-                                    className="btn btn-outline-info btn-sm mt-2"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Mira el repo en Github
-                                </a>
-                            </div>
-                        </div>
-                        <div className="carousel-item">
-                            <img src={fonfoGrizzly} className="d-block w-100" alt="..." />
-                            <div className="carousel-caption grizzly">
-                                <h5>App Movil para la gestión de pedidos</h5>
-                                <p>Menu interactivo para eliminar la espera en los Bares y Cafe.</p>
-                                <a
-                                    href="https://github.com/dmbruno/ReactNative-DiegoBruno"
-                                    className="btn btn-outline-info btn-sm mt-2"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Mira el repo en Github
-                                </a>
-                            </div>
-                        </div>
+  return (
+    <section id="carousel" className="works-section">
+      <div className="works-container">
+        <h2 className="works-title">{t('projects.title')}</h2>
 
-                        <div className="carousel-item">
-                            <img src={chatbotUBM} className="d-block w-100" alt="Foto para ubm" />
-                            <div className="carousel-caption ubm">
-                                <h5>ChatBot - UBM</h5>
-                                <p>ChatBot para la gestion de cotizaciones y mas ...</p>
-                                <a
-                                    href="https://github.com/dmbruno/UBM-BOT-WhatsApp"
-                                    className="btn btn-outline-info btn-sm mt-2"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Mira el repo en Github
-                                </a>
-                            </div>
-                        </div>
+        {projects.map((project, index) => (
+          <div key={project.id} className="featured-project">
+            <div className="project-content">
+              <div className="project-label">
+                <span className="project-featured">{t('projects.featured')}</span>
+              </div>
+              <h3 className="project-title">{t(project.titleKey)}</h3>
 
-                        <div className="carousel-item">
-                            <img src={chatbootSaludPulmonar} className="d-block w-100" alt="Foto para ubm" />
-                            <div className="carousel-caption ubm">
-                                <h5>ChatBot - Salud Pulmonar Salta</h5>
-                                <p>ChatBot para la gestion de turnos y mas ...</p>
-                                <a
-                                    href="https://github.com/dmbruno/Bot-SaludPS"
-                                    className="btn btn-outline-info btn-sm mt-2"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Mira el repo en Github
-                                </a>
-                            </div>
-                        </div>
+              <div
+                className={`project-description ${
+                  index % 2 === 0
+                    ? "project-description-right"
+                    : "project-description-left"
+                }`}
+              >
+                <p
+                  dangerouslySetInnerHTML={{ __html: t(project.descriptionKey) }}
+                ></p>
+              </div>
 
-                        <div className="carousel-item">
-                            <img src={chatbotInformativo} className="d-block w-100" alt="Foto para ubm" />
-                            <div className="carousel-caption ubm">
-                                <h5>ChatBot - Informativo</h5>
-                                <p>ChatBot para que los usuarios se informen sobre usos y ventajas</p>
-                                <a
-                                    href="https://github.com/dmbruno/ChatbotInformativo-DB"
-                                    className="btn btn-outline-info btn-sm mt-2"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Mira el repo en Github
-                                </a>
-                            </div>
-                        </div>
+              <ul className="project-tech-list">
+                {project.technologies.map((tech, index) => (
+                  <li key={index}>{tech}</li>
+                ))}
+              </ul>
 
-                    </div>
-                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Next</span>
-                    </button>
-                </div>
-                <div className="projects-image text-right" style={{ fontFamily: 'montserrat' }}>
-                    <p className="segundoTexto">
-                        Contribuciones en Github ...
-                    </p>
-                    <div className='githubImage'>
-                        <img src={github} alt='Contribuciones Github'></img>
-                    </div>
-                    <div className="text-center mt-6 link">
-                        <a
-                            href="https://github.com/dmbruno"
-                            className="text-blue-500 hover:underline text-lg font-medium"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            ¡Visita mi perfil completo en GitHub!
-                        </a>
-                    </div>
-                    <div className='despedida'>
-                        <p className="despedida">
-                            ¡Pronto habra mas para ver...!
-                        </p>
-                    </div>
-
-                </div>
+              <div className="project-links">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link"
+                  aria-label="GitHub Repository"
+                >
+                  <i className="fab fa-github"></i>
+                </a>
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                    aria-label="External Link"
+                  >
+                    <i className="fas fa-external-link-alt"></i>
+                  </a>
+                )}
+                {project.whatsapp && (
+                  <a
+                    href={project.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                    aria-label="WhatsApp Bot"
+                  >
+                    <i className="fab fa-whatsapp"></i>
+                  </a>
+                )}
+              </div>
             </div>
+
+            <div className="project-image">
+              <a
+                href={project.demo || project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="image-wrapper">
+                  <img src={project.image} alt={t(project.titleKey)} />
+                </div>
+              </a>
+            </div>
+          </div>
+        ))}
+
+        {/* Botón para ver más proyectos en GitHub */}
+        <div className="more-projects">
+          <a
+            href="https://github.com/dmbruno"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="more-projects-button"
+          >
+            {t('projects.viewMore')}
+            <i className="fab fa-github"></i>
+          </a>
         </div>
-    );
+      </div>
+    </section>
+  );
 };
 
 export default Carousel;

@@ -1,204 +1,324 @@
+/* Import Google Fonts - Space Grotesk */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap');
+
+/* ===================================
+   HOME - HERO SECTION CON NAVEGACIÓN
+   =================================== */
+
 .container-home {
-    background-image: url('../assets/images/fondoIndex-2.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    color: white;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100vw;
-    padding-top: 230px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-5xl);
+  align-items: center;
+  padding: 0 var(--spacing-2xl);
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
-.container-datos {
-    display: flex;
-    flex-direction: column;
-    padding-inline-end: 10px;
-    align-items: end;
-    justify-content: end;
-    padding-bottom: 350px;
+.home-content {
+  max-width: 600px;
+  width: 100%;
 }
 
-.nombre {
-    margin: 0;
-    font-size: 74px;
-    font-family: 'new amsterdam';
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
-        /* Sombra sutil y definida */
-        4px 4px 6px rgba(0, 0, 0, 0.4);
+/* === GREETING === */
+.home-greeting {
+  font-family: var(--font-mono);
+  font-size: clamp(var(--font-size-sm), 5vw, var(--font-size-base));
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+  font-weight: var(--font-weight-normal);
 }
 
-.profesion {
-    margin: 0;
-    margin-top: -30px;
-    font-size: 40px;
-    font-family: 'dancing script';
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
-        /* Sombra sutil y definida */
-        4px 4px 6px rgba(0, 0, 0, 0.4);
-
+/* === NAME === */
+.home-name {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-bright);
+  line-height: 1.1;
+  margin: 0 0 var(--spacing-2xl) 0;
+  letter-spacing: -0.02em;
 }
 
-.developer {
-    color: #68e8f9;
-    /* Cambia esto al color que prefieras */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
-        /* Sombra sutil y definida */
-        4px 4px 6px rgba(0, 0, 0, 0.4);
+/* === DESCRIPTION === */
+.home-description {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin: 0 0 var(--spacing-4xl) 0;
+  max-width: 540px;
 }
 
+.home-description .highlight {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
 
+/* === CTA BUTTON === */
+.home-cta {
+  display: inline-block;
+  padding: var(--spacing-lg) var(--spacing-3xl);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius-md);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(100, 255, 218, 0.1);
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.home-cta:hover::before {
+  width: 100%;
+}
+
+.home-cta:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px -10px rgba(100, 255, 218, 0.3);
+}
+
+.home-cta:active {
+  transform: translateY(-1px);
+}
+
+/* === SECCIÓN DE LINKS DE NAVEGACIÓN === */
 .container-links {
-    font-family: "Kirang Haerang";
-    
-    font-style: italic;
-    font-size: 50px;    
-    padding-inline-start: 15px;
-    padding-bottom: 350px;
-    display: flex;
-    flex-direction: column;
-    
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  width: 100%;
+  justify-self: end;
 }
 
 .container-links a {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    /* Elimina el subrayado del link */
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: all 0.6s ease;
+  cursor: pointer;
+  display: inline-block;
+  width: fit-content;
+  position: relative;
 }
 
 .container-links h1 {
-    display: inline-block;
-    font-size: 120px;
-    margin: 0;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7),
-        /* Sombra sutil y definida */
-        2px 2px 3px rgba(0, 0, 0, 0.4);
-
+  margin: 0;
+  font-size: clamp(3rem, 5vw, 6rem);
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  transition: all 0.6s ease;
+  position: relative;
 }
 
-.about:hover,
-.services:hover,
-.contacto:hover,
-.info:hover {
-    color: #68e8f9;
-
-    font-style: normal;
-    transform: scale(1.02);
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
-                 0 0 20px rgba(255, 255, 255, 0.9);
-
-    transition: transform 0.2s ease, text-shadow 0.2s ease;
-    cursor: pointer;
+/* Efecto hover para los links */
+.container-links a:hover h1 {
+  color: var(--color-primary);
+  transform: translateX(var(--spacing-md));
+  
 }
 
-.about {
-    margin-bottom: -55px;
+/* Línea de subrayado que aparece en hover */
+.container-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--color-primary);
+  transition: width 0.7s ease;
 }
 
-.services {
-    margin-bottom: -55px;
+.container-links a:hover::after {
+  width: 105%;
 }
 
-.contacto {
-    margin-bottom: -10px;
-
+/* Números delante de cada link */
+.container-links a:nth-child(1) h1::before {
+  content: '02. ';
 }
 
-.info {
-    margin-top: -45px;
+.container-links a:nth-child(2) h1::before {
+  content: '03. ';
 }
 
-
-/* Media Queries para pantallas medianas y pequeñas */
-
-/* Para pantallas medianas (tabletas en modo retrato) */
-@media (max-width: 991px) and (min-width: 768px) {
-    .container-home {
-        padding-top: 150px; /* Ajusta el espacio superior si es necesario */
-        grid-template-columns: 1fr; /* Cambia la disposición a una columna */
-        text-align: center; /* Centra el texto horizontalmente */
-        justify-content: center; /* Centra el contenido horizontalmente */
-        padding-bottom: 150px; /* Ajusta el espacio inferior si es necesario */
-    }
-
-    .container-datos {
-        padding-inline-end: 0; /* Elimina el padding lateral */
-        padding-bottom: 20px; /* Ajusta el espacio inferior si es necesario */
-        align-items: center; /* Centra el contenido verticalmente */
-        justify-content: center; /* Centra el contenido verticalmente */
-    }
-
-    .nombre {
-        font-size: 50px; /* Reduce el tamaño de la fuente en pantallas medianas */
-    }
-
-    .profesion {
-        font-size: 30px; /* Reduce el tamaño de la fuente en pantallas medianas */
-    }
-
-    .container-links {
-        font-size: 70px; /* Ajusta el tamaño de la fuente en pantallas medianas */
-        padding-inline-start: 0; /* Elimina el padding lateral */
-        padding-bottom: 20px; /* Ajusta el espacio inferior si es necesario */
-        flex-direction: column;
-        gap: 30px; /* Cambia la disposición a fila */
-        justify-content: center; /* Centra los enlaces horizontalmente */
-    }
-
-    .container-links h1 {
-        font-size: 120px; /* Reduce el tamaño de la fuente en pantallas medianas */
-        margin: -10px 10px; /* Ajusta el margen entre los enlaces */
-    }
+.container-links a:nth-child(3) h1::before {
+  content: '04. ';
 }
 
-/* Para pantallas pequeñas (teléfonos) */
-@media (max-width: 767px) {
-    .container-home {
-        padding-top: 100px; /* Ajusta el espacio superior si es necesario */
-        grid-template-columns: 1fr; /* Cambia la disposición a una columna */
-        text-align: center; /* Centra el texto horizontalmente */
-        justify-content: center; /* Centra el contenido horizontalmente */
-        padding-bottom: 50px; /* Ajusta el espacio inferior si es necesario */
-    }
-
-    .container-datos {
-        padding-inline-end: 0; /* Elimina el padding lateral */
-        padding-bottom: 10px; /* Ajusta el espacio inferior si es necesario */
-        align-items: center; /* Centra el contenido verticalmente */
-        justify-content: center; /* Centra el contenido verticalmente */
-    }
-
-    .nombre {
-        font-size: 50px;
-        padding-bottom: 15px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
-    }
-
-    .profesion {
-        font-size: 32px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
-    }
-
-    .container-links {
-        font-size: 70px; /* Ajusta el tamaño de la fuente en pantallas medianas */
-        padding-inline-start: 0; /* Elimina el padding lateral */
-        padding-bottom: 20px; /* Ajusta el espacio inferior si es necesario */
-        flex-direction: column;
-        gap: 30px; /* Cambia la disposición a fila */
-        justify-content: center; /* Centra los enlaces horizontalmente */
-        
-    }
-
-    .container-links h1 {
-        font-size: 120px; /* Reduce el tamaño de la fuente en pantallas medianas */
-        margin: -10px 10px;  /* Ajusta el margen entre los enlaces */
-    }
+.container-links a:nth-child(4) h1::before {
+  content: '05. ';
 }
 
-@media (max-width: 420px){
-    .container-links h1 {
-        font-size: 80px; /* Reduce el tamaño de la fuente en pantallas medianas */
-        margin: -10px 10px;  /* Ajusta el margen entre los enlaces */
-    }
+.container-links h1::before {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-lg);
+  color: var(--color-primary);
+  margin-right: var(--spacing-md);
+  font-weight: var(--font-weight-normal);
+}
+
+/* === ANIMACIONES DE ENTRADA === */
+.home-greeting {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out 0.1s forwards;
+}
+
+.home-name {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out 0.2s forwards;
+}
+
+.home-description {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out 0.3s forwards;
+}
+
+.home-cta {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out 0.4s forwards;
+}
+
+.container-links a:nth-child(1) {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out 0.5s forwards;
+}
+
+.container-links a:nth-child(2) {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out 0.6s forwards;
+}
+
+.container-links a:nth-child(3) {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out 0.7s forwards;
+}
+
+.container-links a:nth-child(4) {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === RESPONSIVE DESIGN === */
+
+/* Tablets y pantallas medianas (991px y menos) */
+@media (max-width: 991px) {
+  .container-home {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-5xl);
+    padding: var(--spacing-5xl) var(--spacing-xl);
+  }
+
+  .home-content {
+    max-width: 100%;
+  }
+
+  .container-links {
+    justify-self: start;
+  }
+
+  .container-links h1 {
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
+  }
+}
+
+/* Smartphones y pantallas pequeñas (768px y menos) */
+@media (max-width: 768px) {
+  .container-home {
+    padding: var(--spacing-4xl) var(--spacing-lg);
+    min-height: calc(100vh - 80px);
+    gap: var(--spacing-4xl);
+  }
+
+  .home-greeting {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .home-name {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .home-description {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .home-cta {
+    padding: var(--spacing-md) var(--spacing-2xl);
+    font-size: var(--font-size-xs);
+  }
+
+  .container-links h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+  }
+
+  .container-links h1::before {
+    font-size: var(--font-size-base);
+    margin-right: var(--spacing-sm);
+  }
+
+  .container-links a:hover h1 {
+    transform: translateX(var(--spacing-sm));
+  }
+}
+
+/* Pantallas muy pequeñas (480px y menos) */
+@media (max-width: 480px) {
+  .container-home {
+    padding: var(--spacing-3xl) var(--spacing-md);
+    gap: var(--spacing-3xl);
+  }
+
+  .home-name {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+  }
+
+  .home-description {
+    font-size: var(--font-size-sm);
+  }
+
+  .container-links h1 {
+    font-size: clamp(1.3rem, 5vw, 2rem);
+  }
+}
+
+/* Pantallas extra pequeñas (360px y menos) */
+@media (max-width: 360px) {
+  .container-home {
+    padding: var(--spacing-2xl) var(--spacing-sm);
+  }
+
+  .container-links gap {
+    gap: var(--spacing-xs);
+  }
 }

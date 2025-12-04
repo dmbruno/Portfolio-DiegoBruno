@@ -1,192 +1,238 @@
-/* Archivo: src/components/about.css */
+/* ===================================
+   ABOUT SECTION - ESTILO MINIMALISTA
+   =================================== */
 
 .about-section {
-    width: auto;
-    background-image: url('../assets/images/IndexMasUno.svg');
-    background-size: cover;
-    padding: 50px;
-    color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-5xl) var(--spacing-2xl);
+  gap: var(--spacing-5xl);
 }
 
+/* === CONTENIDO PRINCIPAL === */
 .about-content {
-    display: flex;
-    margin-top: 80px;
-    width: 100%;
-    border-radius: 8px;
-    align-items: center; /* Alinea el contenido al centro verticalmente */
-    justify-content: center; /* Alinea el contenido al centro horizontalmente */
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: var(--spacing-4xl);
+  align-items: center;
 }
 
-.about-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-
+/* === TEXTO === */
 .about-text {
-    flex: 1;
-    padding: 20px;
-    box-sizing: border-box;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
-        4px 4px 6px rgba(0, 0, 0, 0.4);
-    text-align: center; /* Centra el texto en pantallas pequeñas */
-}
-
-.about-image img {
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
-    height: 400px;
-    max-height: 100%;
-    width: auto;
-    object-fit: contain;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
 }
 
 .about-text h2 {
-    font-size: 60px;
-    font-family: 'New Amsterdam';
-    color: white;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
-        4px 4px 6px rgba(0, 0, 0, 0.4);
+  font-size: clamp(2rem, 5vw, var(--font-size-4xl));
+  color: var(--color-text-bright);
+  margin-bottom: var(--spacing-md);
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+
+/* Número de sección estilo Brittany */
+.about-text h2::before {
+  content: '02. ';
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  margin-right: var(--spacing-sm);
+  font-weight: var(--font-weight-normal);
+}
+
+/* Línea decorativa después del título */
+.about-text h2::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: calc(100% + var(--spacing-lg));
+  width: 300px;
+  height: 1px;
+  background-color: var(--color-text-muted);
+  opacity: 0.3;
 }
 
 .about-text p {
-    font-family: "Roboto slab", system-ui;
-    font-weight: 400;
-    font-size: 20px;
-    font-style: normal;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.about-text strong {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+/* === IMAGEN === */
+.about-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: var(--border-radius-lg);
+  filter: grayscale(30%);
+  transition: all var(--transition-base);
+  position: relative;
+  z-index: 2;
+}
+
+/* Efecto de overlay verde en hover */
+.about-image::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100%;
+  max-width: 350px;
+  height: 100%;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius-lg);
+  z-index: 1;
+  transition: all var(--transition-base);
+}
+
+.about-image:hover img {
+  filter: grayscale(0%);
+  transform: translate(-10px, -10px);
+}
+
+.about-image:hover::before {
+  transform: translate(10px, 10px);
+}
+
+/* === SEGUNDA PARTE (Download CV + Experience) === */
+.about-parteDos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3xl);
+  margin-top: var(--spacing-3xl);
+  width: 100%;
 }
 
 .container-download {
-    padding: 20px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .experience {
-    margin: 40px;
-    margin-bottom: 150px;
+  width: 100%;
 }
 
-/* Media Queries */
+/* === RESPONSIVE === */
 
-/* Para pantallas grandes (por ejemplo, laptops y escritorios) */
-@media (min-width: 992px) {
-    .about-content {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
+/* Tablets */
+@media (max-width: 991px) {
+  .about-section {
+    padding: var(--spacing-4xl) var(--spacing-xl);
+    gap: var(--spacing-4xl);
+  }
 
-    .about-text {
-        padding: 40px;
-        text-align: left; /* Alinea el texto a la izquierda en pantallas grandes */
-    }
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-3xl);
+  }
 
-    .about-image img {
-        height: 400px;
-    }
+  .about-text h2::after {
+    width: 200px;
+  }
 
-    .about-text h2 {
-        font-size: 60px;
-    }
+  .about-image {
+    order: -1; /* Imagen arriba en tablets */
+  }
 
-    .about-text p {
-        font-size: 20px;
-    }
+  .about-image img {
+    max-width: 300px;
+  }
 
-    .experience {
-        margin: 40px;
-        margin-bottom: 150px;
-    }
+  .about-image::before {
+    max-width: 300px;
+  }
+
+  .about-parteDos {
+    gap: var(--spacing-2xl);
+  }
 }
 
-/* Para pantallas medianas (por ejemplo, tabletas en modo horizontal) */
-@media (max-width: 991px) and (min-width: 768px) {
-    .about-content {
-        flex-direction: column;
-        align-items: center; /* Centra el contenido verticalmente en pantallas medianas */
-        text-align: center; /* Centra el texto en pantallas medianas */
-    }
+/* Mobile */
+@media (max-width: 768px) {
+  .about-section {
+    padding: var(--spacing-3xl) var(--spacing-lg);
+    gap: var(--spacing-3xl);
+  }
 
-    .about-text {
-        padding: 20px;
-    }
+  .about-text h2 {
+    font-size: var(--font-size-3xl);
+  }
 
-    .about-image img {
-        height: auto;
-        max-height: 300px;
-    }
+  .about-text h2::before {
+    font-size: var(--font-size-lg);
+  }
 
-    .about-text h2 {
-        font-size: 50px;
-    }
+  .about-text h2::after {
+    width: 100px;
+  }
 
-    .about-text p {
-        font-size: 18px;
-    }
+  .about-text p {
+    font-size: var(--font-size-base);
+  }
 
-    .about-parteDos {
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-        
-    }
-    .container-download{
-        align-items: center;
-        margin-top: 30px;
-        margin-left: -40px;
-        
-    }
+  .about-image img {
+    max-width: 250px;
+  }
 
-    .experience {
-        margin: 20px;
-        margin-bottom: 100px;
-    }
+  .about-image::before {
+    max-width: 250px;
+    top: 15px;
+    left: 15px;
+  }
 }
 
-/* Para pantallas pequeñas (por ejemplo, teléfonos móviles) */
-@media (max-width: 767px) {
-    .about-content {
-        flex-direction: column;
-        align-items: center; /* Centra el contenido verticalmente en pantallas pequeñas */
-        text-align: center; /* Centra el texto en pantallas pequeñas */
-    }
+/* Small Mobile */
+@media (max-width: 480px) {
+  .about-section {
+    padding: var(--spacing-2xl) var(--spacing-md);
+    gap: var(--spacing-2xl);
+  }
 
-    .about-text {
-        padding: 10px;
-    }
+  .about-content {
+    gap: var(--spacing-2xl);
+  }
 
-    .about-image img {
-        height: auto;
-        max-height: 250px;
-    }
+  .about-text h2::after {
+    display: none; /* Ocultar línea en móviles pequeños */
+  }
 
-    .about-text h2 {
-        font-size: 40px;
-    }
+  .about-text p {
+    font-size: var(--font-size-sm);
+  }
 
-    .about-text p {
-        font-size: 16px;
-    }
+  .about-image img {
+    max-width: 200px;
+  }
 
-    .about-parteDos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-         
-     }
-     .container-download{
-         align-items: center;
-         margin-top: 30px;
-         margin-left: -40px;
-         
-     }
+  .about-image::before {
+    max-width: 200px;
+    top: 10px;
+    left: 10px;
+  }
 
-    .experience {
-        margin: 10px;
-        margin-bottom: 60px;
-    }
+  .about-parteDos {
+    gap: var(--spacing-xl);
+  }
 }
-
