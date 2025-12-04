@@ -67,6 +67,7 @@
   overflow: hidden;
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-lg) 0;
+  min-height: 450px;
 }
 
 .certificaciones-grid {
@@ -81,13 +82,12 @@
   position: relative;
   min-width: 600px;
   width: 600px;
-  aspect-ratio: 16 / 11;
+  height: 412px;
   border-radius: 12px;
   overflow: hidden;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #ffffff;
   flex-shrink: 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;

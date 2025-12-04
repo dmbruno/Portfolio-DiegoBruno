@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7a903787.css",
-    "main.js": "/static/js/main.c3ca232a.js",
+    "main.css": "/static/css/main.3f61a5b8.css",
+    "main.js": "/static/js/main.43c445a8.js",
     "static/js/453.66266d61.chunk.js": "/static/js/453.66266d61.chunk.js",
     "static/media/fondoChatBotInformativo.jpg": "/static/media/fondoChatBotInformativo.329a453d2955a222c1d4.jpg",
     "static/media/fondoWebGauchosGuemes.jpg": "/static/media/fondoWebGauchosGuemes.4b1fda9212feeea751b3.jpg",
@@ -12,17 +12,16 @@
     "static/media/certificado-carreraDesarrolloDeApp.png": "/static/media/certificado-carreraDesarrolloDeApp.162922aace218adb4b10.png",
     "static/media/certificado-ReactJs.png": "/static/media/certificado-ReactJs.69b6a15c0455425695f2.png",
     "static/media/fondoChatBotUBM.png": "/static/media/fondoChatBotUBM.acc55f4e67b0e166d342.png",
-    "static/media/chatbotUBM.png": "/static/media/chatbotUBM.2b707454b6966befef01.png",
     "static/media/Python-Full-Stack.png": "/static/media/Python-Full-Stack.2a8e0c3abc990594a62a.png",
     "static/media/fotoColor.jpeg": "/static/media/fotoColor.74b445591971438bbef5.jpeg",
     "static/media/cloudfoundry.svg": "/static/media/cloudfoundry.b2e54b27ed1b15bae675c42698c2fd76.svg",
     "index.html": "/index.html",
-    "main.7a903787.css.map": "/static/css/main.7a903787.css.map",
-    "main.c3ca232a.js.map": "/static/js/main.c3ca232a.js.map",
+    "main.3f61a5b8.css.map": "/static/css/main.3f61a5b8.css.map",
+    "main.43c445a8.js.map": "/static/js/main.43c445a8.js.map",
     "453.66266d61.chunk.js.map": "/static/js/453.66266d61.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a903787.css",
-    "static/js/main.c3ca232a.js"
+    "static/css/main.3f61a5b8.css",
+    "static/js/main.43c445a8.js"
   ]
 }

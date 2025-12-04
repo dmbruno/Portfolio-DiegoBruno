@@ -4,6 +4,13 @@ import './certificaciones2.css';
 
 import cloudFoundryLogo from '../assets/images/cloudfoundry.svg';
 
+// Importar certificados
+import certDesarrolloWeb from '../assets/images/certificados/certificado-desarrolloWeb.png';
+import certJavaScript from '../assets/images/certificados/certificado-javascript.png';
+import certReactJs from '../assets/images/certificados/certificado-ReactJs.png';
+import certReactNative from '../assets/images/certificados/certificado-ReactNative.png';
+import certCarrera from '../assets/images/certificados/certificado-carreraDesarrolloDeApp.png';
+import certPython from '../assets/images/certificados/Python-Full-Stack.png';
 
 
 const Certificaciones2 = () => {
@@ -15,27 +22,27 @@ const Certificaciones2 = () => {
     const certificates = [
         {
             className: 'desarrolloWeb',
-            
+            image: certDesarrolloWeb,
         },
         {
             className: 'javaScript',
-            
+            image: certJavaScript,
         },
         {
             className: 'reactJs',
-            
+            image: certReactJs,
         },
         {
             className: 'reactNative',
-            
+            image: certReactNative,
         },
         {
             className: 'carrera',
-            
+            image: certCarrera,
         },
         {
             className: 'python',
-            
+            image: certPython,
         }
     ];
 
@@ -112,8 +119,14 @@ const Certificaciones2 = () => {
                         }}
                         onTransitionEnd={handleTransitionEnd}
                     >
-                        {extendedCertificates.map((cert, index) => (
-                            <div key={index} className={`certificaciones-card ${cert.className}`}>
+                    {extendedCertificates.map((cert, index) => (
+                            <div 
+                                key={index} 
+                                className={`certificaciones-card ${cert.className}`}
+                                style={{
+                                    backgroundImage: `url(${cert.image})`
+                                }}
+                            >
                                 <div className="certificaciones-overlay">
                                     <h2 className="certificaciones-title-card">{cert.title}</h2>
                                 </div>

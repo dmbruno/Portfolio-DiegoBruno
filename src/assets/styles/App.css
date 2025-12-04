@@ -23,8 +23,8 @@ html, body {
   width: 100%;
 }
 
-/* Asegurar que todos los contenedores no excedan el viewport */
-section, div, main {
+/* Asegurar que los contenedores principales no excedan el viewport */
+section, main {
   max-width: 100%;
   overflow-x: hidden;
 }

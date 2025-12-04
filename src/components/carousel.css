@@ -60,6 +60,7 @@
   align-items: start;
   margin-bottom: 90px;
   position: relative;
+  isolation: isolate;
 }
 
 /* === PROJECT CONTENT === */
