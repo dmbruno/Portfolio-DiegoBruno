@@ -231,7 +231,7 @@
   }
 
   .about-text h2::after {
-    width: 60px; /* Línea decorativa más pequeña pero visible */
+    display: none; /* Ocultar línea decorativa en mobile pequeño */
   }
 
   .about-text p {
