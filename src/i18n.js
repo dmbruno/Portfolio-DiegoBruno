@@ -40,7 +40,7 @@ const resources = {
       "experience.saltalabs.title": "Backend Leader SaltaLabs",
       "experience.saltalabs.company": "@SaltaLabs",
       "experience.saltalabs.period": "Enero 2024 - Actualidad",
-      "experience.saltalabs.description": "Socio fundador y Backend Leader en SaltaLabs, una agencia digital especializada en ofrecer soluciones tecnológicas innovadoras para empresas locales. Lideramos proyectos de SEO, desarrollo de bots de WhatsApp, aplicaciones web y móviles, brindando respuestas efectivas a diversas problemáticas empresariales. Mi rol incluye la arquitectura de sistemas backend, coordinación técnica del equipo y desarrollo de soluciones escalables.",
+      "experience.saltalabs.description": "Backend Leader en SaltaLabs, una agencia digital especializada en ofrecer soluciones tecnológicas innovadoras para empresas locales. Lideramos proyectos de SEO, desarrollo de bots de WhatsApp, aplicaciones web y móviles, brindando respuestas efectivas a diversas problemáticas empresariales. Mi rol incluye la arquitectura de sistemas backend, coordinación técnica del equipo y desarrollo de soluciones escalables.",
       
       // Bellify
       "experience.bellify.title": "Programador en Bellify.io",
@@ -136,7 +136,7 @@ const resources = {
       "experience.saltalabs.title": "Backend Leader SaltaLabs",
       "experience.saltalabs.company": "@SaltaLabs",
       "experience.saltalabs.period": "January 2024 - Present",
-      "experience.saltalabs.description": "Founding partner and Backend Leader at SaltaLabs, a digital agency specialized in offering innovative technological solutions for local businesses. We lead SEO projects, WhatsApp bot development, web and mobile applications, providing effective responses to various business challenges. My role includes backend system architecture, technical team coordination, and development of scalable solutions.",
+      "experience.saltalabs.description": "Backend Leader at SaltaLabs, a digital agency specialized in offering innovative technological solutions for local businesses. We lead SEO projects, WhatsApp bot development, web and mobile applications, providing effective responses to various business challenges. My role includes backend system architecture, technical team coordination, and development of scalable solutions.",
       
       // Bellify
       "experience.bellify.title": "Programmer at Bellify.io",
