@@ -195,6 +195,10 @@
   background-image: url('../assets/images/certificados/Python-Full-Stack.png');
 }
 
+.ethKipu {
+  background-image: url('../assets/images/certificados/CertificadoDevPackEth.png');
+}
+
 /* === SECCIÓN DE TECNOLOGÍAS === */
 .tech-section {
   margin-top: var(--spacing-3xl);

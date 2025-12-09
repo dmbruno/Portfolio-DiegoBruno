@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import './certificaciones2.css';
 
 import cloudFoundryLogo from '../assets/images/cloudfoundry.svg';
+import ethKipuCert from '../assets/images/certificados/CertificadoDevPackEth.png';
 
 const Certificaciones2 = () => {
     const { t } = useTranslation();
@@ -17,7 +18,8 @@ const Certificaciones2 = () => {
         { className: 'reactJs' },
         { className: 'reactNative' },
         { className: 'carrera' },
-        { className: 'python' }
+        { className: 'python' },
+        { className: 'ethKipu' }
     ];
 
     // Para desktop - duplicamos los certificados
