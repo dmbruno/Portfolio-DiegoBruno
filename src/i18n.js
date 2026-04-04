@@ -19,7 +19,7 @@ const resources = {
       // Home
       "home.greeting": "Hola, mi nombre es",
       "home.name": "Diego Bruno",
-      "home.description": "Desarrollador <1>Full Stack</1> especializado en construir aplicaciones web modernas y escalables. Mi foco actual está en el ecosistema <3>Web3</3> y <5>Blockchain</5>, desarrollando soluciones descentralizadas. También trabajo con tecnologías como <7>React</7>, <9>Python</9> y <11>Node.js</11> para crear experiencias digitales robustas y eficientes.",
+      "home.description": "Desarrollador <1>Full Stack</1> que convierte ideas en productos web reales. Integro <3>Inteligencia Artificial</3> (OpenAI, Claude) para automatizar y potenciar productos. Construyo con <5>React</5>, <7>Python</7> y <9>Node.js</9> — y si tu proyecto apunta a <11>Web3</11> o Blockchain, también. Disponible para proyectos freelance y posiciones en equipo.",
       "home.cta": "Ver mis proyectos",
       "home.nav.about": "SOBRE MÍ",
       "home.nav.training": "FORMACIÓN",
@@ -28,8 +28,8 @@ const resources = {
       
       // About
       "about.title": "Sobre mí",
-      "about.paragraph1": "¡Hola! Mi nombre es Diego y disfruto crear cosas que viven en internet. Mi interés por el desarrollo web comenzó hace años cuando decidí aprender a construir mi primera aplicación — resulta que crear funcionalidades desde cero me enseñó mucho sobre <1>JavaScript</1> y <3>React</3>!",
-      "about.paragraph2": "Avancemos al presente: he tenido el privilegio de trabajar en proyectos variados, desde aplicaciones web tradicionales hasta <1>aplicaciones descentralizadas</1>. Actualmente, mi enfoque principal está en construir productos accesibles en el ecosistema <3>Web3</3> y <5>Blockchain</5>, desarrollando <7>smart contracts</7> con <9>Solidity</9> y utilizando herramientas como <11>Remix IDE</11> y <13>Foundry</13>.",
+      "about.paragraph1": "¡Hola! Mi nombre es Diego y disfruto crear cosas que viven en internet. Mi interés por el desarrollo web comenzó en 2021 cuando decidí aprender a construir mi primera aplicación — resulta que crear funcionalidades desde cero me enseñó mucho sobre <1>JavaScript</1> y <3>React</3>!",
+      "about.paragraph2": "Desde entonces trabajé en proyectos variados: integré <1>Inteligencia Artificial</1> usando <3>OpenAI API</3> y <5>Claude API</5> para construir agentes y automatizaciones conversacionales. También construyo en el ecosistema <7>Web3</7> y <9>Blockchain</9>, desarrollando <11>smart contracts</11> con <13>Solidity</13>.",
       "about.paragraph3": "También trabajo constantemente con tecnologías como <1>React</1>, <3>React Native</3>, <5>Python</5>, <7>Node.js</7>, <9>Flask</9>, y bases de datos <11>Relacionales</11> y <13>NO-Relacionales</13>.",
       
       // Experience
@@ -45,14 +45,6 @@ const resources = {
       // Bellify
       "experience.bellify.title": "Programador en Bellify.io",
       "experience.bellify.description": "Fui contratado para desarrollar un producto utilizando FlutterFlow, una tecnología con la que no tenía experiencia previa. A través de investigación autodidacta y aprendizaje rápido, logré dominar la herramienta y cumplir con éxito los requisitos del proyecto. Mi capacidad para adaptarme a nuevas tecnologías y superar obstáculos técnicos fue clave para el desarrollo exitoso.",
-      
-      // Comerciante
-      "experience.comerciante.title": "Comerciante Independiente",
-      "experience.comerciante.description": "Propietario y gerente de un lubricentro durante más de 6 años, especializado en mantenimiento ligero de vehículos. Gestioné cuentas con proveedores y clientes, incluyendo corporativos, además de listas de precios, control de stock, y liquidación de sueldos e impuestos. Desarrollé habilidades clave en administración, logística y atención al cliente.",
-      
-      // Bar
-      "experience.bar.title": "Propietario de Bar",
-      "experience.bar.description": "Propietario y gerente de un bar durante más de 3 años, liderando un equipo de 4 personas. Gestioné de manera integral el negocio, incluyendo la administración de cuentas con proveedores y clientes, control de stock, compras, liquidación de sueldos e impuestos. Desarrollé sólidas habilidades organizativas y de gestión, destacándome por la capacidad de tomar decisiones bajo presión y asegurar el funcionamiento eficiente del negocio.",
       
       // Telecom
       "experience.telecom.title": "Telecom Personal S.A",
@@ -73,6 +65,8 @@ const resources = {
       "projects.viewMore": "Explora más!",
       "projects.demo": "Demo",
       "projects.github": "GitHub",
+      "projects.tapToFlip": "Toca para ver descripción",
+      "projects.tapToReturn": "Toca para volver",
       
       // Gauchos de Güemes
       "projects.gauchos.title": "Web Gauchos de Güemes",
@@ -94,10 +88,10 @@ const resources = {
       "contact.overline": "05. Qué sigue?",
       "contact.title": "Pongámonos en Contacto",
       "contact.description": "Me gusta escuchar nuevas ideas y propuestas. Ya sea que tengas un proyecto en mente, una pregunta, o simplemente quieras charlar sobre tecnología, mi bandeja de entrada está siempre abierta. ¡Haré lo posible por responderte lo antes posible!",
-      "contact.cta": "Hablemos!",
-      
+      "contact.cta": "¡Hablemos!",
+
       // Footer
-      "footer.builtBy": "Construido por Diego Bruno © 2024",
+      "footer.builtBy": "Construido por Diego Bruno © 2026",
     }
   },
   en: {
@@ -115,7 +109,7 @@ const resources = {
       // Home
       "home.greeting": "Hi, my name is",
       "home.name": "Diego Bruno",
-      "home.description": "<1>Full Stack</1> Developer specialized in building modern and scalable web applications. My current focus is on the <3>Web3</3> and <5>Blockchain</5> ecosystem, developing decentralized solutions. I also work with technologies like <7>React</7>, <9>Python</9> and <11>Node.js</11> to create robust and efficient digital experiences.",
+      "home.description": "<1>Full Stack</1> Developer who turns ideas into real web products. I integrate <3>Artificial Intelligence</3> (OpenAI, Claude) to automate and enhance products. I build with <5>React</5>, <7>Python</7> and <9>Node.js</9> — and if your project targets <11>Web3</11> or Blockchain, I've got you covered too. Available for freelance projects and full-time positions.",
       "home.cta": "View my projects",
       "home.nav.about": "ABOUT ME",
       "home.nav.training": "TRAINING",
@@ -124,8 +118,8 @@ const resources = {
       
       // About
       "about.title": "About Me",
-      "about.paragraph1": "Hello! My name is Diego and I enjoy creating things that live on the internet. My interest in web development started years ago when I decided to learn how to build my first application — it turns out that creating functionalities from scratch taught me a lot about <1>JavaScript</1> and <3>React</3>!",
-      "about.paragraph2": "Fast-forward to today: I've had the privilege of working on varied projects, from traditional web applications to <1>decentralized applications</1>. Currently, my main focus is on building accessible products in the <3>Web3</3> and <5>Blockchain</5> ecosystem, developing <7>smart contracts</7> with <9>Solidity</9> and using tools like <11>Remix IDE</11> and <13>Foundry</13>.",
+      "about.paragraph1": "Hello! My name is Diego and I enjoy creating things that live on the internet. My interest in web development started in 2021 when I decided to learn how to build my first application — it turns out that creating functionalities from scratch taught me a lot about <1>JavaScript</1> and <3>React</3>!",
+      "about.paragraph2": "Since then, I've worked on varied projects: I integrated <1>Artificial Intelligence</1> using <3>OpenAI API</3> and <5>Claude API</5> to build agents and conversational automations. I also build in the <7>Web3</7> and <9>Blockchain</9> ecosystem, developing <11>smart contracts</11> with <13>Solidity</13>.",
       "about.paragraph3": "I also constantly work with technologies like <1>React</1>, <3>React Native</3>, <5>Python</5>, <7>Node.js</7>, <9>Flask</9>, and <11>Relational</11> and <13>Non-Relational</13> databases.",
       
       // Experience
@@ -141,14 +135,6 @@ const resources = {
       // Bellify
       "experience.bellify.title": "Programmer at Bellify.io",
       "experience.bellify.description": "I was hired to develop a product using FlutterFlow, a technology I had no prior experience with. Through self-directed research and rapid learning, I managed to master the tool and successfully meet the project requirements. My ability to adapt to new technologies and overcome technical obstacles was key to successful development.",
-      
-      // Comerciante
-      "experience.comerciante.title": "Independent Merchant",
-      "experience.comerciante.description": "Owner and manager of an oil change shop for over 6 years, specialized in light vehicle maintenance. I managed accounts with suppliers and clients, including corporates, as well as price lists, stock control, and payroll and tax settlement. I developed key skills in administration, logistics, and customer service.",
-      
-      // Bar
-      "experience.bar.title": "Bar Owner",
-      "experience.bar.description": "Owner and manager of a bar for over 3 years, leading a team of 4 people. I comprehensively managed the business, including account administration with suppliers and clients, stock control, purchases, payroll and tax settlement. I developed solid organizational and management skills, standing out for my ability to make decisions under pressure and ensure efficient business operation.",
       
       // Telecom
       "experience.telecom.title": "Telecom Personal S.A",
@@ -169,6 +155,8 @@ const resources = {
       "projects.viewMore": "Explore more!",
       "projects.demo": "Demo",
       "projects.github": "GitHub",
+      "projects.tapToFlip": "Tap to see description",
+      "projects.tapToReturn": "Tap to go back",
       
       // Gauchos de Güemes
       "projects.gauchos.title": "Gauchos de Güemes Website",
@@ -193,7 +181,7 @@ const resources = {
       "contact.cta": "Let's Talk!",
       
       // Footer
-      "footer.builtBy": "Built by Diego Bruno © 2024",
+      "footer.builtBy": "Built by Diego Bruno © 2026",
     }
   }
 };

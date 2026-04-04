@@ -20,14 +20,6 @@ const Experience = () => {
             title: t('experience.bellify.title'),
             description: t('experience.bellify.description')
         },
-        experience2: {
-            title: t('experience.comerciante.title'),
-            description: t('experience.comerciante.description')
-        },
-        experience3: {
-            title: t('experience.bar.title'),
-            description: t('experience.bar.description')
-        },
         experience4: {
             title: t('experience.telecom.title'),
             description: t('experience.telecom.description')

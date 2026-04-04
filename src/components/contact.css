@@ -3,11 +3,10 @@
    =================================== */
 
 .contact-section {
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--spacing-5xl) var(--spacing-2xl);
+  padding: var(--spacing-5xl) var(--spacing-2xl) var(--spacing-3xl);
   background-color: var(--color-bg-primary);
   overflow-x: hidden;
   width: 100%;

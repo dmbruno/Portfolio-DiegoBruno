@@ -18,7 +18,7 @@ function Footer() {
           <a href="https://www.linkedin.com/in/diego-martin-bruno/" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-linkedin"></i>
           </a>
-          <a href="https://www.instagram.com/hongobr_/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/diegob_dev/" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-instagram"></i>
           </a>
           <a href="https://www.facebook.com/diego.bruno.758" target="_blank" rel="noopener noreferrer">
