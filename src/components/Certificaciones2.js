@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import './certificaciones2.css';
 
 import cloudFoundryLogo from '../assets/images/cloudfoundry.svg';
-import ethKipuCert from '../assets/images/certificados/CertificadoDevPackEth.png';
 
 const Certificaciones2 = () => {
     const { t } = useTranslation();
@@ -61,6 +60,7 @@ const Certificaciones2 = () => {
             return;
         }
         setCurrentIndex(certificates.length);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isMobile]);
 
     const getCardWidth = () => {
