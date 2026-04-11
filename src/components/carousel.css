@@ -102,7 +102,7 @@
 }
 
 .project-description {
-  background-color: rgba(23, 42, 69, 0.9);
+  background-color: rgba(15, 15, 30, 0.9);
   padding: var(--spacing-lg) var(--spacing-xl);
   margin-bottom: var(--spacing-lg);
   margin-top: 0;
@@ -216,7 +216,7 @@
   overflow: hidden;
   box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.6);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: #0a192f;
+  background-color: #080814;
 }
 
 .image-wrapper::before {
@@ -285,9 +285,9 @@
 }
 
 .more-projects-button:hover {
-  background-color: rgba(100, 255, 218, 0.1);
+  background-color: rgba(16, 185, 129, 0.1);
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(100, 255, 218, 0.2);
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
 }
 
 .more-projects-button i {
@@ -325,9 +325,9 @@
 }
 
 .nav-arrow:hover {
-  background-color: rgba(100, 255, 218, 0.1);
+  background-color: rgba(16, 185, 129, 0.1);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(100, 255, 218, 0.2);
+  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.2);
 }
 
 .nav-arrow:active {
@@ -498,7 +498,7 @@
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-semibold);
     z-index: 2;
-    background-color: rgba(10, 25, 47, 0.9);
+    background-color: rgba(8, 8, 20, 0.9);
     padding: var(--spacing-sm) var(--spacing-lg);
     border-radius: 8px;
     backdrop-filter: blur(10px);
@@ -521,8 +521,8 @@
     transform: rotateY(-180deg);
     background: linear-gradient(
       135deg,
-      rgba(23, 42, 69, 0.98) 0%,
-      rgba(10, 25, 47, 0.98) 100%
+      rgba(15, 15, 30, 0.98) 0%,
+      rgba(8, 8, 20, 0.98) 100%
     );
     backdrop-filter: blur(10px);
     padding: var(--spacing-3xl) var(--spacing-xl);
@@ -567,7 +567,7 @@
     color: var(--color-primary);
     font-family: var(--font-mono);
     font-size: var(--font-size-sm);
-    background-color: rgba(100, 255, 218, 0.15);
+    background-color: rgba(16, 185, 129, 0.15);
     padding: var(--spacing-sm) var(--spacing-lg);
     border-radius: 8px;
     opacity: 1;
@@ -590,7 +590,7 @@
     font-family: var(--font-mono);
     font-size: var(--font-size-xs);
     color: var(--color-text-secondary);
-    background-color: rgba(100, 255, 218, 0.1);
+    background-color: rgba(16, 185, 129, 0.1);
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: 4px;
     opacity: 1;

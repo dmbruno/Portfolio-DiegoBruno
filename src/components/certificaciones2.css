@@ -124,9 +124,9 @@
 }
 
 .slider-arrow:hover {
-  background-color: rgba(100, 255, 218, 0.1);
+  background-color: rgba(6, 182, 212, 0.1);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(100, 255, 218, 0.2);
+  box-shadow: 0 4px 8px rgba(6, 182, 212, 0.2);
 }
 
 .slider-arrow:active {
@@ -151,13 +151,13 @@
   width: 10px;
   height: 3px;
   border-radius: 2px;
-  background-color: rgba(100, 255, 218, 0.2);
+  background-color: rgba(6, 182, 212, 0.2);
   cursor: pointer;
   transition: all var(--transition-base);
 }
 
 .slider-dot:hover {
-  background-color: rgba(100, 255, 218, 0.5);
+  background-color: rgba(6, 182, 212, 0.5);
 }
 
 .slider-dot.active {

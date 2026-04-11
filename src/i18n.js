@@ -39,20 +39,21 @@ const resources = {
       // SaltaLabs
       "experience.saltalabs.title": "Backend Leader SaltaLabs",
       "experience.saltalabs.company": "@SaltaLabs",
-      "experience.saltalabs.period": "Enero 2024 - Actualidad",
-      "experience.saltalabs.description": "Backend Leader en SaltaLabs, una agencia digital especializada en ofrecer soluciones tecnológicas innovadoras para empresas locales. Lideramos proyectos de SEO, desarrollo de bots de WhatsApp, aplicaciones web y móviles, brindando respuestas efectivas a diversas problemáticas empresariales. Mi rol incluye la arquitectura de sistemas backend, coordinación técnica del equipo y desarrollo de soluciones escalables.",
-      
-      // Bellify
-      "experience.bellify.title": "Programador en Bellify.io",
-      "experience.bellify.description": "Fui contratado para desarrollar un producto utilizando FlutterFlow, una tecnología con la que no tenía experiencia previa. A través de investigación autodidacta y aprendizaje rápido, logré dominar la herramienta y cumplir con éxito los requisitos del proyecto. Mi capacidad para adaptarme a nuevas tecnologías y superar obstáculos técnicos fue clave para el desarrollo exitoso.",
+      "experience.saltalabs.period": "Junio 2025 - Actualidad",
+      "experience.saltalabs.description": "Backend Leader en SaltaLabs, una software factory que construye web apps SaaS a medida para empresas con problemáticas específicas. Diseño la arquitectura backend, realizo code review y reporto avances directamente al cliente.\n\n• Proyecto - Sistema de Gestión Comercial (SaaS): Desarrollé de forma integral un sistema para comercio local con módulos de control de stock, manejo de caja y reportes de ventas por cliente y producto. Stack: Python/Flask + React/Redux.\n\n• Proyecto - Plataforma de E-Vouchers (SaaS): App para agencia de viajes con gestión de pasajeros, servicios contratados y generación de e-vouchers con alertas automáticas ante cambios en servicios. Backend con Supabase, frontend React + Redux. Equipo de 3 personas.\n\nHerramientas: Python, Flask, React, Redux, Supabase, PostgreSQL, JavaScript, Git, Notion.",
+
+      // Freelance IA
+      "experience.freelance.title": "Desarrollador Full Stack & IA - Freelance",
+      "experience.freelance.period": "2024 - Actualidad",
+      "experience.freelance.description": "Desarrollo de productos propios integrando Inteligencia Artificial.\n\n• El Encargado - Asistente IA para comercios: App que levanta datos reales de venta y ofrece análisis mediante perfiles de IA configurados (CEO, Chef, Marketing, CFO). Cada perfil brinda opiniones estratégicas al dueño del negocio. Stack: Python, Flask, OpenAI API.\n\n• Asistentes Virtuales con IA: Desarrollo de chatbots y asistentes inteligentes para automatizar atención y consultas en negocios. Integración con APIs de inteligencia artificial.\n\nHerramientas: Python, Flask, OpenAI API, Chatbots, REST API.",
       
       // Telecom
-      "experience.telecom.title": "Telecom Personal S.A",
-      "experience.telecom.description": "Como supervisor de la oficina comercial, gestioné eficientemente los tiempos de espera y la atención al cliente en diversas colas de servicio. Atendí casos especiales, asegurando una experiencia fluida para usuarios finales y corporativos. Lideré un equipo de 30 personas, trabajando en conjunto para alcanzar métricas clave de calidad y gestión, impulsando la satisfacción y fidelización en un entorno dinámico.",
+      "experience.telecom.title": "Supervisor Comercial - Telecom Personal S.A",
+      "experience.telecom.description": "Supervisor de la oficina comercial liderando un equipo de 30 personas en la gestión de atención al cliente.\n\n• Gestión de Colas: Supervisé eficientemente los tiempos de espera y distribución de clientes en diversas colas de servicio (facturación, reclamos, consultas generales), optimizando la experiencia del usuario.\n\n• Resolución de Conflictos: Atendí casos especiales y conflictivos, asegurando una resolución fluida tanto para usuarios finales como para clientes corporativos de alto valor.\n\n• Seguimiento de Métricas: Implementé y monitorée métricas clave de calidad de atención (satisfacción del cliente, tiempo promedio de servicio, resolución en primer contacto) y gestión operativa.\n\n• Liderazgo Directo: Coordiné equipos multidisciplinarios, motivando al personal para mantener altos estándares de servicio, cumplimiento de objetivos y desarrollo profesional en un entorno dinámico y de alto volumen.",
       
       // Centro de Contactos
-      "experience.contactos.title": "Centro De Contactos Salta S.A",
-      "experience.contactos.description": "Lideré equipos de hasta 30 personas en la atención telefónica para clientes como Movistar y Telefónica. Guié al equipo para cumplir con métricas clave, incluyendo calidad de atención, tiempos de resolución y eficiencia operativa, siguiendo las directrices del cliente. Mi enfoque en la supervisión directa contribuyó a mantener altos estándares de servicio y un rendimiento sobresaliente.",
+      "experience.contactos.title": "Supervisor de Equipos - Centro De Contactos Salta S.A",
+      "experience.contactos.description": "Líder de equipos de atención telefónica con supervisión directa de hasta 30 personas en múltiples turnos para clientes estratégicos como Movistar y Telefónica.\n\n• Gestión de Calidad: Establecí y monitoreé rigurosos estándares de calidad en la atención telefónica, asegurando cumplimiento de directrices del cliente y evaluación continua mediante auditorías de llamadas.\n\n• Tiempos de Atención: Optimicé procesos para reducir tiempos de resolución manteniendo la calidad, balanceando eficiencia operativa con satisfacción del cliente.\n\n• Desempeño Individual: Evaluación periódica de desempeño del personal, coaching personalizado para mejorar habilidades técnicas y blandas, e identificación de talentos para desarrollo profesional.\n\n• Liderazgo Operativo: Coordiné la asignación de recursos, cobertura de turnos, gestión de ausencias y escalamiento de problemas complejos. Mantuve comunicación directa con el cliente para reportes de KPIs (Answer Rate, Average Handle Time, Customer Satisfaction).",
       
       // Certifications
       "certifications.title": "Certificaciones",
@@ -129,20 +130,21 @@ const resources = {
       // SaltaLabs
       "experience.saltalabs.title": "Backend Leader SaltaLabs",
       "experience.saltalabs.company": "@SaltaLabs",
-      "experience.saltalabs.period": "January 2024 - Present",
-      "experience.saltalabs.description": "Backend Leader at SaltaLabs, a digital agency specialized in offering innovative technological solutions for local businesses. We lead SEO projects, WhatsApp bot development, web and mobile applications, providing effective responses to various business challenges. My role includes backend system architecture, technical team coordination, and development of scalable solutions.",
-      
-      // Bellify
-      "experience.bellify.title": "Programmer at Bellify.io",
-      "experience.bellify.description": "I was hired to develop a product using FlutterFlow, a technology I had no prior experience with. Through self-directed research and rapid learning, I managed to master the tool and successfully meet the project requirements. My ability to adapt to new technologies and overcome technical obstacles was key to successful development.",
+      "experience.saltalabs.period": "June 2025 - Present",
+      "experience.saltalabs.description": "Backend Leader at SaltaLabs, a software factory that builds custom SaaS web apps for companies with specific business needs. I design backend architecture, conduct code reviews and report progress directly to clients.\n\n• Project - Commercial Management System (SaaS): Built end-to-end a system for a local business with inventory control, cash register management and sales reports by customer and product. Stack: Python/Flask + React/Redux.\n\n• Project - E-Voucher Platform (SaaS): App for a travel agency with passenger database management, contracted services and e-voucher generation with automatic alerts on service changes. Backend with Supabase, frontend React + Redux. Team of 3.\n\nTools: Python, Flask, React, Redux, Supabase, PostgreSQL, JavaScript, Git, Notion.",
+
+      // Freelance IA
+      "experience.freelance.title": "Full Stack Developer & AI - Freelance",
+      "experience.freelance.period": "2024 - Present",
+      "experience.freelance.description": "Building AI-powered products as personal projects.\n\n• El Encargado - AI Assistant for Businesses: App that ingests real sales data and provides analysis through configured AI profiles (CEO, Chef, Marketing, CFO). Each profile offers strategic insights to the business owner. Stack: Python, Flask, OpenAI API.\n\n• AI Virtual Assistants: Development of chatbots and intelligent assistants to automate customer support and business queries. Integration with AI APIs.\n\nTools: Python, Flask, OpenAI API, Chatbots, REST API.",
       
       // Telecom
-      "experience.telecom.title": "Telecom Personal S.A",
-      "experience.telecom.description": "As supervisor of the commercial office, I efficiently managed waiting times and customer service across various service queues. I handled special cases, ensuring a smooth experience for end users and corporates. I led a team of 30 people, working together to achieve key quality and management metrics, driving satisfaction and loyalty in a dynamic environment.",
-      
+      "experience.telecom.title": "Commercial Supervisor - Telecom Personal S.A",
+      "experience.telecom.description": "Commercial office supervisor leading a team of 30 people in customer service management.\n\n• Queue Management: Efficiently supervised waiting times and customer distribution across multiple service queues (billing, complaints, general inquiries), optimizing the overall customer experience.\n\n• Conflict Resolution: Handled special and complex cases, ensuring smooth resolution for both individual customers and high-value corporate accounts.\n\n• Metrics Tracking: Implemented and monitored key quality metrics (customer satisfaction, average service time, first-contact resolution) and operational management KPIs.\n\n• Team Leadership: Coordinated multidisciplinary teams, motivating staff to maintain high service standards, meet objectives, and foster professional development in a high-volume dynamic environment.",
+
       // Centro de Contactos
-      "experience.contactos.title": "Centro De Contactos Salta S.A",
-      "experience.contactos.description": "I led teams of up to 30 people in telephone support for clients like Movistar and Telefónica. I guided the team to meet key metrics, including quality of service, resolution times, and operational efficiency, following client guidelines. My focus on direct supervision contributed to maintaining high service standards and outstanding performance.",
+      "experience.contactos.title": "Team Supervisor - Centro De Contactos Salta S.A",
+      "experience.contactos.description": "Leader of telephone support teams with direct supervision of up to 30 people across multiple shifts for strategic clients including Movistar and Telefónica.\n\n• Quality Assurance: Established and monitored rigorous quality standards in telephone support, ensuring client compliance through continuous call audits and performance evaluations.\n\n• Call Center Optimization: Optimized processes to reduce resolution times while maintaining quality, balancing operational efficiency with customer satisfaction metrics.\n\n• Individual Performance Management: Conducted periodic performance evaluations, provided personalized coaching for technical and soft skills improvement, and identified talent for professional development.\n\n• Operational Leadership: Coordinated resource allocation, shift coverage, absence management, and escalation of complex issues. Maintained direct client communication for KPI reporting (Answer Rate, Average Handle Time, Customer Satisfaction).",
       
       // Certifications
       "certifications.title": "Certifications",

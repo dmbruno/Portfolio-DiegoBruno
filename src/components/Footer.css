@@ -5,7 +5,7 @@
 footer {
   width: 100%;
   background-color: var(--color-bg-primary);
-  border-top: 1px solid rgba(100, 255, 218, 0.1);
+  border-top: 1px solid rgba(6, 182, 212, 0.1);
   margin-top: var(--spacing-5xl);
   overflow-x: hidden;
 }
@@ -74,11 +74,11 @@ footer {
 }
 
 .footer-right a:hover {
-  background-color: rgba(100, 255, 218, 0.1);
+  background-color: rgba(6, 182, 212, 0.1);
   border-color: var(--color-primary);
   color: var(--color-primary);
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(100, 255, 218, 0.2);
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.2);
 }
 
 .footer-right a i {
@@ -93,7 +93,7 @@ footer {
 .footer-bottom {
   text-align: center;
   padding: var(--spacing-md) 0;
-  border-top: 1px solid rgba(100, 255, 218, 0.05);
+  border-top: 1px solid rgba(6, 182, 212, 0.05);
 }
 
 .footer-bottom p {

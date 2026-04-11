@@ -86,13 +86,13 @@
 }
 
 .sidebar-item:hover {
-  background-color: rgba(100, 255, 218, 0.1);
+  background-color: rgba(6, 182, 212, 0.1);
   color: var(--color-primary);
 }
 
 .sidebar-item.active {
   color: var(--color-primary);
-  background-color: rgba(100, 255, 218, 0.1);
+  background-color: rgba(6, 182, 212, 0.1);
 }
 
 .sidebar-item.active::before {
@@ -149,6 +149,7 @@
   line-height: var(--line-height-relaxed);
   color: var(--color-text-secondary);
   margin: 0;
+  white-space: pre-line;
 }
 
 /* Animación de entrada del contenido */

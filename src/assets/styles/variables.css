@@ -3,31 +3,32 @@
    =================================== */
 
 :root {
-  /* === COLORES - Estilo Brittany Chiang (Minimalista) === */
-  
-  /* Colores primarios - Verde azulado suave */
-  --color-primary: #64ffda;
-  --color-primary-dark: #52d4b0;
-  --color-primary-light: #8cffe8;
-  
-  /* Colores de fondo - Azul marino oscuro */
-  --color-bg-primary: #0a192f;
-  --color-bg-secondary: #112240;
-  --color-bg-card: rgba(17, 34, 64, 0.8);
-  --color-bg-hover: rgba(100, 255, 218, 0.1);
-  
-  /* Colores de texto - Paleta sobria */
-  --color-text-primary: #ccd6f6;
-  --color-text-secondary: #8892b0;
-  --color-text-muted: #495670;
-  --color-text-dark: #0a192f;
-  --color-text-bright: #e6f1ff;
-  
-  /* Colores de acento */
-  --color-accent: #64ffda;
-  --color-success: #64ffda;
+  /* === COLORES - Emerald Green + Teal (Professional & Modern) === */
+
+  /* Colores primarios - Verde Esmeralda */
+  --color-primary: #10b981;
+  --color-primary-dark: #059669;
+  --color-primary-light: #6ee7b7;
+
+  /* Colores de fondo - Negro profundo */
+  --color-bg-primary: #080814;
+  --color-bg-secondary: #0f0f1e;
+  --color-bg-card: rgba(15, 15, 30, 0.8);
+  --color-bg-hover: rgba(16, 185, 129, 0.1);
+
+  /* Colores de texto */
+  --color-text-primary: #e2e8f0;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #475569;
+  --color-text-dark: #080814;
+  --color-text-bright: #f8fafc;
+
+  /* Colores de acento - Teal para gradiente */
+  --color-accent: #06b6d4;
+  --color-accent-gradient: linear-gradient(135deg, #10b981, #06b6d4);
+  --color-success: #22c55e;
   --color-warning: #FFC107;
-  --color-info: #64ffda;
+  --color-info: #00d4ff;
   
   /* === TIPOGRAFÍA === */
   
@@ -97,7 +98,8 @@
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  --shadow-glow: 0 0 20px rgba(0, 217, 255, 0.5);
+  --shadow-glow: 0 0 20px rgba(16, 185, 129, 0.5);
+  --shadow-glow-cyan: 0 0 20px rgba(6, 182, 212, 0.4);
   
   /* === TRANSICIONES === */
   

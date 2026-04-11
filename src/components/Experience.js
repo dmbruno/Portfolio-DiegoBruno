@@ -16,9 +16,10 @@ const Experience = () => {
             description: t('experience.saltalabs.description'),
             link: 'https://saltalabs.com/es/'
         },
-        experience1: {
-            title: t('experience.bellify.title'),
-            description: t('experience.bellify.description')
+        freelance: {
+            title: t('experience.freelance.title'),
+            period: t('experience.freelance.period'),
+            description: t('experience.freelance.description'),
         },
         experience4: {
             title: t('experience.telecom.title'),
