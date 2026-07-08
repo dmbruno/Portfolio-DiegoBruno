@@ -1,47 +1,35 @@
 import React from 'react';
-import { Link } from 'react-scroll';
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import './home.css';
 
-const Home = () => {
+const Home = ({ onSelectFile }) => {
     const { t } = useTranslation();
-    
+
     return (
         <div className='container-home' id='home'>
             <div className='home-content'>
+                <p className='home-prompt'><span className='prompt-sign'>$</span> whoami</p>
                 <p className='home-greeting'>{t('home.greeting')}</p>
                 <h1 className='home-name'>{t('home.name')}</h1>
-                
-                <p className='home-description'>
-                    <Trans i18nKey="home.description">
-                        Desarrollador <span className='highlight'>Full Stack</span> especializado en construir aplicaciones web 
-                        modernas y escalables. Mi foco actual está en el ecosistema <span className='highlight'>Web3</span> y <span className='highlight'>Blockchain</span>, 
-                        desarrollando soluciones descentralizadas. También trabajo con tecnologías como <span className='highlight'>React</span>, <span className='highlight'>Python</span> y <span className='highlight'>Node.js</span><span> </span>
-                        para crear experiencias digitales robustas y eficientes.
-                    </Trans>
-                </p>
-                <Link to="carousel" smooth={true} duration={500} className='home-cta'>
-                    {t('home.cta')}
-                </Link>
-            </div>
 
-            <div className='container-links'>
-                <Link to="about" smooth={true} duration={500}>
-                    <h1>{t('home.nav.about')}</h1>
-                </Link>
-                <Link to="certificaciones" smooth={true} duration={500}>
-                    <h1>{t('home.nav.training')}</h1>
-                </Link>
-                <Link to="carousel" smooth={true} duration={500}>
-                    <h1>{t('home.nav.projects')}</h1>
-                </Link>
-                <Link to="contact" smooth={true} duration={500}>
-                    <h1>{t('home.nav.contact')}</h1>
-                </Link>
+                <div className='home-code-block'>
+                    <div className='code-line'><span className='code-keyword'>const</span> developer = <span className='code-punct'>{'{'}</span></div>
+                    <div className='code-line code-indent'>role: <span className='code-string'>"{t('home.code.role')}"</span>,</div>
+                    <div className='code-line code-indent'>stack: <span className='code-punct'>{'{'}</span></div>
+                    <div className='code-line code-indent-2'>backend: [<span className='code-tag'>"Python"</span>, <span className='code-tag'>"Node.js"</span>, <span className='code-tag'>"Flask"</span>, <span className='code-tag'>"Supabase"</span>],</div>
+                    <div className='code-line code-indent-2'>frontend: [<span className='code-tag'>"React"</span>, <span className='code-tag'>"TypeScript"</span>, <span className='code-tag'>"React Native"</span>],</div>
+                    <div className='code-line code-indent-2'>databases: [<span className='code-tag'>"PostgreSQL"</span>, <span className='code-tag'>"MySQL"</span>],</div>
+                    <div className='code-line code-indent'><span className='code-punct'>{'}'}</span>,</div>
+                    <div className='code-line code-indent'>focus: [<span className='code-tag'>"{t('home.code.focus1')}"</span>, <span className='code-tag'>"{t('home.code.focus2')}"</span>],</div>
+                    <div className='code-line code-indent'>availableFor: [<span className='code-tag'>"{t('home.code.available1')}"</span>, <span className='code-tag'>"{t('home.code.available2')}"</span>],</div>
+                    <div className='code-line'><span className='code-punct'>{'}'}</span></div>
+                </div>
+                <button type="button" className='home-cta' onClick={() => onSelectFile('carousel')}>
+                    <span className='prompt-sign'>&gt;</span> {t('home.cta')}
+                </button>
             </div>
         </div>
     );
 };
 
 export default Home;
-

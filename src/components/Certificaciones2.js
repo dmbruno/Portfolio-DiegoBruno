@@ -1,131 +1,123 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './certificaciones2.css';
 
 import cloudFoundryLogo from '../assets/images/cloudfoundry.svg';
+import desarrolloWebImg from '../assets/images/certificados/certificado-desarrolloWeb.png';
+import javaScriptImg from '../assets/images/certificados/certificado-javascript.png';
+import reactJsImg from '../assets/images/certificados/certificado-ReactJs.png';
+import reactNativeImg from '../assets/images/certificados/certificado-ReactNative.png';
+import carreraImg from '../assets/images/certificados/certificado-carreraDesarrolloDeApp.png';
+import pythonImg from '../assets/images/certificados/Python-Full-Stack.png';
+import ethKipuImg from '../assets/images/certificados/CertificadoDevPackEth.png';
+
+const TECH_CATEGORIES = [
+    {
+        label: 'Lenguajes',
+        items: [
+            { name: 'Python', icon: 'fab fa-python' },
+            { name: 'JavaScript', icon: 'fab fa-js-square' },
+        ],
+    },
+    {
+        label: 'Frontend',
+        items: [
+            { name: 'React', icon: 'fab fa-react' },
+            { name: 'HTML5', icon: 'fab fa-html5' },
+            { name: 'CSS3', icon: 'fab fa-css3' },
+            { name: 'Sass', icon: 'fab fa-sass' },
+            { name: 'Bootstrap', icon: 'fab fa-bootstrap' },
+            { name: 'Figma', icon: 'fab fa-figma' },
+        ],
+    },
+    {
+        label: 'Backend & datos',
+        items: [
+            { name: 'Node.js', icon: 'fab fa-node-js' },
+            { name: 'Bases de datos', icon: 'fas fa-database' },
+        ],
+    },
+    {
+        label: 'Herramientas',
+        items: [
+            { name: 'Git', icon: 'fab fa-git' },
+            { name: 'GitHub', icon: 'fab fa-github' },
+            { name: 'npm', icon: 'fab fa-npm' },
+            { name: 'Docker', icon: 'fab fa-docker' },
+        ],
+    },
+    {
+        label: 'Web3 & Cloud',
+        items: [
+            { name: 'Ethereum', icon: 'fab fa-ethereum' },
+            { name: 'Cloud Foundry', image: cloudFoundryLogo },
+        ],
+    },
+];
+
+const CERTIFICATIONS = [
+    {
+        file: 'desarrollo-web.png',
+        title: 'Desarrollo Web',
+        issuer: 'Coderhouse',
+        date: '2023-08',
+        duration: '38 hs',
+        image: desarrolloWebImg,
+    },
+    {
+        file: 'javascript.png',
+        title: 'JavaScript',
+        issuer: 'Coderhouse',
+        date: '2023-11',
+        duration: '36 hs',
+        image: javaScriptImg,
+    },
+    {
+        file: 'react-js.png',
+        title: 'React JS',
+        issuer: 'Coderhouse',
+        date: '2024-01',
+        duration: '30 hs',
+        image: reactJsImg,
+    },
+    {
+        file: 'desarrollo-apps.png',
+        title: 'Desarrollo de Aplicaciones',
+        issuer: 'Coderhouse',
+        date: '2024-03',
+        duration: '36 hs',
+        image: reactNativeImg,
+    },
+    {
+        file: 'carrera-frontend-react.png',
+        title: 'Carrera de Desarrollo Frontend React',
+        issuer: 'Coderhouse',
+        date: '2024-01',
+        duration: '27 sem',
+        image: carreraImg,
+    },
+    {
+        file: 'full-stack-python.png',
+        title: 'Full Stack Python (Codo a Codo 4.0)',
+        issuer: 'Buenos Aires Aprende',
+        date: null,
+        duration: '198 hs',
+        image: pythonImg,
+    },
+    {
+        file: 'eth-developer-pack.png',
+        title: 'Ethereum Developer Pack',
+        issuer: 'ETH Kipu · Talento Tech',
+        date: '2025-11',
+        duration: '42 hs',
+        image: ethKipuImg,
+    },
+];
 
 const Certificaciones2 = () => {
     const { t } = useTranslation();
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [isTransitioning, setIsTransitioning] = useState(false);
-    const sliderRef = useRef(null);
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
-    const certificates = [
-        { className: 'desarrolloWeb' },
-        { className: 'javaScript' },
-        { className: 'reactJs' },
-        { className: 'reactNative' },
-        { className: 'carrera' },
-        { className: 'python' },
-        { className: 'ethKipu' }
-    ];
-
-    // Para desktop - duplicamos los certificados
-    const extendedCertificates = isMobile 
-        ? certificates 
-        : [...certificates, ...certificates, ...certificates];
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768);
-        };
-        
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    // Detectar scroll en mobile para actualizar indicadores
-    useEffect(() => {
-        if (!isMobile || !sliderRef.current) return;
-
-        const handleScroll = () => {
-            const slider = sliderRef.current;
-            const scrollLeft = slider.scrollLeft;
-            const cardWidth = slider.querySelector('.certificaciones-card')?.offsetWidth || 0;
-            const gap = 24;
-            const index = Math.round(scrollLeft / (cardWidth + gap));
-            setCurrentIndex(index);
-        };
-
-        const slider = sliderRef.current;
-        slider?.addEventListener('scroll', handleScroll);
-        return () => slider?.removeEventListener('scroll', handleScroll);
-    }, [isMobile]);
-
-    // Solo para desktop
-    useEffect(() => {
-        if (isMobile) {
-            setCurrentIndex(0);
-            return;
-        }
-        setCurrentIndex(certificates.length);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isMobile]);
-
-    const getCardWidth = () => {
-        const width = window.innerWidth;
-        if (width <= 360) return 200;
-        if (width <= 480) return 240;
-        if (width <= 768) return 360;
-        return 600;
-    };
-
-    const [cardWidth, setCardWidth] = useState(getCardWidth());
-    const gap = 24;
-
-    useEffect(() => {
-        const handleResize = () => {
-            setCardWidth(getCardWidth());
-        };
-        
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    const nextSlide = () => {
-        if (isTransitioning || isMobile) return;
-        setIsTransitioning(true);
-        setCurrentIndex(prev => prev + 1);
-    };
-
-    const prevSlide = () => {
-        if (isTransitioning || isMobile) return;
-        setIsTransitioning(true);
-        setCurrentIndex(prev => prev - 1);
-    };
-
-    const handleTransitionEnd = () => {
-        if (isMobile) return;
-        
-        setIsTransitioning(false);
-        
-        if (currentIndex >= certificates.length * 2) {
-            setCurrentIndex(certificates.length);
-            if (sliderRef.current) {
-                sliderRef.current.style.transition = 'none';
-                setTimeout(() => {
-                    if (sliderRef.current) {
-                        sliderRef.current.style.transition = 'transform 0.5s ease-in-out';
-                    }
-                }, 50);
-            }
-        }
-        
-        if (currentIndex <= 0) {
-            setCurrentIndex(certificates.length);
-            if (sliderRef.current) {
-                sliderRef.current.style.transition = 'none';
-                setTimeout(() => {
-                    if (sliderRef.current) {
-                        sliderRef.current.style.transition = 'transform 0.5s ease-in-out';
-                    }
-                }, 50);
-            }
-        }
-    };
-
-    const translateX = currentIndex * (cardWidth + gap);
+    const [activeIndex, setActiveIndex] = useState(0);
+    const active = CERTIFICATIONS[activeIndex];
 
     return (
         <section id='certificaciones' className="certificaciones-section">
@@ -135,111 +127,69 @@ const Certificaciones2 = () => {
                     {t('certifications.description')}
                 </p>
 
-                <div className="certificaciones-slider-wrapper" ref={isMobile ? sliderRef : null}>
-                    <div 
-                        ref={!isMobile ? sliderRef : null}
-                        className="certificaciones-grid" 
-                        style={!isMobile ? { 
-                            transform: `translateX(-${translateX}px)`,
-                            transition: isTransitioning ? 'transform 0.5s ease-in-out' : 'none'
-                        } : {}}
-                        onTransitionEnd={handleTransitionEnd}
-                    >
-                        {extendedCertificates.map((cert, index) => (
-                            <div key={index} className={`certificaciones-card ${cert.className}`}>
-                                <div className="certificaciones-overlay">
-                                    <h2 className="certificaciones-title-card">{cert.title}</h2>
-                                </div>
-                            </div>
+                <div className="cert-explorer">
+                    <div className="cert-file-list">
+                        <div className="cert-list-prompt">
+                            <span className="cert-list-prompt-sign">$</span> ls -la ./certificaciones
+                        </div>
+                        {CERTIFICATIONS.map((cert, index) => (
+                            <button
+                                type="button"
+                                key={cert.file}
+                                className={`cert-row ${index === activeIndex ? 'active' : ''}`}
+                                onClick={() => setActiveIndex(index)}
+                            >
+                                <i className="fas fa-file-alt cert-row-icon" aria-hidden="true"></i>
+                                <span className="cert-row-name">{cert.file}</span>
+                                <span className="cert-row-issuer">{cert.issuer}</span>
+                                <span className="cert-row-meta">{cert.duration}</span>
+                            </button>
                         ))}
                     </div>
-                </div>
 
-                {/* Controles del slider - solo desktop */}
-                <div className="slider-controls">
-                    <button className="slider-arrow" onClick={prevSlide}>
-                        ←
-                    </button>
-                    <button className="slider-arrow" onClick={nextSlide}>
-                        →
-                    </button>
-                </div>
-
-                {/* Indicadores de posición */}
-                <div className="slider-indicators">
-                    {certificates.map((_, index) => (
-                        <div
-                            key={index}
-                            className={`slider-dot ${
-                                isMobile 
-                                    ? currentIndex === index ? 'active' : ''
-                                    : (currentIndex % certificates.length) === index ? 'active' : ''
-                            }`}
-                            onClick={() => {
-                                if (isMobile) {
-                                    const slider = sliderRef.current;
-                                    const cardWidth = slider?.querySelector('.certificaciones-card')?.offsetWidth || 0;
-                                    slider?.scrollTo({
-                                        left: index * (cardWidth + gap),
-                                        behavior: 'smooth'
-                                    });
-                                } else {
-                                    setIsTransitioning(true);
-                                    setCurrentIndex(certificates.length + index);
-                                }
-                            }}
-                        />
-                    ))}
-                </div>
-            </div>
-            <div className="tech-section">
-                <h3>{t('certifications.technologies')}</h3>
-                <div className="tech-carousel-wrapper">
-                    <div className="tech-carousel">
-                        {/* Primera fila - dirección normal */}
-                        <div className="tech-carousel-track">
-                            <i className="fab fa-python tech-icon"></i>
-                            <i className="fab fa-react tech-icon"></i>
-                            <i className="fab fa-js-square tech-icon"></i>
-                            <i className="fab fa-html5 tech-icon"></i>
-                            <i className="fab fa-css3 tech-icon"></i>
-                            <i className="fab fa-sass tech-icon"></i>
-                            <i className="fab fa-node-js tech-icon"></i>
-                            <i className="fab fa-git tech-icon"></i>
-                            
-                            {/* Duplicado para efecto infinito */}
-                            <i className="fab fa-python tech-icon"></i>
-                            <i className="fab fa-react tech-icon"></i>
-                            <i className="fab fa-js-square tech-icon"></i>
-                            <i className="fab fa-html5 tech-icon"></i>
-                            <i className="fab fa-css3 tech-icon"></i>
-                            <i className="fab fa-sass tech-icon"></i>
-                            <i className="fab fa-node-js tech-icon"></i>
-                            <i className="fab fa-git tech-icon"></i>
+                    <div className="cert-preview">
+                        <div className="cert-preview-header">
+                            <span className="cert-preview-dot"></span>
+                            <span className="cert-preview-dot"></span>
+                            <span className="cert-preview-dot active"></span>
+                            <span className="cert-preview-filename">{active.file}</span>
                         </div>
-                        
-                        {/* Segunda fila - dirección inversa */}
-                        <div className="tech-carousel-track">
-                            <i className="fab fa-github tech-icon"></i>
-                            <i className="fab fa-bootstrap tech-icon"></i>
-                            <i className="fab fa-docker tech-icon"></i>
-                            <i className="fas fa-database tech-icon"></i>
-                            <i className="fab fa-npm tech-icon"></i>
-                            <i className="fab fa-figma tech-icon"></i>
-                            <i className="fab fa-ethereum tech-icon"></i>
-                            <img src={cloudFoundryLogo} alt="Cloud Foundry" className="tech-icon tech-icon-img tech-icon-cloudfoundry" />
-                            
-                            {/* Duplicado para efecto infinito */}
-                            <i className="fab fa-github tech-icon"></i>
-                            <i className="fab fa-bootstrap tech-icon"></i>
-                            <i className="fab fa-docker tech-icon"></i>
-                            <i className="fas fa-database tech-icon"></i>
-                            <i className="fab fa-npm tech-icon"></i>
-                            <i className="fab fa-figma tech-icon"></i>
-                            <i className="fab fa-ethereum tech-icon"></i>
-                            <img src={cloudFoundryLogo} alt="Cloud Foundry" className="tech-icon tech-icon-img tech-icon-cloudfoundry" />
+                        <img className="cert-preview-img" src={active.image} alt={active.title} />
+                        <div className="cert-preview-meta">
+                            <span className="cert-preview-title">{active.title}</span>
+                            <span className="cert-preview-sep">·</span>
+                            <span>{active.issuer}</span>
+                            {active.date && (
+                                <>
+                                    <span className="cert-preview-sep">·</span>
+                                    <span>{active.date}</span>
+                                </>
+                            )}
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div className="tech-section">
+                <h3>{t('certifications.technologies')}</h3>
+                <div className="tech-grid">
+                    {TECH_CATEGORIES.map((category) => (
+                        <div className="tech-category" key={category.label}>
+                            <div className="tech-category-label">{category.label}</div>
+                            <div className="tech-chips">
+                                {category.items.map((item) => (
+                                    <span className="tech-chip" key={item.name}>
+                                        {item.image ? (
+                                            <img src={item.image} alt="" className="tech-chip-img" aria-hidden="true" />
+                                        ) : (
+                                            <i className={`${item.icon} tech-chip-icon`} aria-hidden="true"></i>
+                                        )}
+                                        {item.name}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>

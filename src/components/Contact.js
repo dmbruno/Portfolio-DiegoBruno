@@ -18,7 +18,7 @@ function Contact() {
                     {t('contact.description')}
                 </p>
                 <button className="contact-button" onClick={handleEmailClick}>
-                    {t('contact.cta')}
+                    <span className="prompt-sign">&gt;</span> {t('contact.cta')}
                 </button>
             </div>
         </section>

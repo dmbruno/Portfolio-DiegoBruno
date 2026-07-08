@@ -1,95 +1,66 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
+import { getSections } from './Sidebar';
 import './Header.css';
 
-function Header() {
-  const { t } = useTranslation();
-  const [scrolled, setScrolled] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollTop, setLastScrollTop] = useState(0);
-  const [menuOpen, setMenuOpen] = useState(false); // Estado para el menú móvil
+function Header({ sidebarOpen, onMenuToggle, openTabs, activeTab, onSelectFile, onCloseFile }) {
+  const { i18n } = useTranslation();
+  const SECTIONS = getSections(i18n.language);
+  const activeFile = SECTIONS.find((s) => s.id === activeTab)?.file || 'sin título';
 
-  // Función que maneja el evento de scroll
-  const handleScroll = () => {
-    const scrollTop = window.scrollY;
-
-    if (scrollTop > 350) {
-      setScrolled(true);
-
-      if (scrollTop > 700) {
-        if (scrollTop > lastScrollTop) {
-          setIsVisible(false);
-        } else {
-          setIsVisible(true);
-        }
-      } else {
-        setIsVisible(true);
-      }
-    } else {
-      setScrolled(false);
-      setIsVisible(true);
-    }
-
-    setLastScrollTop(scrollTop);
+  const handleClose = (e, id) => {
+    e.stopPropagation();
+    onCloseFile(id);
   };
-
-  // Toggle del menú móvil
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
-  // Cerrar menú al hacer clic en un link
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
-
-  // Efecto para escuchar el evento de scroll
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lastScrollTop]);
 
   return (
-    <div className='header-container'>
-      <header className={`header ${scrolled ? 'scrolled-header' : ''} ${!isVisible ? 'hidden' : ''}`}>
-        <nav className='nav-container'>
-          {/* Hamburger Menu Button */}
-          <div className={`hamburger-menu ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+    <div className="header-container">
+      <header className="header tab-bar">
+        <button
+          className={`hamburger-menu ${sidebarOpen ? 'active' : ''}`}
+          onClick={onMenuToggle}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-          <ul className={`header-links-container ${scrolled ? 'scrolled' : ''} ${menuOpen ? 'active' : ''}`}>
-            <li><Link to="home" className={`link-header ${scrolled ? 'scrolled' : ''}`} smooth={true} duration={500} onClick={closeMenu}>{t('nav.home')}</Link></li>
-            <li><Link to="about" className={`link-header ${scrolled ? 'scrolled' : ''}`} smooth={true} duration={500} onClick={closeMenu}>{t('nav.about')}</Link></li>
-            <li><Link to="certificaciones" className={`link-header ${scrolled ? 'scrolled' : ''}`} smooth={true} duration={500} onClick={closeMenu}>{t('nav.training')}</Link></li>
-            <li><Link to="carousel" className={`link-header ${scrolled ? 'scrolled' : ''}`} smooth={true} duration={500} onClick={closeMenu}>{t('nav.projects')}</Link></li>
-            <li><Link to="contact" className={`link-header ${scrolled ? 'scrolled' : ''}`} smooth={true} duration={500} onClick={closeMenu}>{t('nav.contact')}</Link></li>
-            {/* Botón de CV temporalmente oculto - actualizar CV antes de mostrar
-            <li>
-              <a href="/CV-DIegoBruno.pdf" download className={`cv-download-link ${scrolled ? 'scrolled' : ''}`} onClick={closeMenu}>
-                {t('nav.downloadCV')}
-              </a>
-            </li>
-            */}
-            <li>
-              <LanguageSwitcher />
-            </li>
-          </ul>
-        </nav>
+        <div className="tab-strip">
+          {openTabs.map((id) => {
+            const section = SECTIONS.find((s) => s.id === id);
+            if (!section) return null;
+            const isActive = activeTab === id;
+
+            return (
+              <button
+                key={id}
+                className={`tab-item ${isActive ? 'active' : ''}`}
+                onClick={() => onSelectFile(id)}
+              >
+                <span className="tab-item-name">{section.file}</span>
+                <span
+                  className="tab-item-close"
+                  onClick={(e) => handleClose(e, id)}
+                  role="button"
+                  aria-label={`Cerrar ${section.file}`}
+                >
+                  &times;
+                </span>
+              </button>
+            );
+          })}
+        </div>
+
+        <div className="tab-breadcrumb-mobile">{activeFile}</div>
+
+        <div className="tab-bar-right">
+          <LanguageSwitcher />
+        </div>
       </header>
     </div>
   );
 }
 
 export default Header;
-
-
-
-

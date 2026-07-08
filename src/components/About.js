@@ -16,17 +16,17 @@ function About() {
                     <h2>{t('about.title')}</h2>
                     <p>
                         <Trans i18nKey="about.paragraph1">
-                            ¡Hola! Mi nombre es Diego y disfruto crear cosas que viven en internet. Mi interés por el desarrollo web comenzó hace años cuando decidí aprender a construir mi primera aplicación — resulta que crear funcionalidades desde cero me enseñó mucho sobre <strong>JavaScript</strong> y <strong>React</strong>!
+                            Soy Diego Bruno, desarrollador Full Stack. Empecé a programar en 2023 escribiendo mi primera aplicación desde cero — ese ejercicio de entender cada pieza del sistema definió la forma en que sigo trabajando hoy.
                         </Trans>
                     </p>
                     <p>
                         <Trans i18nKey="about.paragraph2">
-                            Avancemos al presente: he tenido el privilegio de trabajar en proyectos variados, desde aplicaciones web tradicionales hasta <strong>aplicaciones descentralizadas</strong>. Actualmente, mi enfoque principal está en construir productos accesibles en el ecosistema <strong>Web3</strong> y <strong>Blockchain</strong>, desarrollando <strong>smart contracts</strong> con <strong>Solidity</strong> y utilizando herramientas como <strong>Remix IDE</strong> y <strong>Foundry</strong>.
+                            Diseño y desarrollo productos que integran <strong>Inteligencia Artificial</strong> (OpenAI API, Claude API) para automatizar tareas y construir agentes conversacionales. También trabajo en el ecosistema <strong>Web3</strong> y <strong>Blockchain</strong>, desarrollando smart contracts con <strong>Solidity</strong>.
                         </Trans>
                     </p>
                     <p>
                         <Trans i18nKey="about.paragraph3">
-                            También trabajo constantemente con tecnologías como <strong>React</strong>, <strong>React Native</strong>, <strong>Python</strong>, <strong>Node.js</strong>, <strong>Flask</strong>, y bases de datos <strong>Relacionales</strong> y <strong>NO-Relacionales</strong>.
+                            Mi stack incluye <strong>Python</strong>, <strong>Node.js</strong>, <strong>TypeScript</strong>, <strong>React</strong> y <strong>React Native</strong> en frontend y backend, y bases de datos relacionales como <strong>PostgreSQL</strong>, <strong>MySQL</strong> y <strong>Supabase</strong>. Priorizo el código que resuelve problemas reales de negocio por sobre la estética de un portfolio.
                         </Trans>
                     </p>
                     <p>

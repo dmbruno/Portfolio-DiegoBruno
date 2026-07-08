@@ -17,16 +17,46 @@ html, body {
 /* Asegura que el contenedor principal ocupe toda la altura */
 .App {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   overflow-x: hidden;
   width: 100%;
+}
+
+/* === IDE SHELL LAYOUT === */
+.ide-shell {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.ide-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin-left: 260px;
+  overflow-x: hidden;
+}
+
+@media (max-width: 900px) {
+  .ide-main {
+    margin-left: 0;
+  }
 }
 
 /* Asegurar que los contenedores principales no excedan el viewport */
 section, main {
   max-width: 100%;
   overflow-x: hidden;
+}
+
+/* El <main> crece para ocupar el espacio sobrante de la columna del
+   ide-main. Así, cuando la sección activa es corta (ej. Contacto), el
+   espacio de sobra queda absorbido antes del footer y el footer termina
+   pegado abajo del todo, en vez de quedar arriba con una franja vacía
+   después. El contenido interno de cada sección no se estira: sigue
+   arriba, con su tamaño natural. */
+.ide-main > main {
+  flex: 1 0 auto;
 }
 
 /* Hacer todas las imágenes responsive por defecto */

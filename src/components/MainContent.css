@@ -1,2 +1,35 @@
+/* ===================================
+   EDITOR - ESTADO VACÍO (sin pestañas abiertas)
+   =================================== */
 
-  
+.editor-empty {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editor-empty-inner {
+  text-align: center;
+}
+
+.editor-empty-icon {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-4xl);
+  color: var(--color-signal-dim);
+  margin-bottom: var(--spacing-lg);
+}
+
+.editor-empty-text {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.editor-empty-hint {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+}

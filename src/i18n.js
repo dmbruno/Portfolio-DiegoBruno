@@ -19,7 +19,11 @@ const resources = {
       // Home
       "home.greeting": "Hola, mi nombre es",
       "home.name": "Diego Bruno",
-      "home.description": "Desarrollador <1>Full Stack</1> que convierte ideas en productos web reales. Integro <3>Inteligencia Artificial</3> (OpenAI, Claude) para automatizar y potenciar productos. Construyo con <5>React</5>, <7>Python</7> y <9>Node.js</9> — y si tu proyecto apunta a <11>Web3</11> o Blockchain, también. Disponible para proyectos freelance y posiciones en equipo.",
+      "home.code.role": "Desarrollador Full Stack",
+      "home.code.focus1": "Inteligencia Artificial",
+      "home.code.focus2": "Web3 · Blockchain",
+      "home.code.available1": "equipo",
+      "home.code.available2": "freelance",
       "home.cta": "Ver mis proyectos",
       "home.nav.about": "SOBRE MÍ",
       "home.nav.training": "FORMACIÓN",
@@ -28,9 +32,9 @@ const resources = {
       
       // About
       "about.title": "Sobre mí",
-      "about.paragraph1": "¡Hola! Mi nombre es Diego y disfruto crear cosas que viven en internet. Mi interés por el desarrollo web comenzó en 2021 cuando decidí aprender a construir mi primera aplicación — resulta que crear funcionalidades desde cero me enseñó mucho sobre <1>JavaScript</1> y <3>React</3>!",
-      "about.paragraph2": "Desde entonces trabajé en proyectos variados: integré <1>Inteligencia Artificial</1> usando <3>OpenAI API</3> y <5>Claude API</5> para construir agentes y automatizaciones conversacionales. También construyo en el ecosistema <7>Web3</7> y <9>Blockchain</9>, desarrollando <11>smart contracts</11> con <13>Solidity</13>.",
-      "about.paragraph3": "También trabajo constantemente con tecnologías como <1>React</1>, <3>React Native</3>, <5>Python</5>, <7>Node.js</7>, <9>Flask</9>, y bases de datos <11>Relacionales</11> y <13>NO-Relacionales</13>.",
+      "about.paragraph1": "Soy Diego Bruno, desarrollador Full Stack. Empecé a programar en 2021 escribiendo mi primera aplicación desde cero — ese ejercicio de entender cada pieza del sistema definió la forma en que sigo trabajando hoy.",
+      "about.paragraph2": "Diseño y desarrollo productos que integran <1>Inteligencia Artificial</1> (OpenAI API, Claude API) para automatizar tareas y construir agentes conversacionales. También trabajo en el ecosistema <3>Web3</3> y <5>Blockchain</5>, desarrollando smart contracts con <7>Solidity</7>.",
+      "about.paragraph3": "Mi stack incluye <1>Python</1>, <3>Node.js</3>, <5>TypeScript</5>, <7>React</7> y <9>React Native</9> en frontend y backend, y bases de datos relacionales como <11>PostgreSQL</11>, <13>MySQL</13> y <15>Supabase</15>. Priorizo el código que resuelve problemas reales de negocio por sobre la estética de un portfolio.",
       
       // Experience
       "experience.title": "Experiencias ...",
@@ -61,38 +65,60 @@ const resources = {
       "certifications.technologies": "Tecnologías",
       
       // Projects
-      "projects.title": "Proyectos ...",
+      "projects.title": "Proyectos",
       "projects.featured": "Proyecto Destacado",
       "projects.viewMore": "Explora más!",
       "projects.demo": "Demo",
       "projects.github": "GitHub",
       "projects.tapToFlip": "Toca para ver descripción",
       "projects.tapToReturn": "Toca para volver",
-      
+
+      // Filtros de categoría
+      "projects.filter.all": "Todos",
+      "projects.filter.web": "Web / SaaS",
+      "projects.filter.ia": "IA / Bots",
+      "projects.filter.blockchain": "Blockchain",
+
       // Gauchos de Güemes
       "projects.gauchos.title": "Web Gauchos de Güemes",
       "projects.gauchos.description": "Plataforma web con <strong>sistema de reservas</strong> y <strong>calendario interactivo</strong> conectado a <strong>base de datos</strong>. <strong>App móvil</strong> para gestionar reservas y facilitar el <strong>contacto con clientes</strong> vía <strong>WhatsApp</strong> y <strong>email</strong>.",
-      
+
       // ChatBot UBM
       "projects.chatbotUBM.title": "ChatBot - UBM",
       "projects.chatbotUBM.description": "Bot con <strong>menú interactivo</strong> para consultar <strong>promociones</strong>, <strong>salidas grupales</strong> y datos de contacto. Cualifica clientes, guarda preferencias en <strong>base de datos SQL</strong> y deriva automáticamente al <strong>vendedor ideal</strong>.",
-      
+
       // ChatBot Informativo
       "projects.chatbotInfo.title": "ChatBot - Informativo",
       "projects.chatbotInfo.description": "Bot educativo que explica el potencial de la <strong>automatización conversacional</strong>. Incluye <strong>FAQs</strong>, casos de uso y funciona como <strong>portfolio interactivo</strong> para mostrar servicios de desarrollo de <strong>chatbots inteligentes</strong>.",
-      
+
       // KipuBank
       "projects.kipubank.title": "KipuBank - DeFi Banking",
       "projects.kipubank.description": "Banco <strong>descentralizado</strong> que acepta <strong>ETH</strong> y <strong>tokens ERC20</strong>, convirtiéndolos automáticamente a <strong>USDC</strong> mediante <strong>Uniswap V2</strong>. Testeado con <strong>Foundry</strong> (<strong>43 tests</strong>) antes de desplegar en <strong>Sepolia testnet</strong>.",
-      
+
+      // TokenizAR
+      "projects.tokenizar.title": "TokenizAR - Tokenización Inmobiliaria",
+      "projects.tokenizar.description": "Plataforma educativa que muestra cómo tokenizar un inmueble en <strong>fracciones digitales (ERC-20)</strong> sobre la red de pruebas de <strong>Polygon</strong>. Simula la compra de fracciones, dashboards de propietario e inversor, y el reparto de rentas on-chain.",
+
+      // SnapMoment
+      "projects.snapmoment.title": "SnapMoment - Álbum Colaborativo de Eventos",
+      "projects.snapmoment.description": "App para eventos: los invitados escanean un <strong>código QR</strong> y suben sus fotos a un <strong>álbum colaborativo</strong> en tiempo real. Genera contenido orgánico y espontáneo para las redes del salón o lugar del evento.",
+
+      // PropioIA
+      "projects.propioia.title": "PropioIA - Facturación por WhatsApp",
+      "projects.propioia.description": "Agente de <strong>IA conectado a WhatsApp</strong> que registra y emite facturas del negocio automáticamente. Incluye <strong>dashboard en tiempo real</strong> con total facturado, IVA compra e IVA venta para Responsables Inscriptos, y monto facturado para Monotributistas.",
+
       // Contact
       "contact.overline": "05. Qué sigue?",
-      "contact.title": "Pongámonos en Contacto",
-      "contact.description": "Me gusta escuchar nuevas ideas y propuestas. Ya sea que tengas un proyecto en mente, una pregunta, o simplemente quieras charlar sobre tecnología, mi bandeja de entrada está siempre abierta. ¡Haré lo posible por responderte lo antes posible!",
+      "contact.title": "Hablemos de tu proyecto",
+      "contact.description": "¿Tenés un proyecto en mente, una posición abierta, o simplemente una pregunta técnica? Escribime y te respondo a la brevedad.",
       "contact.cta": "¡Hablemos!",
 
       // Footer
       "footer.builtBy": "Construido por Diego Bruno © 2026",
+
+      // Editor (estado vacío)
+      "editor.emptyTitle": "No hay ningún archivo abierto",
+      "editor.emptyHint": "Elegí una sección en el explorador de la izquierda",
     }
   },
   en: {
@@ -110,7 +136,11 @@ const resources = {
       // Home
       "home.greeting": "Hi, my name is",
       "home.name": "Diego Bruno",
-      "home.description": "<1>Full Stack</1> Developer who turns ideas into real web products. I integrate <3>Artificial Intelligence</3> (OpenAI, Claude) to automate and enhance products. I build with <5>React</5>, <7>Python</7> and <9>Node.js</9> — and if your project targets <11>Web3</11> or Blockchain, I've got you covered too. Available for freelance projects and full-time positions.",
+      "home.code.role": "Full Stack Developer",
+      "home.code.focus1": "Artificial Intelligence",
+      "home.code.focus2": "Web3 · Blockchain",
+      "home.code.available1": "team",
+      "home.code.available2": "freelance",
       "home.cta": "View my projects",
       "home.nav.about": "ABOUT ME",
       "home.nav.training": "TRAINING",
@@ -119,9 +149,9 @@ const resources = {
       
       // About
       "about.title": "About Me",
-      "about.paragraph1": "Hello! My name is Diego and I enjoy creating things that live on the internet. My interest in web development started in 2021 when I decided to learn how to build my first application — it turns out that creating functionalities from scratch taught me a lot about <1>JavaScript</1> and <3>React</3>!",
-      "about.paragraph2": "Since then, I've worked on varied projects: I integrated <1>Artificial Intelligence</1> using <3>OpenAI API</3> and <5>Claude API</5> to build agents and conversational automations. I also build in the <7>Web3</7> and <9>Blockchain</9> ecosystem, developing <11>smart contracts</11> with <13>Solidity</13>.",
-      "about.paragraph3": "I also constantly work with technologies like <1>React</1>, <3>React Native</3>, <5>Python</5>, <7>Node.js</7>, <9>Flask</9>, and <11>Relational</11> and <13>Non-Relational</13> databases.",
+      "about.paragraph1": "I'm Diego Bruno, a Full Stack developer. I started programming in 2021, writing my first application from scratch — that exercise of understanding every piece of the system still shapes how I work today.",
+      "about.paragraph2": "I design and build products that integrate <1>Artificial Intelligence</1> (OpenAI API, Claude API) to automate tasks and build conversational agents. I also work in the <3>Web3</3> and <5>Blockchain</5> ecosystem, developing smart contracts with <7>Solidity</7>.",
+      "about.paragraph3": "My stack includes <1>Python</1>, <3>Node.js</3>, <5>TypeScript</5>, <7>React</7> and <9>React Native</9> on the frontend and backend, plus relational databases like <11>PostgreSQL</11>, <13>MySQL</13> and <15>Supabase</15>. I prioritize code that solves real business problems over portfolio aesthetics.",
       
       // Experience
       "experience.title": "Experience ...",
@@ -152,38 +182,60 @@ const resources = {
       "certifications.technologies": "Technologies",
       
       // Projects
-      "projects.title": "Projects ...",
+      "projects.title": "Projects",
       "projects.featured": "Featured Project",
       "projects.viewMore": "Explore more!",
       "projects.demo": "Demo",
       "projects.github": "GitHub",
       "projects.tapToFlip": "Tap to see description",
       "projects.tapToReturn": "Tap to go back",
-      
+
+      // Category filters
+      "projects.filter.all": "All",
+      "projects.filter.web": "Web / SaaS",
+      "projects.filter.ia": "AI / Bots",
+      "projects.filter.blockchain": "Blockchain",
+
       // Gauchos de Güemes
       "projects.gauchos.title": "Gauchos de Güemes Website",
       "projects.gauchos.description": "Web platform with <strong>reservation system</strong> and <strong>interactive calendar</strong> connected to <strong>database</strong>. <strong>Mobile app</strong> to manage bookings and facilitate <strong>customer contact</strong> via <strong>WhatsApp</strong> and <strong>email</strong>.",
-      
+
       // ChatBot UBM
       "projects.chatbotUBM.title": "ChatBot - UBM",
       "projects.chatbotUBM.description": "Bot with <strong>interactive menu</strong> to check <strong>promotions</strong>, <strong>group tours</strong> and contact information. Qualifies clients, saves preferences in <strong>SQL database</strong> and automatically routes to the <strong>ideal salesperson</strong>.",
-      
+
       // ChatBot Informativo
       "projects.chatbotInfo.title": "ChatBot - Informative",
       "projects.chatbotInfo.description": "Educational bot that explains the potential of <strong>conversational automation</strong>. Includes <strong>FAQs</strong>, use cases and works as an <strong>interactive portfolio</strong> to showcase <strong>intelligent chatbot</strong> development services.",
-      
+
       // KipuBank
       "projects.kipubank.title": "KipuBank - DeFi Banking",
       "projects.kipubank.description": "<strong>Decentralized</strong> bank that accepts <strong>ETH</strong> and <strong>ERC20 tokens</strong>, automatically converting them to <strong>USDC</strong> via <strong>Uniswap V2</strong>. Tested with <strong>Foundry</strong> (<strong>43 tests</strong>) before deploying on <strong>Sepolia testnet</strong>.",
-      
+
+      // TokenizAR
+      "projects.tokenizar.title": "TokenizAR - Real Estate Tokenization",
+      "projects.tokenizar.description": "Educational platform showing how to tokenize a property into <strong>digital fractions (ERC-20)</strong> on the <strong>Polygon</strong> testnet. Simulates fraction purchases, owner/investor dashboards, and on-chain rent distribution.",
+
+      // SnapMoment
+      "projects.snapmoment.title": "SnapMoment - Collaborative Event Album",
+      "projects.snapmoment.description": "Event app: guests scan a <strong>QR code</strong> and upload their photos to a real-time <strong>collaborative album</strong>. Generates organic, spontaneous content for the venue's social media.",
+
+      // PropioIA
+      "projects.propioia.title": "PropioIA - WhatsApp Invoicing",
+      "projects.propioia.description": "AI agent <strong>connected to WhatsApp</strong> that automatically records and issues business invoices. Includes a <strong>real-time dashboard</strong> with total billed, purchase/sales VAT for registered taxpayers, and total billed for simplified-tax payers.",
+
       // Contact
       "contact.overline": "05. What's Next?",
-      "contact.title": "Get In Touch",
-      "contact.description": "I enjoy hearing new ideas and proposals. Whether you have a project in mind, a question, or simply want to chat about technology, my inbox is always open. I'll do my best to get back to you as soon as possible!",
+      "contact.title": "Let's talk about your project",
+      "contact.description": "Have a project in mind, an open position, or just a technical question? Write to me and I'll get back to you shortly.",
       "contact.cta": "Let's Talk!",
       
       // Footer
       "footer.builtBy": "Built by Diego Bruno © 2026",
+
+      // Editor (empty state)
+      "editor.emptyTitle": "No file is open",
+      "editor.emptyHint": "Pick a section from the explorer on the left",
     }
   }
 };

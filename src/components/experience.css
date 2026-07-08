@@ -86,13 +86,13 @@
 }
 
 .sidebar-item:hover {
-  background-color: rgba(6, 182, 212, 0.1);
+  background-color: rgba(34, 197, 94, 0.1);
   color: var(--color-primary);
 }
 
 .sidebar-item.active {
   color: var(--color-primary);
-  background-color: rgba(6, 182, 212, 0.1);
+  background-color: rgba(34, 197, 94, 0.1);
 }
 
 .sidebar-item.active::before {

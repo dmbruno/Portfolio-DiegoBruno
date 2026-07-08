@@ -3,40 +3,40 @@
    =================================== */
 
 :root {
-  /* === COLORES - Emerald Green + Teal (Professional & Modern) === */
+  /* === COLORES - "La terminal como firma" (marca personal Diego Bruno) === */
 
-  /* Colores primarios - Verde Esmeralda */
-  --color-primary: #10b981;
-  --color-primary-dark: #059669;
-  --color-primary-light: #6ee7b7;
+  /* Signal - verde de marca, usar poco: cursor, links, acentos, hover */
+  --color-primary: #22C55E;
+  --color-primary-dark: #16A34A;
+  --color-primary-light: #4ADE80;
+  --color-signal-dim: #0F3D26;
 
-  /* Colores de fondo - Negro profundo */
-  --color-bg-primary: #080814;
-  --color-bg-secondary: #0f0f1e;
-  --color-bg-card: rgba(15, 15, 30, 0.8);
-  --color-bg-hover: rgba(16, 185, 129, 0.1);
+  /* Ink - fondo principal */
+  --color-bg-primary: #0B0E0D;
+  --color-bg-secondary: #10140F;
+  --color-bg-card: rgba(18, 24, 20, 0.85);
+  --color-bg-hover: rgba(34, 197, 94, 0.1);
 
   /* Colores de texto */
-  --color-text-primary: #e2e8f0;
-  --color-text-secondary: #94a3b8;
-  --color-text-muted: #475569;
-  --color-text-dark: #080814;
-  --color-text-bright: #f8fafc;
+  --color-text-primary: #E7ECE9;
+  --color-text-secondary: #9BA79F;
+  --color-text-muted: #7C8A85;
+  --color-text-dark: #0B0E0D;
+  --color-text-bright: #F5F7F6;
 
-  /* Colores de acento - Teal para gradiente */
-  --color-accent: #06b6d4;
-  --color-accent-gradient: linear-gradient(135deg, #10b981, #06b6d4);
+  /* Acento único (ya no se usa un segundo tono teal) */
+  --color-accent: #22C55E;
   --color-success: #22c55e;
   --color-warning: #FFC107;
-  --color-info: #00d4ff;
-  
+  --color-info: #22C55E;
+
   /* === TIPOGRAFÍA === */
-  
-  /* Familias de fuentes - Tipografía moderna y legible */
+
+  /* Cuerpo de texto: sans legible. Acentos/títulos/labels: monospace (JetBrains Mono) */
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Lucida Console', Monaco, monospace;
-  --font-code: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Lucida Console', Monaco, monospace;
+  --font-code: 'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   
   /* Tamaños de fuente - Sistema escalable */
   --font-size-xs: 0.75rem;    /* 12px */
@@ -98,8 +98,8 @@
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  --shadow-glow: 0 0 20px rgba(16, 185, 129, 0.5);
-  --shadow-glow-cyan: 0 0 20px rgba(6, 182, 212, 0.4);
+  --shadow-glow: 0 0 20px rgba(34, 197, 94, 0.5);
+  --shadow-glow-cyan: 0 0 20px rgba(34, 197, 94, 0.4);
   
   /* === TRANSICIONES === */
   

@@ -31,6 +31,7 @@
 }
 
 .about-text h2 {
+  font-family: var(--font-mono);
   font-size: clamp(2rem, 5vw, var(--font-size-4xl));
   color: var(--color-text-bright);
   margin-bottom: var(--spacing-md);
